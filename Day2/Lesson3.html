@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    span{
+        font-size: 25px;
+        font-weight: bold;
+    }
+    textarea{
+        width: 70%;
+        height: 200px;
+    }
+    input{
+        width: 30%;
+
+    }
+    #input-email{
+        margin-left: 10px;
+    }
+    .first-input{
+        display: flex;
+    }
+    p{
+        display: inline;
+    }
+</style>
+<!-- End style -->
+<body>
+    <table  width="100%" cellspacing="0" cellpadding="5">
+        <td>
+            <span>
+                Get in touch with us by filling contact form below
+            </span>
+        </td>
+        <tr >
+            <td class="first-input">
+                <input type="text" placeholder="* Enter your full name"/>
+                <input id="input-email" type="email" placeholder="* Enter your email address"/>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="text" placeholder="* Enter your subject"/></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <textarea placeholder="* Your message here"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit">Send message</button>
+                <p>*Please fill all require form field, thanks!</p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
