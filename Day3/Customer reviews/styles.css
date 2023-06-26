@@ -1,0 +1,28 @@
+
+.heads{
+    text-align: center;
+}
+.line{
+    border-bottom: 3px solid blue;
+    width: 50px;
+    margin-left: 47%;
+    margin-top: -12px;
+    margin-bottom: 50px;
+}
+img{
+    width: 60px;
+    height: 60px;
+}
+.item-reviews{
+    display: flex;
+    font-style: italic;
+    color: rgb(159, 156, 156);
+}
+.text-reviews{
+    margin-left: 20px;
+}
+span{
+    font-weight: bolder;
+    margin-left: 77px;
+    color: gray;
+}

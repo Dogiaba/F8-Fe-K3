@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: auto;
+    font-family:sans-serif;
+}
+.call-action{
+    margin: 15px;
+    text-align: center;
+}
+.head-number{
+    display: inline-block;
+    background-color: #8498CB;
+    padding: 10px 40px;
+    color: #fff;
+}
+.title{
+    font-size: 130%;
+    margin-top:20px ;
+}
+span{
+    color:#01ACF2 ;
+}
+#article{
+    margin-top:20px ;
+}
+.btn-views{
+    margin-top:36px ;
+}
+.btn-views a{
+    margin: 7px;
+}
+a{
+    background-color: #2C3033;
+    padding: 15px 30px;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration:none;
+}

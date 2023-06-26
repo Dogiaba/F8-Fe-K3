@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form ction="https://api-gateway.fullstack.edu.vn/action_page.php" method="post">
+        <table width="50%" cellspacing="0" cellpadding="4">
+            <tr>
+                <td>
+                    <label for="name">Username:</label>
+                </td>
+                <td>
+                    <input type="text" name="name" id="name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="password">Password:</label>
+                </td>
+                <td>
+                    <input type="text" name="password" id="password">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="city">City of Employment:</label>
+                </td>
+                <td>
+                    <input type="text" name="city" id="city">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="server">Web server:</label>
+                </td>
+                <td>
+                    <select name="server" id="server">
+                        <option value="server">-Choose a server-</option>
+                        <option value="Nginx">Nginx</option>
+                        <option value="IIS">IIS</option>
+                        <option value="Apache HTTP">Apache HTTP</option>
+                    </select>
+                </td>
+            </tr>
+            <div class="role-form">
+                <tr>
+                    <td>
+                        <label>Please specify your role:</label>
+                    </td>
+                    <div class="item-role">
+                        <td>
+                            <div>
+                                <label>
+                                    <input type="radio" type="radio" name="role" value="0">
+                                    Admin</label>
+                            </div>
+                            <div>
+                                <label>
+                                    <input type="radio" name="role" value="1">
+                                    Engineer</label>
+                            </div>
+                            <div>
+                                <label>
+                                    <input type="radio" name="role" value="2">
+                                    Manager</label>
+                            </div>
+                            <div>
+                                <label>
+                                    <input type="radio" name="role" value="3">
+                                    AGuest</label>
+                            </div>
+                        </td>
+                    </div>
+                </tr>
+            </div>
+            <!-- End role-form -->
+            <div class="sigle-form">
+                <tr>
+                    <td>
+                        <label>Single sign-on so the following:</label>
+                    </td>
+                    <div class="item-sigle">
+                        <td>
+                            <div>
+                                <label>
+                                    <input type="checkbox" name="Single" id="mail" name="source[]" value="0">
+                                    Mail</label>
+                            </div>
+                            <div>
+                                <label>
+                                    <input type="checkbox" name="Single" id="payroll" name="source[]" value="1">
+                                    Payroll</label>
+                            </div>
+                            <div>
+                                <label>
+                                    <label>
+                                        <input type="checkbox" name="Single" id="service" name="source[]" value="2">
+                                        Self-service</label>
+                            </div>
+                        </td>
+                    </div>
+                </tr>
+            </div>
+            <!-- End sigle-form -->
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit">Login</button>
+                    <button type="submit">Reset</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

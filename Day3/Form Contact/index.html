@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Contact Form</title>
+</head>
+
+<body>
+    <footer>
+        <div class="header-contact">
+            <h3>CONTACT US</h3>
+        </div>
+        <!-- <hr  align="left" /> -->
+        <p></p>
+        <div class="contact-from">
+            <div class="contact-infor">
+                <h4>Contact Info</h4>
+                <div class="infor">
+                    <i class="fa-sharp fa-solid fa-location-dot"
+                        style="--fa-primary-color: #ffffff; --fa-secondary-color: #898f9a"></i>
+                    321 Awesome Street New York, NY 17022
+                </div>
+                <div class="infor">
+                    <i class="fa-regular fa-envelope"></i>
+                    info@companyname.com
+                </div>
+                <div class="infor">
+                    <i class="fa-solid fa-phone"></i>
+                    +1 800 123 1234
+                </div>
+            </div>
+            <!-- End contact-infor -->
+            <div class="form-input">
+                <form action="https://api-gateway.fullstack.edu.vn/action_page.php" method="post">
+                    <span>Having Any Query! Or Book an appointment</span>
+                    <div class="input-type">
+                        <input name="name" type="text" placeholder=" Your Name" id="name" />
+                    </div>
+                    <div class="input-type">
+                        <input name="email" type="email" placeholder=" Your Email" id="email"/>
+                    </div>
+                    <div class="input-type">
+                        <input name="subject" type="text" placeholder=" Subject" id="subject"/>
+                    </div>
+                    <div class="input-type">
+                        <textarea name="message" placeholder=" Message" id="message"></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+            <!-- End form-input -->
+        </div>
+    </footer>
+</body>
+
+</html>
