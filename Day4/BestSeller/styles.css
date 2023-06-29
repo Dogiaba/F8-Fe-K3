@@ -112,4 +112,8 @@ input:nth-of-type(5):checked ~ .nav-seller a:nth-of-type(5) {
   color: #fff;
 }
 
+input:nth-of-type(1):checked ~ .items-img p:nth-of-type(1){
+  color: red;
+}
+
 
