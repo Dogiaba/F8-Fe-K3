@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Book Table</title>
+  </head>
+  <body>
+    <div class="head-title">
+      <h2>RESERVATION</h2>
+      <h3>Book your table</h3>
+    </div>
+    <form
+      action="https://api-gateway.fullstack.edu.vn/action_page.php"
+      method="post"
+    >
+      <table align="center" width="90%" cellspacing="0" cellpadding="4">
+        <tr>
+          <td>
+            <input type="text" name="name" placeholder=" NAME" />
+            <input type="email" name="email" placeholder=" EMAIL" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" name="date" placeholder=" DATE" />
+            <input type="text" name="time" placeholder=" TIME" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="number" name="people" min="1" placeholder=" PEOPLE" />
+            <button type="submit">Find A Table</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

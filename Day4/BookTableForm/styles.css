@@ -1,0 +1,47 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Crimson+Text&family=Poppins:ital,wght@1,200;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;1,300&display=swap');
+
+/* head-title */
+.head-title{
+    text-align: center;
+}
+h2{
+    font-family:'BebasNeue', sans-serif;
+    color: #3C2819;
+    font-size: 120%;
+    margin-top: 30px;
+}
+h3{
+    font-family:'Alfa Slab One', sans-serif;
+    font-weight:bolder ;
+    color: #392516;
+    margin: 0px 0px 7px 0px;
+    font-size: 300%;
+}
+/* End head-title */
+
+/* table */
+input{
+    width:45%;
+    height:35px;
+    margin: 6px
+}
+input::placeholder{
+    font-family:'BebasNeue', sans-serif;
+    font-weight:bolder;
+    color: black;
+}
+button{
+    background: #ba2424;
+    font-family:'Alfa Slab One', sans-serif;
+    color: #fff;
+    text-align: center;
+    border: none;
+    width: 46%;
+    height: 41px;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+/* End table */
+
+
