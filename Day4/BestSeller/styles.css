@@ -78,6 +78,11 @@ img {
   padding: 12px;
 }
 
+p{
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
 .btn-add {
   background: #28378d;
   padding: 13px;
