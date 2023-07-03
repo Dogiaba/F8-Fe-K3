@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Form Submit</title>
+</head>
+
+<body>
+  <div class="form_submit">
+    <h2>Hey there</h2>
+    <p>
+      <span id="text_title">We'd like to hear from you.</span class="text_color"><span> Send us your
+        message or just say hy with our contact form or directly via phone, we
+        love to chat.</span>
+    </p>
+    <form action="https://api-gateway.fullstack.edu.vn/action_page.php" method="post">
+      <table width="100%" cellspacing="0" cellpadding="4">
+        <tr>
+          <td>
+            <div class="item_input">
+              <span class="item_iconLeft"><i class="fa-solid fa-user"></i></span>
+              <!-- End item_iconLeft -->
+              <input type="text" name="name_input" placeholder=" Your name" class="input_type" required />
+              <!-- <span class="show_mess">Enter your name</span> -->
+              <span class="item_iconRight"><i class="fa-solid fa-star"></i></span>
+              <!-- End item_iconRight -->
+            </div>
+            <!-- END item_input -->
+          </td>
+        </tr>
+<!--------------------->
+        <tr>
+          <td>
+            <div class="item_input">
+              <span class="item_iconLeft"><i class="fa-solid fa-envelope"></i></span>
+              <!-- End item_iconLeft -->
+              <input type="email" name="email_input" placeholder=" your@domain.com" class="input_type" required />
+              <span class="item_iconRight"><i class="fa-solid fa-star"></i></span>
+              <!-- End item_iconRight -->
+            </div>
+            <!-- END item_input -->
+          </td>
+        </tr>
+<!-- -------------------->
+        <tr>
+          <td>
+            <div class="item_input">
+              <span class="item_iconLeft"><i class="fa-solid fa-mobile-screen"></i></span>
+              <!-- End item_iconLeft -->
+              <input type="number" name="phone_input" placeholder=" +44 00 123" class="input_type" required />
+            </div>
+            <!-- END item_input -->
+          </td>
+        </tr>
+<!------------------------>
+        <tr>
+          <td>
+            <div class="item_input">
+              <span class="item_iconLeft"><i class="fa-solid fa-folder"></i></span>
+              <!-- End item_iconLeft -->            
+              <select name="subject" id="subject_input">
+                <option value="Subject">Subject</option>
+                <option value="VN">Viet Nam</option>
+                <option value="Lao">Lao</option>
+                <option value="CN">China</option>
+              </select>
+            </div>
+            <!-- END item_input -->
+          </td>
+        </tr>
+<!----------------------->
+        <tr>
+          <td>
+            <div class="item_input">
+              <span class="item_iconLeft_textarea"><i class="fa-solid fa-message mess"></i></span>
+              <!-- End item_iconLeft_textarea -->
+              <textarea placeholder=" Message" required></textarea>
+              <span class="item_iconRight"><i class="fa-solid fa-star"></i></span>
+              <!-- End item_iconRight -->
+            </div>
+            <!-- END item_input -->
+          </td>
+        </tr>
+<!----------------------->
+        <tr>
+          <td>
+            <div class="send_form">
+              <label class="text_checkbox" for="checkbox">
+                <input type="checkbox" name="checkbox_send"/>
+                <span class="text_color">Send me a copy of this message</span>
+                <!-- End text_color -->
+              </label>
+              <!-- End text_checkbox -->
+              <button type="submit">SEND</button>
+            </div>
+            <!-- End send_form -->
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</body>
+
+</html>
