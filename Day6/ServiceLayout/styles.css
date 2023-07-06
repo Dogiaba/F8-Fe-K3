@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Crimson+Text&family=Lato:ital,wght@0,300;0,400;1,300&family=Lobster&family=Open+Sans:wght@300&family=Poppins:ital,wght@1,200;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;1,300;1,400&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background: #ecf4fc;
+}
+img {
+  width: 20%;
+  height: auto;
+}
+.container {
+  padding: 20px 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.container .items_content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 4%;
+  box-shadow: 3px 3px 3px #e0e8ef;
+}
+.items_content img {
+  display: block;
+  float: left;
+  margin-right: 12px;
+}
+p {
+  clear: both;
+  margin: 20px 0;
+}
+a {
+  color: #4a7ced;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.items_content:hover {
+  border: 2px solid red;
+}

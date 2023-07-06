@@ -11,6 +11,12 @@ h2 {
 #text_title {
   color: red;
 }
+
+form {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 /* ---------item_input name/email/phone/subject -----------*/
 .item_input {
   position: relative;

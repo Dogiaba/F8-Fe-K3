@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Crimson+Text&family=Lato:ital,wght@0,300;0,400;1,300&family=Lobster&family=Open+Sans:wght@300&family=Poppins:ital,wght@1,200;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;1,300&display=swap");
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+nav li {
+  float: left;
+  position: relative;
+  border: 1px solid #ccc;
+}
+nav a {
+  text-decoration: none;
+  color: #666;
+  display: block;
+  font-weight: 400px;
+  padding: 14px 22px;
+  font-size: 14px;
+}
+
+nav a:hover{
+    color: #fff !important;
+}
+
+li:hover:not(.null) {
+  background: #53a2d4;
+}
+
+.dropdow_items {
+  visibility: hidden;
+  opacity: 0;
+  min-width: 170px;
+  position: absolute;
+  padding-left: 0px;
+  margin-top: 10px;
+  transition-duration: 0.5s;
+  box-shadow: 3px 3px 2px rgb(194, 193, 193);
+}
+.null {
+  padding: 9px 122px;
+}
+.fa-solid {
+  margin: 0 10px;
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+ul li ul li {
+  clear: both;
+  width: 100%;
+}
