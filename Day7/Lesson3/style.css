@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Asap:ital,wght@0,200;1,100&family=Bebas+Neue&family=Crimson+Text&family=Lato:ital,wght@0,300;0,400;1,300&family=Lobster&family=Nunito:wght@200;300&family=Open+Sans:wght@300&family=Poppins:ital,wght@1,200;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;1,300;1,400&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Asap',sans-serif;
+    background:#F3F1EF;
+}
+.container{
+    width: 1154px;
+    margin: 12px auto;
+}
+
+h1{
+    font-size: 17px;
+}
+/* -----line------- */
+.container h1::after{
+    content: "";
+    position: absolute;
+    width: 730px;
+    height: 2px;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: rgb(208, 208, 208);
+}
+.location_nav ul{
+    display: flex;
+    gap: 14px;
+}
+.location_nav ul li{
+    list-style: none;
+    background: #E4E4E4;
+    padding: 12px;
+    margin: 12px 2px;
+    border-radius: 30px;
+}
+
+.location_nav ul li a{
+    text-decoration: none;
+    /* text-align: center; */
+    color: black;
+    font-weight: bolder;
+    position: relative;
+    justify-content: center;
+    font-size: 15px;
+}
+.location_nav ul li a > i{
+    font-size: 12px;
+}
+/*-- gid---- */
+.cards{
+    margin: 15px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 22.5rem);
+    grid-gap: 1.5rem ;
+
+}
+
+.cards img{
+    /* width: 290px;*/
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+
+}
+.img_card{
+    position: relative;
+    box-shadow: 0 0 10px #a7a7a7;
+    border-radius: 4px;
+    /* -------Zoom on hover-------- */
+    overflow: hidden;
+
+}
+    /* -----Zoom on hover --------*/
+.img_card img{
+    transform: scale 400ms;
+}
+    /* -----Zoom on hover --------*/
+.img_card:hover img{
+    scale: 110%;
+
+}
+.text_img{
+    position: absolute;
+
+}
+.location{
+    top: 20px;
+    left: 23px;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 26px;
+}
+.status{
+    left: 23px;
+    bottom: 20px;
+    color: #fff;
+    font-weight: 600;
+}
+.status .first_text{
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+/* ------------hover nav ------------*/
+.location_nav ul li:hover,
+.location_nav ul li a:hover{
+    background: #AE7B37;
+    color: #fff;
+}
+
+
+

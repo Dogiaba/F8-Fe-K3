@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Asap:ital,wght@0,200;1,100&family=Bebas+Neue&family=Crimson+Text&family=Lato:ital,wght@0,300;0,400;1,300&family=Lobster&family=Nunito:wght@200;300&family=Open+Sans:wght@300&family=Poppins:ital,wght@1,200;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Asap:ital,wght@0,200;1,100&family=Bebas+Neue&family=Crimson+Text&family=Lato:ital,wght@0,300;0,400;1,300&family=Lobster&family=Nunito:wght@200;300&family=Open+Sans:wght@300&family=Oswald:wght@300;400&family=Poppins:ital,wght@1,200;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;1,300;1,400&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.banner_img{
+    position: relative;
+}
+
+.banner_img img{
+    width: 100%;
+
+}
+span{
+    color: #DC5D55;
+    font-size: 20px;
+
+}
+.banner_img .describe{
+    font-family:"Asap", sans-serif;
+    background:#fafaf8cf;
+    color: #3f3424;
+    position: absolute;
+    max-width: 42%;
+    min-height: 34%;
+    top: 27%;
+    left:13%;
+    padding: 27px 19px;
+    font-size: 13px;
+    font-weight: bolder;
+    line-height: 19px;
+}
+
+/* .describe .location::before{
+    content: "\f167" ;
+} */
+.describe > p{
+    margin: 15px 0;
+   
+}
+.describe .location{
+    display: flex;
+}
+
+.fa-solid{
+    margin: 0 3px;
+    font-size: 16px;
+}
+.location > p{
+    font-size: 14px;
+}
+.btn{
+    font-family: "Oswald", sans-serif;
+    position: absolute;
+    top: 244px;
+    right: 571px;
+    background: #DC5D55;
+    font-size: 20px;
+    color: #fff;
+    padding: 9px 15px;
+    border-radius: 4px;
+}
