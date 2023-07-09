@@ -42,11 +42,10 @@ h1{
 
 .location_nav ul li a{
     text-decoration: none;
-    /* text-align: center; */
     color: black;
     font-weight: bolder;
-    position: relative;
-    justify-content: center;
+    /* position: relative;
+    justify-content: center; */
     font-size: 15px;
 }
 .location_nav ul li a > i{
