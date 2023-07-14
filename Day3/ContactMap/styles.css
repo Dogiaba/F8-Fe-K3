@@ -7,29 +7,27 @@
 body{
      margin: 2%;
     }
-nav{
-    border: 2px solid rgb(186, 137, 2);
-    width: 46%;
-    text-align: center;
-}
-nav a{
-    display:inline-block;
-    padding:12px;
-    font-size:20px;
-    color:rgb(186, 137, 2);
-    text-decoration:none;
 
+.contact_list{
+    border: 1px solid rgb(186, 137, 2);
+    display: inline-block;
 }
 
-nav a:hover{
+.contact_list ul li{
+ display: inline-block;
+}
+
+.contact_list ul li a{
+    display: inline-block;
+    padding: 15px 80px;
+    color: #af9656;
+    text-decoration: none;
+}
+
+.contact_list ul li:hover a{
     background-color:rgb(186, 137, 2);
     color: #fff;
 }
-a{
-    color:rgb(186, 137, 2) ;
-
-}
-
 .contact-infor{
     background-color: rgb(251, 246, 239);
 
