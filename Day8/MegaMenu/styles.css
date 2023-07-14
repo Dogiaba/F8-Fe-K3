@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Asap:ital,wght@0,200;1,100&family=Bebas+Neue&family=Crimson+Text&family=Lato:ital,wght@0,300;0,400;1,300&family=Lobster&family=Manrope:wght@200;300;400&family=Nunito:wght@200;300&family=Open+Sans:wght@300&family=Oswald:wght@300;400&family=Poppins:ital,wght@1,200;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;1,300;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Manrope", sans-serif;
+    background: #FAFAFC;
+}
+
+nav{
+    /* position: fixed; */
+    width: 100%;
+}
+
+nav .nav_header{
+    position: relative;
+    max-width: 1300px;
+    padding: 0 30px;
+    height: 70px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav_header .logo a{
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.fa-chevron-down{
+    font-size: 12px;
+}
+
+.search{
+    margin-left:20px ;
+}
+.right_nav{
+    display: flex;
+}
+
+.right_nav li{
+    list-style: none;
+}
+.right_nav li a{
+    text-decoration: none;
+    color: black;
+    padding: 9px 15px;
+    transform: all 0.4s ease;
+}
+
+/* Hover right_nav */
+.right_nav li > a:hover{
+    color: rgba(0, 0, 0, 0.42);
+}
+
+.mega_menu{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 0 30px;
+    top: 100px;
+
+    opacity: 0;
+    visibility: hidden;
+}
+/* Hover mega_menu */
+.right_nav li:hover .mega_menu{
+    transition: all 0.7s;
+    top: 54px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.mega_menu .item_megaMenu{
+    background: #fff;
+    border-radius: 4px;
+    padding: 25px 21px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: 0 0 10px #cbcbcb;
+}
+.manin_items{
+    /* width: 25%; */
+    line-height: 40px;
+}
+.manin_items:nth-child(3){
+    margin-left: 30px;
+    border-left: 1px solid rgba(128, 128, 128, 0.139);
+
+}
+.item_mega li{
+    padding: 0 15px;
+}

@@ -13,6 +13,8 @@
 
 .banner_img img{
     width: 100%;
+    min-height: 500px;
+    background-size: cover;
 
 }
 span{
@@ -35,9 +37,7 @@ span{
     line-height: 19px;
 }
 
-/* .describe .location::before{
-    content: "\f167" ;
-} */
+
 .describe > p{
     margin: 15px 0;
    
@@ -53,14 +53,15 @@ span{
 .location > p{
     font-size: 14px;
 }
-.btn{
+
+.describe .btn{
     font-family: "Oswald", sans-serif;
     position: absolute;
-    top: 244px;
-    right: 571px;
+    top: 125px;
+    right: 34px;
     background: #DC5D55;
     font-size: 20px;
     color: #fff;
-    padding: 9px 15px;
+    padding: 13px 15px;
     border-radius: 4px;
 }

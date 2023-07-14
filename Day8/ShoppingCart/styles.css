@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Asap:ital,wght@0,200;1,100&family=Bebas+Neue&family=Crimson+Text&family=Lato:ital,wght@0,300;0,400;1,300&family=Lobster&family=Manrope:wght@200;300;400&family=Nunito:wght@200;300&family=Open+Sans:wght@300&family=Oswald:wght@300;400&family=Poppins:ital,wght@1,200;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;1,300;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Nunito", sans-serif;
+    background: gray;
+    overflow-x: hidden;
+}
+.right_cart{
+    position: absolute;
+    top: 0;
+    right:0;
+    height: auto;
+    width: 340px;
+    background-color: #fff;
+}
+.head_cart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #F3F3F3;
+    padding: 20px;
+}
+h2{
+    position: relative;
+    font-size: 20px;
+}
+.head_cart h2::after{
+    content: "4";
+    position: absolute;
+    font-size: 9px;
+    background: #405FF2;
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 50%;
+} 
+
+.fa-circle-xmark{
+    background-color: rgba(255, 0, 0, 0.565);
+    color: #fff;
+    font-size: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.fa-circle-xmark:hover{
+    transform: scale(1.1);
+}
+
+.images img{
+    width: 60px;
+    background:#FDF8EE;
+}
+
+.products .product_item:nth-child(1){
+    border-bottom: 1px solid gainsboro;
+    padding: 18px 0;
+
+}
+.product_item{
+    display: flex;
+
+    margin: 20px 16px ;
+}
+
+.detail_product{
+    margin: 0 23px;
+}
+.detail_product .fa-xmark{
+    margin-left: 4px;
+    font-size: 17px;
+    color: rgb(194, 190, 190);
+    cursor: pointer;
+}
+.detail_product .fa-xmark:hover{
+    transform: scale(1.1);
+}
+.price_infor{
+    display: flex;
+    margin: 12px 0;
+}
+.quantity_product{
+    border: 1px solid rgb(142, 6, 6);
+    width: 90px;
+    text-align: center;
+    padding: 3px;
+    border-radius: 50px;
+    color:rgb(142, 6, 6);
+    
+}
+.quantity_product .numbers{
+    margin: 0 15px;
+    font-size: 15px;
+}
+.quantity_product + span{
+    margin-left: 45px;
+    font-weight: 700;
+    margin-top: 3px;
+}
+
+.total_product{
+    display: flex;
+    padding: 12px 16px;
+    font-weight: bolder;
+    font-size: 17px;
+}
+
+.total_product p:nth-child(2){
+    margin-left: 177px;
+    color: rgb(235, 74, 74);
+}
+.check_product #text_checkout{
+    color: rgb(180, 177, 177);
+    font-size: 14px;
+    padding: 16px;
+}
+.btn{
+    padding: 9px 16px;
+}
+.btn button{
+    width: 303px;
+    height:40px;
+    /* padding: 16px 0; */
+}
+.view_cart button{
+    background: #fff;
+    border: 1px solid gainsboro;
+    color: rgb(171, 171, 171);
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.view_cart button:hover{
+    background-color: rgb(208, 208, 208);
+    color: #FFF;
+}
+.Add_cart{
+    padding: 20px 0;
+}
+.Add_cart button{
+    background: #405FF2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.Add_cart button:hover{
+    opacity: 0.8;
+}
+.shipp_product{
+    display: flex;
+    padding: 20px 16px;
+}
+.fa-truck-fast{
+    color: #405FF2;
+    font-size: 20px;
+    border: 1px solid #405FF2;
+    border-radius: 50%;
+    padding: 10px;
+}
+.shipp_product p{
+    margin-left: 20px;
+    font-weight: 700;
+    margin-top: 10px;
+
+}

@@ -41,5 +41,5 @@ a {
 }
 
 .items_content:hover {
-  border: 2px solid red;
+  outline: 2px solid red;
 }

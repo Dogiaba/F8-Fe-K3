@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Shopping Cart Mini</title>
+  </head>
+  <body>
+    <div class="right_cart">
+      <div class="head_cart">
+        <h2>Shopping Cart</h2>
+        <span class="xmark_icon">
+          <i class="fa-regular fa-circle-xmark"></i>
+        </span>
+      </div>
+
+      <div class="products">
+        <div class="product_item">
+          <div class="images">
+            <img src="./image/iphone-13-pink-select-2021.png" alt="iphone" />
+          </div>
+          <div class="detail_product">
+            <span>Asinity Queen Poster Bed</span>
+            <i class="fa-solid fa-xmark"></i>
+            <div class="price_infor">
+              <div class="quantity_product">
+                <span>-</span>
+                <span class="numbers">1</span>
+                <span>+</span>
+              </div>
+              <span>1x $570</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product_item">
+          <div class="images">
+            <img src="./image/iphone-13-pink-select-2021.png" alt="iphone" />
+          </div>
+          <div class="detail_product">
+            <span>Asinity Queen Poster Bed</span>
+            <i class="fa-solid fa-xmark"></i>
+            <div class="price_infor">
+              <div class="quantity_product">
+                <span>-</span>
+                <span class="numbers">1</span>
+                <span>+</span>
+              </div>
+              <span>1x $570</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="total_product">
+        <p id="subtotal">Subtotal</p>
+        <p id="price_total">$920.00</p>
+      </div>
+
+      <div class="check_product">
+        <span id="text_checkout"
+          >Taxes and shipping calculated at checkout</span
+        >
+        <div class="btn">
+          <div class="view_cart">
+            <button type="button">View Cart</button>
+          </div>
+          <div class="Add_cart">
+            <button type="submit">Add To Cart</button>
+          </div>
+        </div>
+        <div class="shipp_product">
+          <i class="fa-solid fa-truck-fast"></i>
+          <p>Spend $ 499.00 to Free Shipping</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
