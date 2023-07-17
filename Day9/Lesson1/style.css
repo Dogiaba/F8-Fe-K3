@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Asap:ital,wght@0,200;1,100&family=Bebas+Neue&family=Crimson+Text&family=Lato:ital,wght@0,300;0,400;1,300&family=Lobster&family=Manrope:wght@200;300;400&family=Nunito:wght@200;300&family=Open+Sans:wght@300&family=Oswald:wght@300;400&family=Poppins:ital,wght@1,200;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;1,300;1,400&family=Space+Grotesk:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Asap:ital,wght@0,200;1,100&family=Bebas+Neue&family=Crimson+Text&family=Inter:wght@100;200&family=Lato:ital,wght@0,300;0,400;1,300&family=Lobster&family=Manrope:wght@200;300;400&family=Nunito:wght@200;300&family=Open+Sans:wght@300&family=Oswald:wght@300;400&family=Poppins:ital,wght@1,200;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;1,300;1,400&family=Space+Grotesk:wght@300;400;500&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --font-heading:"Space Grotesk";
+    --font-text:"Inter";
+    --size-text:14px;
+    --color-text: #949497;
+}
+
+.time_line{
+    margin: 15px auto;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.list_time{
+    margin-right: 267px; 
+}
+.detail_timeline{
+    display: flex;
+
+
+}
+.hear_title{
+    text-align: right;
+    width: 322px;
+    height: 140px;
+    position: relative;
+
+    
+}
+.hear_title h2{
+    font-family:var(--font-heading), sans-serif ;
+}
+.text{
+    margin: 15px 0;
+    color: var(--color-text);
+}
+.btn button{
+    border-radius: 50px;
+    border: none;
+    padding: 7px 17px;
+    font-size: var(--size-text);
+    color: var(--color-text);
+    cursor: pointer;
+
+}
+.circle i{
+    color: #4AA495;
+    margin: 6px 13px;
+    font-size: 12px;
+    outline: 1px solid #EDF6F4;
+    background-color: #EDF6F4;
+    padding: 5px;
+    border-radius: 50%;
+}
+.times{
+    margin: 6px 0;
+    font-family: var(--font-text), sans-serif;
+    font-size: var(--size-text);
+    color: var(--color-text);
+    position: relative;
+
+}
+.line_left{
+    content: "";
+    width: 1px;
+    height: 135px;
+    background-color: #ebebeb;
+    position: relative;
+    left: 23px;
+}
+
+
+.images{
+    position: relative;
+
+}
+.images .img1{
+    width: 281px;
+    height: 300px;
+    display: block;
+
+}
+.images .img2{
+    width: 163px;
+    height: 237px;
+    display: block;
+    position: absolute;
+    top: 108px;
+    right: 188px;
+    border: 10px solid hsla(0, 0%, 100%, 0.521);
+}
+
+.hear_title:hover .btn button{
+    background: #A26F5A;
+    color: #FFF;
+
+}
+.detail_timeline:hover .hear_title{
+    left: 83%;
+    text-align: left;
+
+}
+
+.detail_timeline:hover .times{
+    right: 30%;
+
+}

@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Asap:ital,wght@0,200;1,100&family=Bebas+Neue&family=Crimson+Text&family=Lato:ital,wght@0,300;0,400;1,300&family=Lobster&family=Manrope:wght@200;300;400&family=Nunito:wght@200;300&family=Open+Sans:wght@300&family=Oswald:wght@300;400&family=Poppins:ital,wght@1,200;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;1,300;1,400&family=Space+Grotesk:wght@300;400;500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    font-family: "Space Grotesk",sans-serif;
+    /* display: flex;
+    justify-content: center; */
+}
+.cards{
+    max-width: 1200px;
+    margin: 12px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.items_card{
+    border: 1px solid rgb(202, 202, 202);
+    width: 315px;
+    height: 245px;
+    margin: 10px;
+    padding: 30px 20px;
+    position: relative;
+
+}
+
+.items_card > i{
+    font-size: 30px;
+    color: #A57460;
+}
+
+.hear_title{
+    position: absolute;
+    top: 95px;
+    transition: 0.5s ease;
+}
+h2{
+    font-size: 20px;
+    margin: 12px 0;
+}
+.content{
+    font-size: 14px;
+}
+.learn_more{
+    position: absolute;
+    opacity: 0;
+    bottom: 0;
+    transition: 0.5s ease;
+}
+
+.learn_more a{
+    text-decoration: none;
+    color: #fff;
+
+}
+.learn_more a > i{
+    border: 1px solid #fff;
+    padding: 5px 6px;
+    border-radius: 50%;
+}
+
+.items_card:hover .hear_title{
+    top: 20px;
+    color: #fff;
+
+}
+
+.items_card:hover {
+    background:url('./image/photo-1688375111155-bf328b1a1d9e.avif') no-repeat center;
+
+}
+
+.items_card:hover .learn_more {
+    opacity: 1;
+    bottom: 30px;
+}
+.learn_more:hover i{
+    color: black;
+    background: #fff;
+}
+.items_card:hover > i{
+    opacity: 0;
+}

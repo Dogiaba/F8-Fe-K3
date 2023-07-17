@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Lesson 3</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="text_header">
+        <h2>Drop Us A Line</h2>
+        <p>
+          Reach out to us from our contact form and we will get back to you
+          shorly
+        </p>
+      </div>
+      <form action="#">
+        <div class="form_row">
+          <div class="input_form">
+            <input type="text" name="firstName" id="firstName" required />
+            <label for="">First Name*</label>
+          </div>
+          <div class="input_form">
+            <input type="text" name="lasttName" id="lasttName" required />
+            <label for="">Last Name*</label>
+          </div>
+        </div>
+
+        <div class="form_row">
+          <div class="input_form">
+            <input type="email" name="email" id="email" required />
+            <label for="">Email*</label>
+          </div>
+
+          <div class="input_form">
+            <select name="sales" id="sales_input" required>
+              <option value="sales">Sales</option>
+              <option value="salesAD">Sales Admin</option>
+              <option value="salesM">Sales Marketing</option>
+              <option value="salesMa">Sales Manager</option>
+            </select>
+          </div>
+        </div>
+
+          <div class="textarea-input">
+            <textarea name="" id="" cols="30" rows="10" required></textarea>
+            <label for="textarea">Message *</label>
+          </div>
+ 
+        <div class="btn">
+          <button type="submit">Send message</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
