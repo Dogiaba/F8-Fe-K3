@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>VIKINGER</title>
+  </head>
+  <body>
+    <div class="account">
+      <div class="infor_account">
+        <div class="logo">
+          <img src="./icon-pj2/svgexport-1.svg" alt="img" />
+        </div>
+        <div class="title">
+          <span class="title_sm">WELCOME TO</span>
+          <h1 class="title_big">VIKINGER</h1>
+        </div>
+        <p class="infor_text">
+          The next generation social network &amp; community! Connect with your
+          friends and play with our quests and badges gamification system!
+        </p>
+
+        <div class="change_tab">
+          <input type="radio" name="tab" id="radi_login" hidden />
+          <input type="radio" name="tab" id="radi_register" hidden />
+          <div class="nav_tab">
+            <label for="radi_login" class="login-tab">Login</label>
+            <label for="radi_register" class="register-tab">Register</label>
+          </div>
+        </div>
+      </div>
+      <!-- End infor_account -->
+      <div class="acount_form">
+        <div class="container_form login_form">
+          <div class="rocket">
+            <img src="./icon-pj2/rocket.png" alt="rocket" />
+          </div>
+          <h3>Account Login</h3>
+          <form action="">
+            <div class="input_form">
+              <input type="text" name="username_email" id="username_email" />
+              <label for="username_email">Username or Email</label>
+            </div>
+
+            <div class="input_form">
+              <input type="text" name="username_email" id="username_email" />
+              <label for="username_email">Password</label>
+            </div>
+
+            <div class="form_row">
+              <div class="check_form">
+                <input
+                  type="checkbox"
+                  name="checkbox_reme"
+                  id="checkbox_reme"
+                  hidden
+                />
+                <label for="checkbox_reme">
+                  <div class="check_config">
+                    <img src="./icon-pj2/svgexport-2.svg" alt="" />
+                  </div>
+                  <span class="text_reme">Remember Me</span>
+                </label>
+              </div>
+              <!-- End check_form Login -->
+              <div class="forgot">
+                <a href="#">Forgot Password</a>
+              </div>
+            </div>
+            <!-- End form_row Login -->
+            <div class="btn btn_login">
+              <button type="submit">Login to your Account</button>
+            </div>
+          </form>
+
+          <div class="login_social">Login with your Social Account</div>
+          <span class="lined_text"></span>
+
+          <div class="socials">
+            <a href="#" class="social_item facebook">
+              <img src="./icon-pj2/svgexport-3.svg" alt="" />
+            </a>
+
+            <a href="#" class="social_item twitter">
+              <img src="./icon-pj2/svgexport-4.svg" alt="" />
+            </a>
+
+            <a href="#" class="social_item chat">
+              <img src="./icon-pj2/svgexport-5.svg" alt="" />
+            </a>
+
+            <a href="#" class="social_item youtube">
+              <img src="./icon-pj2/svgexport-6.svg" alt="" />
+            </a>
+          </div>
+        </div>
+        <!-- End container_form Login -->
+
+        <div class="container_form create_form">
+          <div class="rocket">
+            <img src="./icon-pj2/rocket.png" alt="rocket" />
+          </div>
+          <h3>Create your Account!</h3>
+          <form action="">
+            <div class="input_form">
+              <input type="text" name="your_email" id="your_email" />
+              <label for="your_email">Your Email</label>
+            </div>
+
+            <div class="input_form">
+              <input type="text" name="username" id="username" />
+              <label for="username">Username</label>
+            </div>
+
+            <div class="input_form">
+              <input type="password" name="password" id="password" />
+              <label for="password">Password</label>
+            </div>
+
+            <div class="input_form">
+              <input
+                type="password"
+                name="repeat_password"
+                id="repeat_password"
+              />
+              <label for="repeat_password">Repeat Password</label>
+            </div>
+
+            <div class="form_row">
+              <div class="check_form">
+                <input
+                  type="checkbox"
+                  name="checkbox_mail"
+                  id="checkbox_mail"
+                  hidden
+                />
+                <label for="checkbox_mail">
+                  <div class="check_config">
+                    <img src="./icon-pj2/svgexport-2.svg" alt="" />
+                  </div>
+                  <span class="text_reme"
+                    >Send me news and updates via email</span>
+                </label>
+
+              </div>
+            </div>
+            <div class="btn btn_create">
+              <button type="submit">Register Now!</button>
+            </div>
+          </form>
+          <p class="contact">
+            You'll receive a confirmation email in your inbox with a link to
+            activate your account. If you have any problems,
+            <a href="#">contact us</a>!
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

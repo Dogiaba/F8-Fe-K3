@@ -1,0 +1,458 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Asap:ital,wght@0,200;1,100&family=Crimson+Text&family=Inter:wght@100;200&family=Lato:ital,wght@0,300;0,400;1,300&family=Lobster&family=Manrope:wght@200;300;400&family=Montserrat:ital,wght@0,200;0,400;1,300&family=Nunito:wght@200;300&family=Open+Sans:wght@300&family=Oswald:wght@300;400&family=Poppins:ital,wght@1,200;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;1,300;1,400&family=Space+Grotesk:wght@300;400;500&family=Titillium+Web:wght@200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Asap:ital,wght@0,200;1,100&family=Crimson+Text&family=Inter:wght@100;200&family=Lato:ital,wght@0,300;0,400;1,300&family=Lobster&family=Manrope:wght@200;300;400&family=Montserrat:ital,wght@0,200;0,400;1,300&family=Nunito:wght@200;300&family=Open+Sans:wght@300&family=Oswald:wght@300;400&family=Poppins:ital,wght@1,200;1,500&family=Rajdhani:wght@300;400;500&family=Roboto:ital,wght@0,100;0,300;0,400;1,300;1,400&family=Space+Grotesk:wght@300;400;500&family=Titillium+Web:wght@200;300;400;700;900&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, .account .acount_form .login_form blockquote.login_social::after, blockquote:after,
+q:before,
+.account .acount_form .login_form q.login_social::after, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.account {
+  width: 1200px;
+  margin: 15px auto;
+  display: flex;
+}
+.account .infor_account {
+  color: #fff;
+  text-align: center;
+  margin-top: 200px;
+  padding: 15px;
+  margin-right: 26%;
+}
+.account .infor_account > .title {
+  margin-top: 36px;
+  font-family: "Titillium Web", sans-serif;
+}
+.account .infor_account > .title .title_sm {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.account .infor_account > .title .title_big {
+  font-size: 6.5rem;
+  font-weight: 900;
+}
+.account .infor_account .infor_text {
+  width: 384px;
+  margin: 30px auto 0;
+  font-size: 1.125rem;
+  line-height: 1.3333333333em;
+  font-weight: 500;
+}
+.account .infor_account .change_tab {
+  margin-left: 40px;
+  margin-top: 90px;
+  font-family: "Rajdhani", sans-serif;
+}
+.account .infor_account .change_tab #radi_login:checked ~ .nav_tab .login-tab {
+  background-color: #fff;
+  color: #3e3f5e;
+}
+.account .infor_account .change_tab #radi_login:checked ~ .acount_form .create_form {
+  transform: translate(50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+}
+.account .infor_account .change_tab #radi_register:checked ~ .nav_tab .register-tab {
+  background-color: #fff;
+  color: #3e3f5e;
+}
+.account .infor_account .change_tab #radi_register:checked ~ .acount_form .login_form {
+  transform: translateX(50%);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+}
+.account .infor_account .change_tab .nav_tab {
+  display: flex;
+  justify-content: center;
+  width: 360px;
+  max-width: 94vw;
+}
+.account .infor_account .change_tab .nav_tab label {
+  font-weight: 700;
+  height: 54px;
+  width: 100%;
+  border: 1px solid #fff;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 54px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.account .infor_account .change_tab .nav_tab .login-tab {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+.account .infor_account .change_tab .nav_tab .register-tab {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.account .acount_form {
+  font-family: "Rajdhani", sans-serif;
+}
+.account .acount_form .container_form {
+  width: 400px;
+  padding: 40px;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 0 60px 0 rgba(94, 92, 154, 0.12);
+  position: relative;
+}
+.account .acount_form .login_form > .rocket {
+  position: absolute;
+  top: 9px;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+.account .acount_form .login_form h3 {
+  text-align: center;
+  font-size: 1.625rem;
+  font-weight: 700;
+  margin-bottom: 59px;
+}
+.account .acount_form .login_form form {
+  margin-top: 76px;
+  width: 100%;
+}
+.account .acount_form .login_form form .input_form {
+  position: relative;
+  width: 100%;
+  font-size: 1.2rem;
+  line-height: 24px;
+}
+.account .acount_form .login_form form .input_form + .input_form {
+  margin-top: 28px;
+}
+.account .acount_form .login_form form .input_form label {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease-in-out;
+  color: #adafca;
+  font-weight: 600;
+  padding: 0 5px;
+  background-color: #fff;
+  pointer-events: none;
+}
+.account .acount_form .login_form form .input_form input {
+  width: 90%;
+  padding: 0 18px;
+  height: 54px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  outline: none;
+  transition: border 0.3s ease-in-out;
+}
+.account .acount_form .login_form form .input_form input:focus {
+  border: 1px solid blue;
+}
+.account .acount_form .login_form form .input_form input:focus + label {
+  top: 0;
+  font-size: 1rem;
+}
+.account .acount_form .login_form form .form_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  line-height: 22px;
+  font-weight: 700;
+  margin-top: 28px;
+  flex-wrap: wrap;
+  margin-bottom: 26px;
+}
+.account .acount_form .login_form form .form_row .check_form #checkbox_reme:checked + label .check_config {
+  background-color: #23d2e2;
+}
+.account .acount_form .login_form form .form_row .check_form > label {
+  display: flex;
+  gap: 12px;
+  user-select: none;
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.account .acount_form .login_form form .form_row .check_form > label .check_config {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  transition: background-color 0.2s ease-in-out;
+}
+.account .acount_form .login_form form .form_row .check_form > label .check_config + .text_reme {
+  position: relative;
+  top: 2px;
+}
+.account .acount_form .login_form form .form_row > .forgot a {
+  color: #adafca;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 22px;
+  text-decoration: none;
+}
+.account .acount_form .login_form form .form_row > .forgot a:hover {
+  color: #00c7d9;
+}
+.account .acount_form .login_form form .btn_login:hover {
+  background-color: #5753e4;
+  border-radius: 10px;
+  box-shadow: 4px 7px 12px 0 rgba(97, 93, 250, 0.2);
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.account .acount_form .login_form form .btn_login button {
+  cursor: pointer;
+  width: 100%;
+  color: #fff;
+  outline: none;
+  border: none;
+  height: 54px;
+  line-height: 54px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  background-color: #615dfa;
+  box-shadow: 4px 7px 12px 0 rgba(97, 93, 250, 0.2);
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.account .acount_form .login_form .login_social {
+  margin-top: 40px;
+  position: relative;
+  font-size: 14px;
+  line-height: 1em;
+  font-weight: 700;
+  padding: 0 15px;
+  left: 96px;
+}
+.account .acount_form .login_form .login_social::before, .account .acount_form .login_form .login_social::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 25%;
+  height: 0.5px;
+  top: 50%;
+  right: 100%;
+  background-color: #ddd;
+}
+.account .acount_form .login_form .login_social::after {
+  right: auto;
+  left: 50%;
+}
+.account .acount_form .socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+.account .acount_form .socials > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+.account .acount_form .socials > a:hover {
+  transform: translateY(-5px);
+}
+.account .acount_form .socials > a img {
+  width: 12px;
+}
+.account .acount_form .socials .facebook {
+  background-color: #3763d2;
+}
+.account .acount_form .socials .twitter {
+  background-color: #1abcff;
+}
+.account .acount_form .socials .chat {
+  background-color: #7b5dfa;
+}
+.account .acount_form .socials .youtube {
+  background-color: #fd434f;
+}
+.account .acount_form .create_form {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.account .acount_form .create_form > .rocket {
+  position: absolute;
+  top: 9px;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+.account .acount_form .create_form h3 {
+  text-align: center;
+  font-size: 1.625rem;
+  font-weight: 700;
+  margin-bottom: 59px;
+}
+.account .acount_form .create_form form .input_form {
+  position: relative;
+  width: 100%;
+  font-size: 1.2rem;
+  line-height: 24px;
+}
+.account .acount_form .create_form form .input_form + .input_form {
+  margin-top: 28px;
+}
+.account .acount_form .create_form form .input_form label {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease-in-out;
+  color: #adafca;
+  font-weight: 600;
+  padding: 0 5px;
+  background-color: #fff;
+  pointer-events: none;
+}
+.account .acount_form .create_form form .input_form input {
+  width: 90%;
+  padding: 0 18px;
+  height: 54px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  outline: none;
+  transition: border 0.3s ease-in-out;
+}
+.account .acount_form .create_form form .input_form input:focus {
+  border: 1px solid blue;
+}
+.account .acount_form .create_form form .input_form input:focus + label {
+  top: 0;
+  font-size: 1rem;
+}
+.account .acount_form .create_form form .form_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  line-height: 22px;
+  font-weight: 700;
+  margin-top: 28px;
+  flex-wrap: wrap;
+  margin-bottom: 26px;
+}
+.account .acount_form .create_form form .form_row .check_form #checkbox_mail:checked + label .check_config {
+  background-color: #23d2e2;
+}
+.account .acount_form .create_form form .form_row .check_form > label {
+  display: flex;
+  gap: 12px;
+  user-select: none;
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.account .acount_form .create_form form .form_row .check_form > label .check_config {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  transition: background-color 0.2s ease-in-out;
+}
+.account .acount_form .create_form form .form_row .check_form > label .check_config + .text_reme {
+  position: relative;
+  top: 2px;
+}
+.account .acount_form .create_form form .btn_create:hover {
+  background-color: #23d2e2;
+  border-radius: 10px;
+  box-shadow: 4px 7px 12px 0 rgba(97, 93, 250, 0.2);
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.account .acount_form .create_form form .btn_create button {
+  cursor: pointer;
+  width: 100%;
+  color: #fff;
+  outline: none;
+  border: none;
+  height: 54px;
+  line-height: 54px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  background-color: #23d2e2;
+  box-shadow: 4px 7px 12px 0 rgba(97, 93, 250, 0.2);
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.account .acount_form .create_form .contact {
+  margin-top: 30px;
+  font-size: 0.875rem;
+  line-height: 1.7142857143em;
+  font-weight: 500;
+}
+.account .acount_form .create_form .contact a {
+  color: #00c7d9;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+body {
+  background-image: url("../icon-pj2/landing-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*# sourceMappingURL=styles.css.map */
