@@ -1,0 +1,11 @@
+@import './parts/variables';
+@import "./parts/fonts";
+@import "./parts/reset";
+@import "./parts/mixin";
+@import "./parts/base";
+
+@import "./layouts/header";
+@import"./layouts/banner-header";
+@import "./layouts/footer";
+
+@import"./pages/home/hero";

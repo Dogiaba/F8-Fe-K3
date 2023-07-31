@@ -1,0 +1,53 @@
+.banner_header {
+  .text_banner {
+    font-family: $fonts;
+    // padding: 103px;
+    h1 {
+      margin: 14px 0;
+    }
+    p {
+      line-height: 26px;
+    }
+  }
+  .container_right {
+    margin-top: 5px;
+    .logo_banner {
+        background-color: #dcffca;
+        width: 775.833px;
+        height: 704.333px;
+        border-radius: 16.667px 0px 0px 16.667px;
+        position: relative;
+        img{
+            position: absolute;
+            width: 714px;
+            height: auto;
+            right: 228px;
+        }
+        span{
+            position: absolute;
+            transform: rotate(90deg);
+            font-size: 165.667px;
+            font-weight: 800;
+            line-height: 100%;
+            top: 177px;
+            left: 307px;
+            opacity: 0.1;
+        }
+    }
+  }
+}
+
+.evaluate{
+    .container{
+        margin-top:60px ;
+        .text_evaluate{
+            text-align: center;
+            padding: 0 255px;
+            p{
+                margin: 15px 0;
+            }
+
+        }
+
+    }
+}
