@@ -1,3 +1,48 @@
 .news{
     font-family: $fonts;
+    margin-top: 120px;
+    .text_news{
+        text-align: center;
+        padding: 0 255px;
+        margin-bottom: 30px;
+        h2{
+            margin-bottom: 12px;
+        }
+    }
+
+    .item_new{
+        .calens{
+            display: flex;
+            margin: 15px 0;
+            font-weight:500;
+        .text_calen{
+            color: $primaryColor;
+            margin-right: 148px;
+            margin-top: 4px;
+        }
+        .day_time{
+            margin-left: 9px;
+            margin-top: 4px;
+            color: #A3A3A3;
+        }
+        }
+
+        .text_item_news{
+            margin: 12px 0;
+        }
+    }
+    .btn_more{
+        text-align: center;
+        margin-bottom: 40px;
+        button{
+            background: #fff;
+            border: 1px solid $primaryColor;
+            border-radius: 6.667px;
+            padding: 12px 20px;
+            a{
+                font-weight: 700;
+            }
+    
+        }
+    }
 }
