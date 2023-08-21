@@ -9,5 +9,11 @@ Kiểm tra 2 số cùng dấu hay không và hiển thị kết quả ra màn h�
 const a= prompt("Enter number1: ") ;
 const b= prompt("Enter number2: ") ;
 
-var c =((a > 0 && b > 0) || (a <0 && b<0))?"same sign":"not same sign";
-console.log(`${c}`);
+// var c =((a > 0 && b > 0) || (a <0 && b<0))?"same sign":"not same sign";
+// console.log(`${c}`);
+
+if(a * b > 0){
+    console.log("Cung dau");
+}else{
+    console.log("trai dau");
+}
