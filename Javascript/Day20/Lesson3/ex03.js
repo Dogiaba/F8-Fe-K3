@@ -1,5 +1,3 @@
-var arr = [["a", 1, true], ["b", 2, false]];
-
 // var newArr = [[], [],[]];
 
 // arr.forEach((value) =>{
@@ -15,43 +13,25 @@ var arr = [["a", 1, true], ["b", 2, false]];
 // });
 // document.write(`[${newArr[0]}], [${newArr[1]}], [${newArr[2]}]`);
 
-if(Array.isArray(arr)){
-    arr = arr.flat(Infinity);
-    var arrayType = arr.reduce(function(prev, current){
-        var type = typeof current;
-        if(!prev[type]){
-            prev[type] = [];
-        }
-        prev[type].push(current);
-        return prev;
-    },[]);
+var arr = [
+  ["a", 1, true],
+  ["b", 2, false],
+];
 
-    var newArr = [];
-    for (var index in arrayType) {
-        newArr.push(arrayType[index]);
+if (Array.isArray(arr)) {
+  arr = arr.flat(Infinity);
+  var arrayType = arr.reduce(function (prev, current) {
+    var type = typeof current;
+    if (!prev[type]) {
+      prev[type] = [];
     }
-    document.write(`[${newArr[0]}], [${newArr[1]}], [${newArr[2]}]`);
+    prev[type].push(current);
+    return prev;
+  }, []);
 
+  var newArr = [];
+  for (var index in arrayType) {
+    newArr.push(arrayType[index]);
+  }
+console.log(`[${newArr[0]}], [${newArr[1]}], [${newArr[2]}]`);
 }
-
-
-// if (Array.isArray(arr)) {
-//     arr = arr.flat(Infinity);
-//     var array = arr.reduce(function (prev, current) {
-//       var type = typeof current;
-//       if (!prev[type]) {
-//         prev[type] = [];
-//       }
-  
-//       prev[type].push(current);
-  
-//       return prev;
-//     }, []);
-  
-//     var result = [];
-//     for (var index in array) {
-//       result.push(array[index]);
-//     }
-  
-//     console.log(result);
-//   }
