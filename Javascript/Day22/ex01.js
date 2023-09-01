@@ -1,4 +1,4 @@
-var parents = [
+var categories = [
   {
     id: 1,
     name: "Chuyên mục 1",
@@ -56,21 +56,45 @@ var parents = [
   },
 ];
 
-var result = parents.map((value) => {
-  return {
-    id:value.id, 
-    name:value.name,
-    ...{ children: value.parent[0] },
-    [parents.length > 1 && "children"]: parents.map((t, j) => {
-      return {
-        parent: value.parent[j],
-      };
-    }),
-  };
+
+var getArr = function (childrenObject) {
+  categories.forEach(function (object) {
+    if (object.id === childrenObject.parent) {
+      if (!object.children) {
+        object.children = [childrenObject];
+      } else {
+        object.children.push(childrenObject);
+      }
+    }
+  });
+};
+var result = [];
+categories.forEach(function (object) {
+  if (object.parent === 0) {
+    result.push(object);
+  } else {
+    getArr(object);
+  }
+  delete object.parent;
 });
-console.log("Bài làm 1 đang bị sai");
+console.log("---------LESSON1----------")
 console.log(result);
 
+
+// var result = parents.map((value) => {
+//   return {
+//     id:value.id, 
+//     name:value.name,
+//     ...{ children: value.parent[0] },
+//     [parents.length > 1 && "children"]: parents.map((t, j) => {
+//       return {
+//         parent: value.parent[j],
+//       };
+//     }),
+//   };
+// });
+// console.log("Bài làm 1 đang bị sai");
+// console.log(result);
 //-------------------------------------------------
 console.log("--------LESSON2------------");
 
