@@ -62,18 +62,41 @@ function addSelector(cate, prefix) {
   option.text = prefix + cate.name;
   select.add(option);
 
-  if(cate.children){
-    for(var i = 0; i < cate.children.length;i++){
+  if (cate.children) {
+    for (var i = 0; i < cate.children.length; i++) {
       addSelector(cate.children[i], prefix + " --| ");
     }
   }
 }
-for(var i = 0; i <categories.length; i++){
+
+for (var i = 0; i < categories.length; i++) {
   addSelector(categories[i], "");
 }
 
 
 
 
+// // test cach khac == dang loi==
+// function addSelector(cate,prefix) {
+//   let select = document.createElement("select");
 
+//   let option = document.createElement("option");
+//   option.text = "Chon chuyen muc";
+//   select.add(option);
+//   for (let key in cate) { 
+//       let option = document.createElement("option");
+//       option.value = key.id;
+//       option.text = prefix + cate.name;
+//       select.add(option);
+//   }
+//   selects.appendChild(select);
+//     if (cate.children) {
+//     for (var i = 0; i < cate.children.length; i++) {
+//       addSelector(cate.children[i], prefix + " --| ");
+//     }
+//   }
+// }
 
+// for (var i = 0; i < categories.length; i++) {
+//   addSelector(categories[i], "");
+// }
