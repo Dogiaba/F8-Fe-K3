@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Asap:ital,wght@0,200;1,100&family=Bebas+Neue&family=Crimson+Text&family=Lato:ital,wght@0,300;0,400;1,300&family=Lobster&family=Manrope:wght@200;300;400&family=Nunito:wght@200;300&family=Open+Sans:wght@300&family=Oswald:wght@300;400&family=Poppins:ital,wght@1,200;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;1,300;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Manrope", sans-serif;
+    background: #FAFAFC;
+}
+
+nav{
+    width: 100%;
+}
+nav .nav_header{
+    position: relative;
+    max-width: 1300px;
+    padding: 0 30px;
+    height: 70px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav_header .logo a{
+    text-decoration: none;
+    color: #0C5F2C;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.right_nav{
+    display: flex;
+}
+.right_nav li{
+    list-style: none;
+}
+.right_nav li a{
+    text-decoration: none;
+    color: black;
+    padding: 9px 15px;
+}
+
+.form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 96%;
+    max-width: 400px;
+    background: #fff;
+    background: #bae1c9;
+    border-radius:3px;
+    overflow-y: auto;
+    max-height: 100vh;
+    height: 68%;
+    /* padding: 0 40px 30px;
+    background: #fff none;
+    width: 100%;
+    max-width: 460px;
+    position: relative;
+    border-radius: 3px;
+    overflow-y: auto;
+    max-height: 100vh; */
+}
+.form .tab_header{
+    display: flex;
+    justify-content: space-between;
+    padding: 6px;
+}
+.form .tab_header > div{
+    flex: 1;
+    padding: 15px;
+    /* height: 56px; */
+    text-align: center;
+    color: #999;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+}
+.form .tab_header > div.active{
+    background: #fff none;
+    color: #333;
+}
+.form .tab_body{
+    position: relative;
+    min-height: 360px;
+    overflow: hidden;
+}
+.form .tab_body > div{
+    position: absolute;
+    width: 100%;
+    top: -150vh;
+    opacity: 0;
+    padding: 5px 25px;
+    transition: opacity 300ms ease-in-out 0ms;
+}
+.form .tab_body > div.active{
+    top:0px;
+    opacity: 1;
+    transition:opacity 300ms ease-in-out 0ms;
+}
+.form .tab_body .title{
+    /* font-size: 15px;
+    text-align: center;
+    color: #1a1a1a; */
+    /* display: flex; */
+    justify-content: center;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+    font-size: 12px;
+}
+
+
+.form .tab_body .login_social{
+    margin: 16px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.form .tab_body .login_social button{
+    flex: 0 0 auto;
+    max-width: 100%;
+    width: calc(50% - 10px);
+    border: 0;
+    background: #e2e8f0 none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 22px;
+    color: #333;
+    height: 45px;
+    padding: 0;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.form .tab_body .input_form{
+    margin: 10px 0px;
+}
+.form .tab_body .input_form label{
+    display: block;
+    font-size: 15px;
+}
+.form .tab_body .input_form input{
+    width: 100%;
+    height: 44px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 12px 16px 10px;
+    font-size: 14px;
+    line-height: 22px;
+    color: #333;
+    outline: 0;
+}
+
+.form .tab_body .forgot{
+    font-size: 14px;
+    line-height: 22px;
+    color: gray;
+    font-style: italic;
+    padding: 0;
+    background: transparent none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.form .tab_body .btn_sub{
+    width: 100%;
+    height: 44px;
+    margin-top:10px;
+    padding: 10px;
+    font-size: 16px;
+    color: #f8fafc;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #1a7900;
+}
