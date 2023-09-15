@@ -96,7 +96,7 @@ console.log(result);
 // console.log("Bài làm 1 đang bị sai");
 // console.log(result);
 //-------------------------------------------------
-console.log("--------LESSON2------------");
+console.log("--------LESSON2---------");
 
 var arr = [10, 20, 30, 60];
 Array.prototype.reduce2 = function(prev, value){
