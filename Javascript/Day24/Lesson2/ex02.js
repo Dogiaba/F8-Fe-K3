@@ -50,9 +50,9 @@ function coverNumber(number){
 
     outcoverNumber +=num[2] != 0 ? (oneNumber[Number(num[2])] || `${twoNumber[num[2][0]]} ${oneNumber[num[2][1]]}` )+ ' trăm ' : ''; 
 
-    outcoverNumber +=num[3] != 0 ? (oneNumber[Number(num[3])] || `${twoNumber[num[3][0]]} ${oneNumber[num[3][1]]}`)+ ' nghìn ' : ''; 
+    outcoverNumber +=num[3] != 0 ? (oneNumber[Number(num[3])] || `${twoNumber[num[3][0]]} ${oneNumber[num[3][1]]}`)+  ' nghìn ' : ''; 
 
-    outcoverNumber +=num[4] != 0 ? (oneNumber[Number(num[4])] || `${twoNumber[num[4][0]]} ${oneNumber[num[4][1]]}`) +' trăm ': ''; 
+    outcoverNumber +=num[4] != 0 ? (oneNumber[Number(num[4])] || `${twoNumber[num[4][0]]} ${oneNumber[num[4][1]]}`) + ' trăm ': ''; 
 
     outcoverNumber +=num[5] != 0 ? (oneNumber[Number(num[5])] || `${twoNumber[num[5][0]]} ${oneNumber[num[5][1]]} `) : ' '; 
     return outcoverNumber;
