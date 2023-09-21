@@ -32,8 +32,9 @@ function addTodo(e) {
     todoDiv.appendChild(editButton);
 
     const trashButton = document.createElement("button");
-    trashButton.innerHTML = `<i class="fa-solid fa-trash"></i>`;
     trashButton.classList.add("trash-btn");
+    trashButton.classList.add("fa-solid");
+    trashButton.classList.add("fa-trash");
     todoDiv.appendChild(trashButton);
 
     todoList.appendChild(todoDiv);
@@ -44,6 +45,7 @@ function addTodo(e) {
 
 
 function removeTodo(e) {
+  console.log(e.target.classList);
   if (e.target.classList.contains("trash-btn")) {
     e.target.parentElement.remove();
     removeLocalTodos(e.target.parentElement);
