@@ -6,6 +6,7 @@ var progessSpan = progress.querySelector("span");
 var initialClientX;
 var percent;
 var currentPercent = 0;
+let updateTimer;
 
 progressBar.addEventListener("mousedown", function (e) {
   //Lấy offsetX của progress-bar
@@ -115,20 +116,6 @@ audio.addEventListener("pause", function () {
   playBtn.children[0].classList.add("fa-play");
 });
 
-//Lắng nghe sự kiện timeupdate
-// audio.addEventListener("timeupdate", function () {
-//   //Lấy thời gian hiện tại của bài hát
-//   var currentTime = audio.currentTime;
-
-//   //Show currentTime lên UI
-//   currentTimeEl.innerText = getTime(currentTime);
-
-//   //Chuyển currentTime thành phần trăm
-//   var percent = (currentTime * 100) / audio.duration;
-
-//   //Cập nhật width vào progress
-//   progress.style.width = `${percent}%`;
-// });
 //----------
 // function displayTime() {
 //   const { duration, currentTime } = audio;
