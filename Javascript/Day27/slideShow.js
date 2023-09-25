@@ -61,9 +61,7 @@ for (let i = 0; i < carousel.length; ++i) {
   allDots[0].classList.add("active-dot");
   sliderImgs[0].style.left = "0";
 
-  //   function dotClick(num){
 
-  //   }
 
   const dotss = dots.querySelectorAll("*").forEach((dot, index) => {
     dot.addEventListener("click", () => {
@@ -75,16 +73,14 @@ for (let i = 0; i < carousel.length; ++i) {
     slideIndex = index;
   }
 }
-// Mouse Drag-----------------
-// var carousel = document.querySelectorAll(".carousel");
+
+// Mouse Drag
 const container = document.querySelector(".slider");
 
 const container_width = container.clientWidth;
 
-// var carouselInner = document.querySelector(".carousel-inner");
 const imgs_wrapper = document.querySelector(".slider__wrapper");
 
-// const sliderImgs = slider.querySelectorAll(".item");
 const imgs = document.querySelectorAll(".slide");
 const total_imgs = imgs.length;
 let current_index = 0;
