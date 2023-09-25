@@ -6,6 +6,9 @@ var progessSpan = progress.querySelector("span");
 var initialClientX;
 var percent;
 var currentPercent = 0;
+
+let isPlaying = false;
+var isDragging = false;
 let updateTimer;
 
 progressBar.addEventListener("mousedown", function (e) {
@@ -152,3 +155,14 @@ audio.addEventListener("timeupdate", function () {
   });
 }, 500);
 
+audio.addEventListener("timeupdate",function(){
+  if(!isDragging){
+    var progress = (audio.currentTime / audio.duration)*100;
+    progressBar.value = progress;
+  }
+})
+progressBar.addEventListener("mousedown",function(){
+  isDragging = false;
+  audio.play();
+  initialClientX = e.clientX
+})
