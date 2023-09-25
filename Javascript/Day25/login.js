@@ -13,8 +13,4 @@ for(let i = 0; i<tabHeadElement.length; i++){
         tabBodyElement[i].classList.add("active");
     })
 }
-<<<<<<< HEAD
-// VÌ LÝ DO CÁ NHÂN NÊN CHƯA THỂ HOÀN THÀNH BÀI TẬP THEO YÊU CẦU XIN PHÉP ĐƯỢC NỘP BỔ SUNG LẠI CUỐI TUẦN NÀY Ạ
-=======
-// VÌ LÝ DO CÁ NHÂN NÊN CHƯA THỂ HOÀN THÀNH BÀI TẬP THEO YÊU CẦU XIN PHÉP ĐƯỢC NỘP BỔ SUNG LẠI CUỐI TUẦN NÀY Ạ
->>>>>>> 400035aba4cdbbbc51db14816025f58837078b1b
+

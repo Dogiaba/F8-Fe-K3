@@ -63,6 +63,7 @@ nav .nav_header{
     border-radius: 3px;
     overflow-y: auto;
     max-height: 100vh; */
+
 }
 .form .tab_header{
     display: flex;
@@ -182,4 +183,9 @@ nav .nav_header{
     cursor: pointer;
     border-radius: 5px;
     background: #1a7900;
+}
+.form .model-overlay{
+    background: #00000076;
+    position: fixed;
+    inset: 2;
 }
