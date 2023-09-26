@@ -138,31 +138,42 @@ progressBar.addEventListener("change", function () {
 });
 // displayTime();
 const timer = this.setInterval(() => {
-//   displayTime();
-//Lắng nghe sự kiện timeupdate
-audio.addEventListener("timeupdate", function () {
+  //   displayTime();
+  //Lắng nghe sự kiện timeupdate
+  audio.addEventListener("timeupdate", function () {
     //Lấy thời gian hiện tại của bài hát
     var currentTime = audio.currentTime;
-  
+
     //Show currentTime lên UI
     currentTimeEl.innerText = getTime(currentTime);
-  
+
     //Chuyển currentTime thành phần trăm
     var percent = (currentTime * 100) / audio.duration;
-  
+
     //Cập nhật width vào progress
     progress.style.width = `${percent}%`;
   });
 }, 500);
 
-audio.addEventListener("timeupdate",function(){
-  if(!isDragging){
-    var progress = (audio.currentTime / audio.duration)*100;
+audio.addEventListener("timeupdate", function () {
+  if (!isDragging) {
+    var progress = (audio.currentTime / audio.duration) * 100;
     progressBar.value = progress;
   }
-})
-progressBar.addEventListener("mousedown",function(){
+});
+progressBar.addEventListener("mousedown", function () {
   isDragging = false;
   audio.play();
-  initialClientX = e.clientX
-})
+  initialClientX = e.clientX;
+});
+progressBar.addEventListener("mouseup", function (e) {
+  var clickPosition =
+    (e.clientX - progressBar.getBoundingClientRect().left) /
+    progressBar.clientWidth;
+  var newTime = clickPosition * audio.duration;
+  audio.currentTime = newTime;
+  if (isPlaying) {
+    audio.play();
+  }
+  isDragging = false;
+});
