@@ -13,6 +13,7 @@
   }
   
   .player .play-inner {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -51,4 +52,8 @@
   }
 .audio{
     display: contents;
+}
+.present-time{
+  position: absolute;
+  top:-20px;
 }
