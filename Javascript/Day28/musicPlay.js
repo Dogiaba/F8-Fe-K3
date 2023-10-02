@@ -70,12 +70,12 @@ var handleDrag = function (e) {
   }
 
   // progress.style.width = `${percent}%`;
-  progress.style.width = `${percent2}%`;
+  progress.style.width = `${percent}%`;
 
   isDragging = true;
 
-  var currentTime = percent / 100 * audio.duration;
-  currentTimeEl.innerText = getTime(currentTime)
+  var currentTime = (percent / 100) * audio.duration;
+  currentTimeEl.innerText = getTime(currentTime);
 };
 
 //Xây dựng trình phát nhạc
@@ -129,18 +129,6 @@ audio.addEventListener("pause", function () {
 });
 
 //----------
-// function displayTime() {
-//   const { duration, currentTime } = audio;
-//   progressBar.max = duration;
-//   progressBar.value = currentTime;
-//   playerDuration.textContent = getTime(currentTime);
-
-//   if (!duration) {
-//     playerRemaining.textContent = `0:00`;
-//   } else {
-//     playerRemaining.textContent = getTime(duration);
-//   }
-// }
 
 progressBar.addEventListener("change", function () {
   audio.currentTime = this.value;
@@ -156,33 +144,13 @@ audio.addEventListener("timeupdate", function () {
   var percent = (currentTime * 100) / audio.duration;
 
   if (!isDragging) {
-  //Show currentTime lên UI
-  currentTimeEl.innerText = getTime(currentTime);
-  
-  //Cập nhật width vào progress
-  progress.style.width = `${percent}%`;
+    //Show currentTime lên UI
+    currentTimeEl.innerText = getTime(currentTime);
 
+    //Cập nhật width vào progress
+    progress.style.width = `${percent}%`;
   }
-
 });
-
-// const timer = this.setInterval(() => {
-//   //   displayTime();
-//   //Lắng nghe sự kiện timeupdate
-//   audio.addEventListener("timeupdate", function () {
-//     //Lấy thời gian hiện tại của bài hát
-//     var currentTime = audio.currentTime;
-
-//     //Show currentTime lên UI
-//     currentTimeEl.innerText = getTime(currentTime);
-
-//     //Chuyển currentTime thành phần trăm
-//     var percent = (currentTime * 100) / audio.duration;
-
-//     //Cập nhật width vào progress
-//     progress.style.width = `${percent}%`;
-//   });
-// });
 
 audio.addEventListener("timeupdate", function () {
   if (!isDragging) {
@@ -190,6 +158,7 @@ audio.addEventListener("timeupdate", function () {
     // progressBar.value = progress;
   }
 });
+
 progressBar.addEventListener("mousedown", function (e) {
   isDragging = true;
   audio.play();
@@ -229,14 +198,29 @@ audio.addEventListener("ended", function () {
   audio.currentTime = 0;
 });
 
-// var playeremaining = document.querySelector(".player-remaining");
-// var timeUp = function (e) {
-//   var currentTime = audio.currentTime;
-//   currentTimeEl.innerText = getTime(currentTime);
-//   var percent = (currentTime * 100) / audio.duration;
-
-// };
-
 progressBar.addEventListener("mouseout", function () {
   presentTime.style.display = "none";
 });
+
+//-------------------
+var karaokeOpen = document.querySelector(".karaokeOpen");
+karaokeOpen.addEventListener("click", function (e) {
+  var karaokes = document.querySelector(".karaoke");
+  karaokes.classList.add("show");
+  console.log("test");
+
+  var close = karaokes.querySelector(".close");
+  close.addEventListener("click", function () {
+    karaokes.classList.remove("show");
+  });
+
+  karaokes.addEventListener("mouseup", function (e) {
+    e.stopPropagation();
+  });
+
+  karaokes.addEventListener("mousedown", function () {
+    e.stopPropagation();
+  });
+});
+
+

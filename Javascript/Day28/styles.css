@@ -7,9 +7,11 @@
   .player {
     max-width: 90%;
     margin: 30px auto;
+    text-align: center;
   }
   .player .play-btn {
-    text-align: center;
+    display: inline-block;
+    margin: 0px auto;
   }
   
   .player .play-inner {
@@ -56,4 +58,53 @@
 .present-time{
   position: absolute;
   top:-20px;
+}
+.karaokeOpen{
+  text-align: center;
+}
+.karaokeOpen button{
+  color: #fff;
+  cursor: pointer;
+  background: #8a2be2;
+  border: 0;
+  padding: 5px 15px;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.karaoke{
+  position: absolute;
+  color: #fff;
+  inset: 0;
+  translate: 0 100%;
+  background-color: #8a2be2;
+  padding: 15px;
+  transition: translate .4s;
+}
+
+body {
+  overflow: hidden;
+}
+body .show {
+  inset: 0;
+  translate: 0 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.karaoke .karaoke_header {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+
+}
+.karaoke .karaoke_header h2{
+  font-size: 3rem;
+}
+.karaoke .karaoke_header .close{
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
