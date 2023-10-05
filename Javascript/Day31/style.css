@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.list-content {
+  background: #4286f4;
+  width: 500px;
+  padding: 1rem;
+}
+
+.draggable-list li{
+  background: #8bb3f4;
+  border: 1px solid #fff;
+  margin: 1px 0;
+  padding: 0.5rem;
+  list-style-type: none;
+
+}
+
+.draggable{
+    display: flex;
+}
+.active{
+    background: #ff6f00 !important;
+}
