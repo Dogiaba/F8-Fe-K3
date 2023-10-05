@@ -89,7 +89,6 @@ body .show {
   inset: 0;
   translate: 0 0;
 }
-
 .container {
   max-width: 800px;
   margin: 0 auto;
@@ -108,3 +107,20 @@ body .show {
   font-size: 1.5rem;
   font-weight: 700;
 }
+.karaoke_inner{
+  text-align: center;
+  margin: 30px 0;
+  font-size: 40px;
+  font-weight: 500;
+}
+.karaoke_inner span.word{
+  position: relative;
+}
+.karaoke_inner span.word span{
+  position: absolute;
+  left: 0;
+  color: black;
+  overflow: hidden;
+  width: 0;
+
+} 
