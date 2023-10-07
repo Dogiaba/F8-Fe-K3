@@ -1,7 +1,6 @@
 var listContent = document.querySelector(".list-content");
 var draggableList = document.querySelector(".draggable-list");
 
-
 function checkModule(m) {
   if (m.indexOf("Module") !== -1) {
     return true;
@@ -41,7 +40,7 @@ function createList() {
     });
   addEventListener();
 }
-
+//-----color title module-------
 function upColor() {
   var notActive = document.querySelectorAll(".course_list:not(.acrive)");
   notActive.forEach(function (value) {
@@ -52,8 +51,10 @@ function upColor() {
   active.forEach(function (value) {
     value.parentElement.parentElement.classList.add("active");
   });
-//   console.log(active);
+  //   console.log(active);
   sortNumber();
+
+   
 }
 
 function dragStart() {
@@ -109,7 +110,7 @@ function addEventListener() {
     item.addEventListener("dragleave", dragLeave);
   });
 }
-
+//---sort lesson number------
 function sortNumber() {
   var number = document.querySelectorAll(".number");
   number.forEach(function (value, index) {
