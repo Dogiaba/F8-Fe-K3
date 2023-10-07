@@ -1,0 +1,30 @@
+.scrollBottom{
+    position: absolute;
+    top: 0;
+    color: red;
+    margin-top:  13px;
+    right: 30px;
+    cursor: pointer;
+    border: 1px solid red;
+    border-radius: 27%;
+    padding: 11px;
+}
+.scrollTop{
+
+    color: red;
+    /* margin-top: 13px; */
+    /* right: 30px; */
+    cursor: pointer;
+    border: 1px solid red;
+    border-radius: 27%;
+    padding: 11px;
+    margin-bottom:13px;
+    position: fixed;
+    display: none;
+    right: 30px;
+    bottom: 10px;
+}
+
+.scrollTop.show{
+    display: block;
+}
