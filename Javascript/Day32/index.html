@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h4 id="title">Doc Editor</h4>
+      <!-- #title -->
+      <!-- <hr> -->
+      <div class="edit-header">
+        <div class="control-field">
+          <div class="dropdown">
+            <button  class="dropBtn">
+              File<i
+                class="fa-solid fa-caret-down"
+                style="color: #ffffff; margin-left: 5px"
+              ></i>
+            </button>
+            <div id="myDropdown" class="dropdown-content">
+              <button class="dropdown-item">New</button>
+              <button class="dropdown-item">Save as TXT</button>
+              <button class="dropdown-item">Save as PDF</button>
+            </div>
+          </div>
+          <!-- .dropdown -->
+          <input type="text" name="text" id="text" style="margin-left: 10px" />
+        </div>
+
+        <div class="control-btn">
+          <button id="bold-btn" class="btn btn-drak"><b>b</b></button>
+          <button id="underline-btn" class="btn btn-drak"><u>u</u></button>
+          <button id="italic-btn" class="btn btn-drak"><i>i</i></button>
+          <input id="color-btn" type="color" class="btn" value="#000002" />
+        </div>
+      </div>
+
+      <p contenteditable="true" spellcheck="false" class="content"></p>
+
+      <div class="numbers">
+        <div class="char">Số ký tự:<span>0</span></div>
+        <div class="words">Số từ:<span>0</span></div>
+      </div>
+    </div>
+    <script src="./editText.js"></script>
+  </body>
+</html>
