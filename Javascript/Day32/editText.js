@@ -1,31 +1,28 @@
 //Show dropdown
 var dropBtn = document.querySelector(".dropBtn");
 var dropDown = document.querySelector(".dropdown");
+var dropDownContent = document.querySelector(".dropdown-content");
 var vlll = document.getElementById("myDropdown");
 var textInput = document.querySelector("#text-input");
 
 dropBtn.addEventListener("click", () => {
-  dropDown.classList.toggle("show-menu");
+  dropDownContent.classList.toggle("show-menu");
 });
 
 // Prevent event bubble up to window.
 vlll.addEventListener("click", function (event) {
   event.stopPropagation();
 });
+
 //-----click out btn File----
-// window.addEventListener("click",(event) =>{
-//     if(!event.target.matches(" .dropBtn")){
-//         var dropDownContent = document.querySelector(".dropdown-content");
-//         var i;
-//         for(  i = 0; i < dropDownContent.length; i++){
-//             var openDropdown = dropDownContent[i];
-//             if (openDropdown.classList.contains('show-menu')) {
-//                 openDropdown.classList.remove('show-menu');
-//               }
-//         }
-//         console.log("test")
-//     }
-// })
+window.addEventListener("click", (event) => {
+  if (!event.target.matches(".dropBtn")) {
+      if (dropDownContent.classList.contains("show-menu")) {
+        dropDownContent.classList.remove("show-menu");
+      }
+    console.log(dropDownContent);
+  }
+});
 
 var boldBtn = document.querySelector("#bold-btn");
 boldBtn.addEventListener("click", () => {
@@ -60,15 +57,15 @@ colorBtn.addEventListener("blur", () => {
 
 //------Save txt------
 var txtBtn = document.querySelector(".txt-btn");
-txtBtn.addEventListener("click",()=>{
-var tempLink = document.createElement("a");
- var blob = new Blob([`${content.value}`], {type:"text/plain"});
- tempLink.setAttribute('href', URL.createObjectURL(blob));
- tempLink.setAttribute('download', `${textInput.value}.txt`);
+txtBtn.addEventListener("click", () => {
+  var tempLink = document.createElement("a");
+  var blob = new Blob([`${content.value}`], { type: "text/plain" });
+  tempLink.setAttribute("href", URL.createObjectURL(blob));
+  tempLink.setAttribute("download", `${textInput.value}.txt`);
   tempLink.click();
 
- URL.revokeObjectURL(tempLink.href);
-})
+  URL.revokeObjectURL(tempLink.href);
+});
 
 //--------save pdf---------
 var pdfBtn = document.querySelector(".pdf-btn");
@@ -81,26 +78,16 @@ pdfBtn.addEventListener("click", () => {
     jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
   };
   // New Promise-based usage:
-html2pdf().set(opt).from(content).save();
-// console.log("tesst")
+  html2pdf().set(opt).from(content).save();
+  // console.log("tesst")
 });
 
 //----new file-------
 var newBtn = document.querySelector(".new-btn");
-newBtn.addEventListener("click",()=>{
-  textInput.value="";
-  content.innerHTML="";
-})
-
-
-
-
-
-
-
-
-
-
+newBtn.addEventListener("click", () => {
+  textInput.value = "";
+  content.innerHTML = "";
+});
 
 //-------------
 // var content = document.querySelector(".content");
