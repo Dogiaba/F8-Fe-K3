@@ -12,7 +12,7 @@ dropBtn.addEventListener("click", () => {
 vlll.addEventListener("click", function (event) {
   event.stopPropagation();
 });
-//-----click ount btn File----
+//-----click out btn File----
 // window.addEventListener("click",(event) =>{
 //     if(!event.target.matches(" .dropBtn")){
 //         var dropDownContent = document.querySelector(".dropdown-content");
@@ -44,9 +44,11 @@ italicBtn.addEventListener("click", () => {
 
 var content = document.querySelector(".content");
 var colorBtn = document.querySelector("#color-btn");
+
 colorBtn.addEventListener("blur", () => {
+  var pickColor = colorBtn.value;
   document.execCommand("styleWithCSS", false, true);
-  document.execCommand("ForeColor", false, `${this.value}`);
+  document.execCommand("ForeColor", false, pickColor);
 });
 
 //---------------change all text color---------------
@@ -55,6 +57,16 @@ colorBtn.addEventListener("blur", () => {
 //     content.style.color = selectedColor;
 // }
 // colorBtn.addEventListener("change", changTextColor);
+
+var txtBtn = document.querySelector(".txt-btn");
+txtBtn.addEventListener("click",()=>{
+ var blob = new Blob([`${content.value}`], {type:"text/plain;charset=utf-8"});
+ txtBtn.setAttribute('href', URL.createObjectURL(blob));
+ txtBtn.setAttribute('download', `${textInput.value}.txt`);
+ txtBtn.click();
+
+ URL.revokeObjectURL(txtBtn.href);
+})
 
 var pdfBtn = document.querySelector(".pdf-btn");
 pdfBtn.addEventListener("click", () => {
@@ -66,8 +78,10 @@ pdfBtn.addEventListener("click", () => {
     jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
   };
   // New Promise-based usage:
-html2pdf().set(opt).from(element).save();
+html2pdf().set(opt).from(content).save();
+// console.log("tesst")
 });
+
 
 
 

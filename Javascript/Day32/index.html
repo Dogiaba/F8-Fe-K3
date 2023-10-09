@@ -28,13 +28,13 @@
               ></i>
             </button>
             <div id="myDropdown" class="dropdown-content">
-              <button class="dropdown-item">New</button>
-              <button class="dropdown-item">Save as TXT</button>
-              <button class="dropdown-item">Save as PDF</button>
+              <button class="dropdown-item new-btn">New</button>
+              <button class="dropdown-item txt-btn">Save as TXT</button>
+              <button class="dropdown-item pdf-btn">Save as PDF</button>
             </div>
           </div>
           <!-- .dropdown -->
-          <input type="text" name="text" id="text" style="margin-left: 10px" />
+          <input type="text" name="text" id="text-input" value="untitled" style="margin-left: 10px" />
         </div>
 
         <div class="control-btn">
@@ -52,6 +52,7 @@
         <div class="words">Số từ:<span>0</span></div>
       </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./editText.js"></script>
   </body>
 </html>
