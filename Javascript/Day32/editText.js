@@ -60,12 +60,13 @@ colorBtn.addEventListener("blur", () => {
 
 var txtBtn = document.querySelector(".txt-btn");
 txtBtn.addEventListener("click",()=>{
- var blob = new Blob([`${content.value}`], {type:"text/plain;charset=utf-8"});
- txtBtn.setAttribute('href', URL.createObjectURL(blob));
- txtBtn.setAttribute('download', `${textInput.value}.txt`);
- txtBtn.click();
+var tempLink = document.createElement("a");
+ var blob = new Blob([`${content.value}`], {type:"text/plain"});
+ tempLink.setAttribute('href', URL.createObjectURL(blob));
+ tempLink.setAttribute('download', `${textInput.value}.txt`);
+ tempLink.click();
 
- URL.revokeObjectURL(txtBtn.href);
+ URL.revokeObjectURL(tempLink.href);
 })
 
 var pdfBtn = document.querySelector(".pdf-btn");
