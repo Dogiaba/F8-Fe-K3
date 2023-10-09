@@ -58,17 +58,19 @@ colorBtn.addEventListener("blur", () => {
 // }
 // colorBtn.addEventListener("change", changTextColor);
 
+//------Save txt------
 var txtBtn = document.querySelector(".txt-btn");
 txtBtn.addEventListener("click",()=>{
 var tempLink = document.createElement("a");
  var blob = new Blob([`${content.value}`], {type:"text/plain"});
  tempLink.setAttribute('href', URL.createObjectURL(blob));
  tempLink.setAttribute('download', `${textInput.value}.txt`);
- tempLink.click();
+  tempLink.click();
 
  URL.revokeObjectURL(tempLink.href);
 })
 
+//--------save pdf---------
 var pdfBtn = document.querySelector(".pdf-btn");
 pdfBtn.addEventListener("click", () => {
   var opt = {
@@ -83,6 +85,12 @@ html2pdf().set(opt).from(content).save();
 // console.log("tesst")
 });
 
+//----new file-------
+var newBtn = document.querySelector(".new-btn");
+newBtn.addEventListener("click",()=>{
+  textInput.value="";
+  content.innerHTML="";
+})
 
 
 
