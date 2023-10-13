@@ -4,11 +4,11 @@ var btnLink = document.querySelector(".btn-link");
 var counterNumber = 20;
 let checkTime;
 let focusOut = false;
-
-
+counter.innerText = counterNumber;
 
 function startDown(currentTime) {
   if (!checkTime) checkTime = currentTime;
+
   if (currentTime - checkTime > 1000) {
     counterNumber--;
     checkTime = currentTime;
@@ -28,26 +28,19 @@ btnLink.addEventListener("click", function(){
 
 // Sử dụng event blur or focus phát hiện user chuyển tab
 window.addEventListener('blur', function() {
-    focusOut = true;
+    // focusOut = true;
     document.title = "Breakup";
   })
   
   window.addEventListener('focus', function() {
-    focusOut = false;
+    // focusOut = false;
     document.title = "Patch Up";
   });
+
+
+
 
 // document.addEventListener("visibilitychange", function(){
 
 // })
 
-
-// var countDownDate = new Date().setSeconds(new Date().getSeconds() + 20);
-
-// function startDown() {
-//   // counter.innerText = counterNumber;
-//   var now = new Date().getTime();
-//   var distance = countDownDate - now;
-//   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-//   counter.innerHTML = seconds;
-// }
