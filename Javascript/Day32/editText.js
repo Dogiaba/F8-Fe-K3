@@ -20,7 +20,7 @@ window.addEventListener("click", (event) => {
       if (dropDownContent.classList.contains("show-menu")) {
         dropDownContent.classList.remove("show-menu");
       }
-    console.log(dropDownContent);
+    // console.log(dropDownContent);
   }
 });
 
