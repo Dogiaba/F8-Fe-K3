@@ -29,7 +29,7 @@
     display: block;
 }
 #img2{
-    background-size: 600% 600%;
+    /* background-size: 600% 600%; */
     top: 50%;
     left: 53%;
     transform: translateY(-50%);
