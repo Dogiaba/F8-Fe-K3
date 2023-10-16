@@ -8,7 +8,6 @@ counter.innerText = counterNumber;
 
 function startDown(currentTime) {
   if (!checkTime) checkTime = currentTime;
-
   if (currentTime - checkTime > 1000) {
     counterNumber--;
     checkTime = currentTime;
@@ -28,16 +27,14 @@ btnLink.addEventListener("click", function(){
 
 // Sử dụng event blur or focus phát hiện user chuyển tab
 window.addEventListener('blur', function() {
-    // focusOut = true;
+    focusOut = true;
     document.title = "Breakup";
   })
   
   window.addEventListener('focus', function() {
-    // focusOut = false;
+    focusOut = false;
     document.title = "Patch Up";
   });
-
-
 
 
 // document.addEventListener("visibilitychange", function(){
