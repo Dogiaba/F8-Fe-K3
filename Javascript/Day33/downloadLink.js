@@ -3,7 +3,9 @@ var btnLink = document.querySelector(".btn-link");
 
 var counterNumber = 20;
 let checkTime;
-let focusOut = false;
+// let focusOut = false;
+
+// btnLink.disabled = true;
 counter.innerText = counterNumber;
 
 function startDown(currentTime) {
@@ -15,14 +17,21 @@ function startDown(currentTime) {
   }
   if (counterNumber > 0) {
     requestAnimationFrame(startDown);
-  } else {
+  }else{
     btnLink.disabled = false;
   }
 }
 requestAnimationFrame(startDown);
 
+
+
 btnLink.addEventListener("click", function(){
+  if(counterNumber === 0){
     window.location.href="https://anonystick.com/blog-developer/performance-javascript-3-vi-du-nay-co-the-chung-minh-2020121088424197"
+  }else{
+    btnLink.disabled = true;
+  }
+
 })
 
 // Sử dụng event blur or focus phát hiện user chuyển tab
@@ -36,8 +45,4 @@ window.addEventListener('blur', function() {
     document.title = "Patch Up";
   });
 
-
-// document.addEventListener("visibilitychange", function(){
-
-// })
 
