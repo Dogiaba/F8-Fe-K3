@@ -100,10 +100,11 @@ h4{
 
 .numbers{
     display: flex;
-    position: absolute;
-    right: 100px;
-
+    /* position: absolute;
+    right: 100px; */
+    display: flex;
+    justify-content: end;
 }
-.char{
+/* .char{
     margin-right: 17px;
-}
+} */

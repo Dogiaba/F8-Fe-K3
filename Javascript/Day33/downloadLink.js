@@ -23,8 +23,6 @@ function startDown(currentTime) {
 }
 requestAnimationFrame(startDown);
 
-
-
 btnLink.addEventListener("click", function(){
   if(counterNumber === 0){
     window.location.href="https://anonystick.com/blog-developer/performance-javascript-3-vi-du-nay-co-the-chung-minh-2020121088424197"
