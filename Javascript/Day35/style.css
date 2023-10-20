@@ -26,6 +26,6 @@ body{
    font-size: 17px;
    margin: 12px 0;
 }
-/* .btn:hover{
-
-} */
+.btn:hover{
+    background-color: #be4d25;
+}
