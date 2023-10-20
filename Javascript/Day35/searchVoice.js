@@ -1,9 +1,9 @@
 var btnVoice = document.querySelector(".btn");
 var actice = document.querySelector(".actice");
 
-const SpeechRecognition =
-  window.SpeechRecognition || window.webkitSpeechRecognition;
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
+
 recognition.lang = "vi-VN";
 
 btnVoice.addEventListener("click", function () {
@@ -18,7 +18,6 @@ btnVoice.addEventListener("click", function () {
     handleVoice(voiceResult);
   };
 });
-
 
 
 function handleVoice(listen) {
