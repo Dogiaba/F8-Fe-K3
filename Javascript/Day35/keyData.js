@@ -25,3 +25,21 @@ var keywords = [
       url: "https://facebook.com/",
     },
   ];
+
+const address = [
+    "chỉ đường",
+    "chỉ đường tới",
+    "tới",
+    "đường tới",
+]
+const music =[
+    "bài hát",
+    "mở bài hát",
+    "nghe bài hát",
+]
+
+const video =[
+    "video",
+    "mở video",
+    "xem video",
+]
