@@ -5,6 +5,7 @@ var dataProduct= [
         type:"electronics",
         vote:3.4,
         img: "./img/product.jpg",
+        price:"$64",
     },
     {
         id:2,
@@ -12,6 +13,7 @@ var dataProduct= [
         type:"electronics",
         vote:3.4,
         img: "./img/product.jpg",
+        price:"$64",
     },
     {
         id:3,
@@ -19,6 +21,7 @@ var dataProduct= [
         type:"electronics",
         vote:3.4,
         img: "./img/product.jpg",
+        price:"$64",
     },
     {
         id:4,
@@ -26,6 +29,7 @@ var dataProduct= [
         type:"electronics",
         vote:3.4,
         img: "./img/product.jpg",
+        price:"$64",
     },
     {
         id:5,
@@ -33,6 +37,7 @@ var dataProduct= [
         type:"electronics",
         vote:3.4,
         img: "./img/product.jpg",
+        price:"$64",
     },
     {
         id:6,
@@ -40,5 +45,6 @@ var dataProduct= [
         type:"electronics",
         vote:3.4,
         img: "./img/product.jpg",
+        price:"$64",
     },
 ]
