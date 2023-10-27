@@ -1,10 +1,28 @@
 const wrapper = document.querySelector(".wrapper");
 const banner = document.querySelector(".banner");
 const productContent = document.querySelector(".products");
+const container = document.querySelector(".container");
 setTimeout(()=> {
     wrapper.classList.remove("skeleton")
 },3000)
 
+// function getBaner(value){
+//   return new Promise((resolve, reject) => {
+//     setTimeout(()=>{
+//       resolve(value);
+
+//   },3000)
+//   })
+// }
+// const banerHeader = async()=>{
+//   const bannerOther = await getBaner(`
+//     <div class="banner">
+//     <img src="./img/banner.9aa4579c.jpg" alt="banner" />
+//   </div>
+//   `);
+//   console.log(bannerOther)
+//   banner.outerHTML = bannerOther;
+// };
 
 function render(dataProduct) {
   Promise.all(
@@ -12,7 +30,7 @@ function render(dataProduct) {
         return new Promise((resolve, reject) => {
             setTimeout(()=>{
                 resolve(value);
-                productContent.classList.remove("skeleton")
+                // productContent.classList.remove("skeleton")
             },3000)
           });
 
@@ -43,8 +61,14 @@ function render(dataProduct) {
       </div>
         `
     },``)
-    productContent.innerHTML= result
+    // productContent.innerHTML= result
+    container.outerHTML = `
+    <div class="container">
+      <div class="products ">${result}</div>
+    </div>
+    `
     console.log(result);
   })
 }
 render(dataProduct);
+// banerHeader()
