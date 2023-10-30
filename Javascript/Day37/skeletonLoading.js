@@ -2,9 +2,10 @@ const wrapper = document.querySelector(".wrapper");
 const banner = document.querySelector(".banner");
 const productContent = document.querySelector(".products");
 const container = document.querySelector(".container");
-setTimeout(()=> {
-    wrapper.classList.remove("skeleton")
-},3000)
+const heading = document.querySelector(".heading");
+// setTimeout(()=> {
+//   banner.classList.remove("skeleton")
+// },3000)
 
 // function getBaner(value){
 //   return new Promise((resolve, reject) => {
@@ -30,7 +31,9 @@ function render(dataProduct) {
         return new Promise((resolve, reject) => {
             setTimeout(()=>{
                 resolve(value);
-                // productContent.classList.remove("skeleton")
+                banner.classList.remove("skeleton")
+                productContent.classList.remove("skeleton")
+                heading.classList.remove("skeleton")
             },3000)
           });
 
@@ -39,13 +42,13 @@ function render(dataProduct) {
     const result = data.reduce((prev , value)=> {
         return prev  + 
         `
-        <div class="item-product">
-        <div class="item-img ">
+        <div class="item-product ">
+        <div class="item-img  ">
           <img src="${value.img}" alt="product" />
         </div>
         <h3 class="item-title ">${value.name}</h3>
         <div class="item-info">
-          <span class="nameType">${value.type}</span>
+          <span class="nameType ">${value.type}</span>
           <div class="item-vote">
             <span class="voteStart ">${value.vote}</span>
             <span class="item-start ">
@@ -55,18 +58,18 @@ function render(dataProduct) {
         </div>
         <h3 class="price ">${value.price}</h3>
         <div class="item-btn ">
-          <button class="item-addBtn">Add to card</button>
-          <button class="item-buyBtn">Buy now</button>
+          <button class="item-addBtn ">Add to card</button>
+          <button class="item-buyBtn ">Buy now</button>
         </div>
       </div>
         `
     },``)
-    // productContent.innerHTML= result
-    container.outerHTML = `
-    <div class="container">
-      <div class="products ">${result}</div>
-    </div>
-    `
+    productContent.innerHTML= result
+    // container.outerHTML = `
+    // <div class="container">
+    //   <div class="products ">${result}</div>
+    // </div>
+    // `
     console.log(result);
   })
 }
