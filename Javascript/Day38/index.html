@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="todoapp">
+      <div class="container">
+        <h1 class="title"><span class="corlor-text">Smatyx</span> Todos App</h1>
+          <div class="newtask">
+            <div class="input-search">
+              <input type="text" name="" class="todo-input" placeholder="Search Todos" maxlength="40">
+              <div class="btn-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+            </div>
+              <button data-modal-target="#modal" type="submit" class="todo-button ">Add Todos </button>
+          </div>
+          <div class="tasks">
+              <ul class="todo-list"></ul>
+          </div>
+          <!-- <ul id="tasks" ></ul> -->
+          <button class="btn-completed">
+            Completed Todos<span>1</span>
+          </button>
+          <div class="task-completed">
+            <ul class="Completed-list"></ul>
+          </div>
+
+          <!-- Add Form -->
+          <div class="modal" id="modal">
+          <input type="checkbox" hidden id="add-form-toggle">
+          <form action="" class=" hideform add-form">
+            <input type="text" name="" class="todo-title" required placeholder="Add Todos">
+            <div class="line"></div>
+            <div class="action">
+              <button>Save</button>
+              <label class="cancel" data-close-button for="add-form-toggle">Cancel</label>
+            </div>
+          </form>
+        </div>
+          <label class="overlay"></label>
+
+          <!-- Edit Form  -->
+          <div class="modal" id="modal">
+          <input type="checkbox" hidden id="edit-form-toggle">
+          <label class="overlay"></label>
+          <form action="" class=" hideform edit-form">
+            <input type="text" class="todo-title" required autofocus placeholder="Edit Todos">
+            <div class="line"></div>
+            <div class="action" >
+              <button>Save</button>
+              <label for="edit-form-toggle" data-close-button class="cancel">Cancel</label>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- .container -->
+  </div>
+    <script src="./todoList.js"></script>
+  </body>
+</html>
