@@ -1,13 +1,9 @@
-const serverApi = `http://localhost:3000`;
+
 const todoButton = document.querySelector(".todo-button");
 const addForm = document.querySelector(".add-form");
 const cancel = document.querySelector(".cancel");
 const form = document.querySelector("form");
 
-
-const openModalButtons = document.querySelectorAll("[data-modal-target]");
-const closeModalButtons = document.querySelectorAll("[data-close-button]");
-const overlay = document.querySelector(".overlay");
 
 
 todoButton.addEventListener("click",()=>{
@@ -16,6 +12,40 @@ todoButton.addEventListener("click",()=>{
 cancel.addEventListener("click",()=>{
     form.style.display="none";
 })
+
+document.addEventListener("DOMContentLoaded",function(){
+    const serverApi = `https://mjct5n-8080.csb.app/todos`;
+    const ulTodoList = document.querySelector(".todo-list");
+
+    function getAllTodos(){
+        return new Promise(resolve => {
+            fetch(new Request(serverApi))
+            .then(res =>{return res.json();})
+            .then(data => {resolve(data);})
+        })
+    }
+
+    function saveTodo(text) {
+        let req = new Request(dbUrl,{ method: 'POST',
+            headers: new Headers({'Content-Type': 'application/json'}),
+            body: JSON.stringify({text: text})
+        });
+
+        return new Promise(resolve => {
+            fetch(req)
+                .then(res => { return res.json(); })
+                .then(data => { resolve(data); });
+        })
+    }
+
+    function appendTodolist(todo){
+        ulTodoList.innerHTML += `
+        
+        `
+    }
+
+})
+
 
 // openModalButtons.forEach((button) => {
 //   button.addEventListener("click", () => {
