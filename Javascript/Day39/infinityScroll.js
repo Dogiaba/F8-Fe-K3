@@ -14,12 +14,19 @@ const app = {
             <div class="container">
             <div class="cards tag">
               <div class="item_card">
+              <div class="title_card">
                 <img src="${image}" alt="img1" />
                 <h2>${title}</h2>
-                <span class="name">${name}</span>
+              </div>
+              <span class="name">${name}</span>
                 <p class="content">
                     ${content}
                 </p>
+                <div class="icon-tag">
+                  <span class="code">Front-end</span>
+                  <span class="date">2 tháng trước</span>
+                  <span class="read">4 phút đọc</span>
+                </div>
                 <a href="#">Read More</a>
               </div>
             </div>
