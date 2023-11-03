@@ -3,12 +3,13 @@ import { config } from "./config.js";
 const { PAGE_LIMIT } = config;
 
 const root = document.querySelector("#root");
-
+const loading = document.querySelector(".loader");
+let currentPage = 1;
 const app = {
   query: {},
   totalPage: 0,
-  currentPage:1,
-  render: function (blog) {
+  // currentPage:1,
+  render: function ShowBlog(blog) {
     const inHtml = blog.map(
       ({ name, title, content, image }) => `    
             <div class="container">
@@ -37,13 +38,27 @@ const app = {
     root.innerHTML += inHtml.join("");
   },
   addEvent: function(){
+
+    function showLoading(){
+      loading.classList.add("show");
+      setTimeout(()=>{
+        loading.classList.remove("show");
+        setTimeout(() =>{
+          currentPage++;
+          ShowBlog(blog);
+        },3000)
+      },1000)
+    }
+
+
     window.addEventListener("scroll",()=>{
       const {scrollTop, scrollHeight, clientHeight} = document.documentElement;
-      if(scrollTop + clientHeight >= scrollHeight - 5 && hasMoreFacts(currentPage,totalPage,_limit)){
-        this.currentPage++;
-        
+      if(scrollTop + clientHeight >= scrollHeight - 5){
+        showLoading();
       }
     })
+
+
   },
 
   getBlog: async function (query = {}) {
@@ -54,13 +69,17 @@ const app = {
 
     const { data: blog } = await client.get("blogs" + queryString);
     this.render(blog);
+
+
   },
 
   start: function () {
     Object.assign(this.query, {
       _limit: PAGE_LIMIT,
+      // _page: this.currentPage,
     });
     this.getBlog(this.query);
+    this.addEvent();
   },
 };
 

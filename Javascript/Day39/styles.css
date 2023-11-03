@@ -49,7 +49,13 @@ img{
   margin:10px 0;
 }
 .icon-tag .code{
-  margin-right: 10px;
+  background-color: #e2e2e2;
+  border-radius: 100px;
+  color: #333;
+  font-weight: 500;
+  line-height: 2rem;
+  margin-right: 12px;
+  padding: 4px 6px;
 }
 .icon-tag .date{
   margin-right: 10px;
@@ -82,6 +88,7 @@ img{
 }
 
 .circle:nth-of-type(3) {
+  background-color: aqua;
   animation-delay: 0.2s;
 }
 
