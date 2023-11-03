@@ -41,7 +41,21 @@ img{
   width: 200px;
   border-radius: 15px;
 }
-
+.title_card{
+  display: flex;
+}
+.icon-tag{
+  margin:10px 0;
+}
+.icon-tag .code{
+  margin-right: 10px;
+}
+.icon-tag .date{
+  margin-right: 10px;
+}
+.content{
+  margin: 12px 0;
+}
 .loader {
   opacity: 0;
   height: 30px;
