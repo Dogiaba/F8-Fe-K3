@@ -84,7 +84,7 @@ img{
 }
 .circle:nth-of-type(2) {
   background-color: red;
-  animation-delay: 0.75s;
+  animation-delay: 0.25s;
 }
 
 .circle:nth-of-type(3) {
