@@ -39,9 +39,10 @@ document.addEventListener("DOMContentLoaded",function(){
     }
 
     function appendTodolist(todo){
-        ulTodoList.innerHTML += `
-        
-        `
+        const newTodo = document.createElement("li");
+        newTodo.innerText = todoInput.value;
+        newTodo.classList.add("todo-itemms");
+        ulTodoList.appendChild(newTodo);
     }
 
 })
