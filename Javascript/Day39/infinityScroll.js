@@ -16,9 +16,11 @@ const app = {
               <div class="item_card">
               <div class="title_card">
                 <img src="${image}" alt="img1" />
+                <div>
                 <h2>${title}</h2>
+                <span class="name">${name}</span>
+                </div>
               </div>
-              <span class="name">${name}</span>
                 <p class="content">
                     ${content}
                 </p>
