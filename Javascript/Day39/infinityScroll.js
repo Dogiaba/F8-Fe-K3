@@ -4,12 +4,12 @@ const { PAGE_LIMIT } = config;
 
 const root = document.querySelector("#root");
 const loading = document.querySelector(".loader");
-let currentPage = 1;
+// let currentPage = 1;
 const app = {
   query: {},
   totalPage: 0,
   // currentPage:1,
-  render: function ShowBlog(blog) {
+  render: function (blog) {
     const inHtml = blog.map(
       ({ name, title, content, image }) => `    
             <div class="container">
@@ -35,28 +35,43 @@ const app = {
             </div>
           </div>`
     );
-    root.innerHTML += inHtml.join("");
-  },
-  addEvent: function(){
+    const addPost = async () => {
+      root.innerHTML += inHtml.join("");
+    }
+  addPost();
 
-    function showLoading(){
+  },
+
+  addEvent: function(){
+    const showLoading = () => {
       loading.classList.add("show");
       setTimeout(()=>{
-        loading.classList.remove("show");
         setTimeout(() =>{
-          currentPage++;
-          ShowBlog(blog);
+          this.query._page++;
+          // console.log( this.query._page)
+          this.getBlog(this.query);
         },3000)
       },1000)
     }
-
 
     window.addEventListener("scroll",()=>{
       const {scrollTop, scrollHeight, clientHeight} = document.documentElement;
       if(scrollTop + clientHeight >= scrollHeight - 5){
         showLoading();
+        console.log("ok")
       }
     })
+
+    // const infiScroll = async () =>{
+    //   const scrollTop =  document.documentElement.scrollTop + window.innerHeight;
+    //   const lastBlog = document.querySelector("#root .container:last-child");
+
+    //   if(lastBlog && scrollTop > lastBlog.offsetTop + lastBlog.offsetHeight){
+    //     if (this.currentPage < this.totalPage){
+
+    //     }
+    //   }
+    // }
 
 
   },
@@ -69,18 +84,19 @@ const app = {
 
     const { data: blog } = await client.get("blogs" + queryString);
     this.render(blog);
-
+    // addPost();
 
   },
 
   start: function () {
     Object.assign(this.query, {
       _limit: PAGE_LIMIT,
-      // _page: this.currentPage,
+      _page: 1,
     });
     this.getBlog(this.query);
     this.addEvent();
   },
 };
+
 
 app.start();
