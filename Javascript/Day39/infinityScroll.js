@@ -43,16 +43,29 @@ const app = {
   },
 
   addEvent: function(){
-    const showLoading = () => {
+     const showLoading = () => {
       loading.classList.add("show");
       setTimeout(()=>{
         setTimeout(() =>{
           this.query._page++;
-          // console.log( this.query._page)
           this.getBlog(this.query);
+          // console.log(this)
+          loading.classList.remove("show");
         },3000)
       },1000)
     }
+
+    // function showLoading(){
+    //   loading.classList.add("show");
+    //   setTimeout(()=>{
+    //     setTimeout(() =>{
+    //       this.query._page++;
+    //       // this.getBlog(this.query);
+    //       console.log(this)
+    //       loading.classList.remove("show");
+    //     },3000)
+    //   },1000)
+    // }
 
     window.addEventListener("scroll",()=>{
       const {scrollTop, scrollHeight, clientHeight} = document.documentElement;
@@ -60,19 +73,11 @@ const app = {
         showLoading();
         console.log("ok")
       }
+      // console.log(scrollTop);
+      // console.log(scrollHeight)
+      // console.log(clientHeight)
+
     })
-
-    // const infiScroll = async () =>{
-    //   const scrollTop =  document.documentElement.scrollTop + window.innerHeight;
-    //   const lastBlog = document.querySelector("#root .container:last-child");
-
-    //   if(lastBlog && scrollTop > lastBlog.offsetTop + lastBlog.offsetHeight){
-    //     if (this.currentPage < this.totalPage){
-
-    //     }
-    //   }
-    // }
-
 
   },
 
@@ -84,7 +89,6 @@ const app = {
 
     const { data: blog } = await client.get("blogs" + queryString);
     this.render(blog);
-    // addPost();
 
   },
 
