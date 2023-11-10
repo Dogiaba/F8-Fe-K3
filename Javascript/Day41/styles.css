@@ -116,15 +116,19 @@ input[type="radio"] {
 }
 .btn-sign {
   border-radius: 80px;
-  background: #8699da;
+  background-color: #8699da;
   box-shadow: 4px 8px 12px 0px rgba(78, 99, 141, 0.06),
     0px 4px 12px 0px rgba(200, 211, 249, 0.6) inset;
   width: 481px;
   height: 40px;
-  border: 1px solid #8699da;
+  /* border: 1px solid #8699da; */
   color: #fff;
   font-size: 20px;
+  transition: all 0.3 ease;
   cursor: pointer;
+}
+button:hover{
+  background-color: #789ade;
 }
 .socice {
   /* background: #fff; */
@@ -149,3 +153,18 @@ input[type="radio"] {
   width: 575.94px;
   height: 502.27px;
 }
+.signUpForm{
+  display: none;
+}
+/* .signUpForm{
+  opacity: 0;
+  pointer-events: none;
+}
+.show-signup.signUpForm{
+  opacity: 1;
+  pointer-events: auto;
+}
+.show-signup.signInForm{
+  opacity: 0;
+  pointer-events: auto;
+} */
