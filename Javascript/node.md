@@ -40,78 +40,75 @@ maxElement(arr);
 <!-- ===================================================================================== -->
 
 
-const wrapper = document.querySelector(".wrapper");
-const banner = document.querySelector(".banner");
-const productContent = document.querySelector(".products");
-const container = document.querySelector(".container");
-setTimeout(()=> {
-    wrapper.classList.remove("skeleton")
-},3000)
-
-// function getBaner(value){
-//   return new Promise((resolve, reject) => {
-//     setTimeout(()=>{
-//       resolve(value);
-
-//   },3000)
-//   })
-// }
-// const banerHeader = async()=>{
-//   const bannerOther = await getBaner(`
-//     <div class="banner">
-//     <img src="./img/banner.9aa4579c.jpg" alt="banner" />
-//   </div>
-//   `);
-//   console.log(bannerOther)
-//   banner.outerHTML = bannerOther;
-// };
-
-function render(dataProduct) {
-  Promise.all(
-    dataProduct.map((value, index) => {
-        return new Promise((resolve, reject) => {
-            setTimeout(()=>{
-                resolve(value);
-                // productContent.classList.remove("skeleton")
-            },3000)
-          });
-
-    })
-  ).then((data)=>{
-    const result = data.reduce((prev , value)=> {
-        return prev  + 
-        `
-        <div class="item-product">
-        <div class="item-img ">
-          <img src="${value.img}" alt="product" />
+    <div class="container">
+      <nav class="nav-bar">
+        <div class="logo">
+          <a href="#"><img src="./img/Vector.jpg" alt="imgLogo" /></a>
         </div>
-        <h3 class="item-title ">${value.name}</h3>
-        <div class="item-info">
-          <span class="nameType">${value.type}</span>
-          <div class="item-vote">
-            <span class="voteStart ">${value.vote}</span>
-            <span class="item-start ">
-              <i class="fa-solid fa-star"></i>
-            </span>
+        <div class="infor-navRight">
+          <ul class="right-nav">
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">English</a></li>
+            <li><a href="#">Sign up</a></li>
+            <li><a href="#"><i class="fa-solid fa-house"></i></a></li>
+          </ul>
+        </div>
+        <!-- .infor-navRight -->
+      </nav>
+      <!-- .nav-bar -->
+      <div class="content">
+        <div class="login-content">
+          <div class="title">
+            <h1>WELCOME BACKI</h1>
+            <span class="des"
+              >Don’t have a account,<span><a href="#">Sign up</a></span></span
+            >
           </div>
+          <!-- .title -->
+          <form action="#">
+            <div class="inputs">
+              <label for="uname">Username</label>
+              <input
+                type="text"
+                placeholder="Enter Username"
+                name="uname"
+                required
+              />
+            </div>
+
+            <div class="inputs pass">
+              <label for="psw">Password</label>
+              <input
+                type="password"
+                placeholder="Enter Password"
+                name="psw"
+                required
+              />
+            </div>
+
+            <div class="checkRMember">
+              <div class="Rmember">
+                <input type="radio" name="radi" id="numberRadi" />
+                <label for="rad">Remeber me</label>
+              </div>
+              <a href="#">Forget password</a>
+            </div>
+            <!-- .checkRMember -->
+            <button type="submit" class="btn-sign">Sign in</button>
+          </form>
+          <div class="socice">
+            <a href="#" class=" btn-socice Google"><img src="./img/google.png" alt=""></a>
+            <a href="#" class=" btn-socice Facebook"><img src="./img/facebook.png" alt=""></a>
+            <a href="#" class=" btn-socice Apple"><img src="./img/apple.png" alt=""></a>
+          </div>
+          <!-- .socice -->
         </div>
-        <h3 class="price ">${value.price}</h3>
-        <div class="item-btn ">
-          <button class="item-addBtn">Add to card</button>
-          <button class="item-buyBtn">Buy now</button>
+        <!-- .login-content -->
+        <div class="right-img">
+            <img src="./img/Exlorer_Illustration 1.jpg" alt="img">
         </div>
       </div>
-        `
-    },``)
-    productContent.innerHTML= result
-    // container.outerHTML = `
-    // <div class="container">
-    //   <div class="products ">${result}</div>
-    //   <!-- .products -->
-    // </div>
-    // `
-    console.log(result);
-  })
-}
-render(dataProduct);
-// banerHeader()
+      <!-- .content -->
+    </div>
+

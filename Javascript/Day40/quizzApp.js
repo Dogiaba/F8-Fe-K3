@@ -39,7 +39,9 @@ const app = {
     },
 
     checker: function(optio){
-
+        countdown = setTimeout(()=>{
+            count--;
+        })
     },
 
     getQuiz: async function(query = {}){

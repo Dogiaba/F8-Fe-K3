@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Asap:ital,wght@0,200;1,100&family=Crimson+Text&family=Inter:wght@100;200&family=Lato:ital,wght@0,300;0,400;1,300&family=Lobster&family=Manrope:wght@200;300;400&family=Montserrat:ital,wght@0,200;0,400;1,300&family=Nunito:wght@200;300&family=Open+Sans:wght@300&family=Oswald:wght@300;400&family=Overpass:ital,wght@0,300;1,200&family=Poppins:ital,wght@0,200;0,300;1,200;1,500&family=Rajdhani:wght@300;400;500&family=Roboto:ital,wght@0,100;0,300;0,400;1,300;1,400&family=Space+Grotesk:wght@300;400;500&family=Titillium+Web:wght@200;300;400;700;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body{
+    font-family: Overpass;
+}
+.nav-bar {
+  width: 100%;
+  position: relative;
+  max-width: 1300px;
+  padding: 0 30px;
+  height: 70px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.right-nav {
+  display: flex;
+}
+.right-nav li {
+  padding: 9px 15px;
+}
+.content {
+  display: flex;
+  padding: 24px 32px;
+  /* align-items: flex-start; */
+  justify-content: space-between;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.title h1 {
+  color: #444b59;
+  font-family: Overpass;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 3.6px;
+}
+.des {
+  color: #444b59;
+  font-family: Nunito;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2.4px;
+}
+.des >span >a{
+    color: #789ade;
+}
+form {
+  margin: 30px 0px;
+}
+.inputs > label {
+  color: #444b59;
+  font-family: Nunito;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 2.8px;
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+}
+.inputs > input {
+  border-radius: 80px;
+  border: 2px solid #789ade;
+  background: #fff;
+  padding: 10px;
+  width: 481px;
+  height: 40px;
+}
+::placeholder {
+  color: #c8d3f9;
+}
+.pass {
+  margin: 18px 0px;
+}
+#numberRadi {
+  width: 21px;
+  height: 18px;
+}
+.Rmember > label {
+  position: relative;
+  top: -3px;
+}
+
+.checkRMember {
+  display: flex;
+  width: 479px;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 18px 0px;
+}
+
+input[type="radio"] {
+  accent-color: #9eb0ea;
+  /* accent-color: red; */
+}
+.btn-sign {
+  border-radius: 80px;
+  background: #8699da;
+  box-shadow: 4px 8px 12px 0px rgba(78, 99, 141, 0.06),
+    0px 4px 12px 0px rgba(200, 211, 249, 0.6) inset;
+  width: 481px;
+  height: 40px;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+.socice {
+  /* background: #fff; */
+  display: flex;
+  width: 480px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.socice .btn-socice {
+  border-radius: 8px;
+  border: 2px solid #789ade;
+  /* width: 120px;
+  height: 80px; */
+  padding: 15px 36px;
+}
+.socice .btn-socice img{
+    /* position: relative;
+    top: 13px; */
+    height: 37px;
+}
+.right-img img {
+  width: 575.94px;
+  height: 502.27px;
+}
