@@ -40,75 +40,78 @@ maxElement(arr);
 <!-- ===================================================================================== -->
 
 
-    <div class="container">
-      <nav class="nav-bar">
-        <div class="logo">
-          <a href="#"><img src="./img/Vector.jpg" alt="imgLogo" /></a>
-        </div>
-        <div class="infor-navRight">
-          <ul class="right-nav">
-            <li><a href="#">Help</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">English</a></li>
-            <li><a href="#">Sign up</a></li>
-            <li><a href="#"><i class="fa-solid fa-house"></i></a></li>
-          </ul>
-        </div>
-        <!-- .infor-navRight -->
-      </nav>
-      <!-- .nav-bar -->
-      <div class="content">
-        <div class="login-content">
-          <div class="title">
-            <h1>WELCOME BACKI</h1>
-            <span class="des"
-              >Don’t have a account,<span><a href="#">Sign up</a></span></span
-            >
-          </div>
-          <!-- .title -->
-          <form action="#">
-            <div class="inputs">
-              <label for="uname">Username</label>
-              <input
-                type="text"
-                placeholder="Enter Username"
-                name="uname"
-                required
-              />
-            </div>
+import { config } from "./config.js";
+import {requestRefresh} from "./utils.js";
+const { SERVER_API } = config;
 
-            <div class="inputs pass">
-              <label for="psw">Password</label>
-              <input
-                type="password"
-                placeholder="Enter Password"
-                name="psw"
-                required
-              />
-            </div>
+export const client = {
+  serverApi: SERVER_API,
+  token:null,
+  setToken:function(tokens){
+    this.token = tokens;
+  },
+  requestRefresh:null,
+  setUrl: function (url) {
+    this.serverApi = url;
+  },
+  send: async function (path, method = "GET", body = null) {
+    //nối chuỗi
+    const url = `${this.serverApi}${path}`;
+    //tác vụ call api
+    const headers = {
+      "Content-Type": "application/json",
+    };
+    if(this.token){
+      headers["Authorization"] = `Bearer ${this.token}`
+    }
+    const options = {
+      method,
+      headers,
+    };
+    if (body) {
+      options.body = JSON.stringify(body);
+    }
+    try {
+      const response = await fetch(url, options);
+       //Response
+      //Check token ở đây --> Nếu hết hạn -> Gọi API Refresh -> Lưu lại -> Gọi lại hàm send()
+      if(!response.ok){
+        const newToken = await requestRefresh(this);
+        if(newToken){
+          //xử lý --> Lưu token vào localStorage
+          this.token = newToken.data.token.accessToken;
+          console.log(this.token)
+          //xử lý -> Gọi lại hàm send
+          return this.send(path, method, body);
+        }
+        console.log(newToken)
+      }
+      const data = await response.json();
+      return { response, data };
+    } catch (e) {
+      throw new Error(e);
+    }
+  },
+  get: function (url) {
+    //call API với get method
+    return this.send(url);
+  },
+  post: function (url, body) {
+    //Call API với post method
+    return this.send(url, "POST", body);
+  },
+  put: function (url, body) {
+    //call api với put method
+    return this.send(url, "PUT", body);
+  },
+  patch: function (url, body) {
+    //callapi với path method
+    return this.send(url, "PATH", body);
+  },
+  delete: function (url) {
+    //callapi voiws delete
+    return this.send(url, "DELETE");
+  },
+};
 
-            <div class="checkRMember">
-              <div class="Rmember">
-                <input type="radio" name="radi" id="numberRadi" />
-                <label for="rad">Remeber me</label>
-              </div>
-              <a href="#">Forget password</a>
-            </div>
-            <!-- .checkRMember -->
-            <button type="submit" class="btn-sign">Sign in</button>
-          </form>
-          <div class="socice">
-            <a href="#" class=" btn-socice Google"><img src="./img/google.png" alt=""></a>
-            <a href="#" class=" btn-socice Facebook"><img src="./img/facebook.png" alt=""></a>
-            <a href="#" class=" btn-socice Apple"><img src="./img/apple.png" alt=""></a>
-          </div>
-          <!-- .socice -->
-        </div>
-        <!-- .login-content -->
-        <div class="right-img">
-            <img src="./img/Exlorer_Illustration 1.jpg" alt="img">
-        </div>
-      </div>
-      <!-- .content -->
-    </div>
 

@@ -215,6 +215,9 @@ const app = {
       name,
     });
   },
+
+
+
   checkAuth: async function () {
     if (localStorage.getItem("login-token")) {
       try {
