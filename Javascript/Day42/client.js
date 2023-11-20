@@ -7,6 +7,9 @@ export const client = {
   setUrl: function (url) {
     this.serverApi = url;
   },
+  setToken: function(token){
+    this.token = token;
+  },
   send: async function (url, method = "GET", body = null) {
     //nối chuỗi
     url = `${this.serverApi}${url}`;

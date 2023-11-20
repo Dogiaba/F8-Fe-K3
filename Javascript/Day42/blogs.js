@@ -16,9 +16,9 @@ const app = {
   render: function () {
     root.innerHTML = this.isLogin()
       ? this.homePage()
-      : this.register
+      :( this.register
       ? this.signUp()
-      : this.loginForm();
+      : this.loginForm());
     // root.innerHTML = this.loginForm();
     // root.innerHTML = this.signUp();
   },
@@ -39,7 +39,16 @@ const app = {
 
   listBlog: function (blogs) {
     const inHtml = blogs.map(
-      ({ userId, title, content }) => `
+      ({ userId, title, content,timeUP }) =>{
+        const phoneRegex = /^(0|\+84)(?:\d{9})$/;
+        content = content.replace(phoneRegex,`<a href="tel:$1" target="_blank" title="Gọi tới số:$1" data-start="$2">$1</a>`);
+    
+        const mailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        content = content.replace(mailRegex,`<a href="tel:$1" target="_blank" title="email: $1" data-start="$2">$1</a>`);
+    
+        const youTuRegex = /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/
+        content = content.replace(youTuRegex,`<a href="tel:$1" target="_blank" title="link: $1" data-start="$2">$1</a>`);
+      return`
             <div class="container">
             <div class="cards tag">
               <div class="item_card">
@@ -56,12 +65,13 @@ const app = {
                   <span class="code">Front-end</span>
                   <span class="date">2 tháng trước</span>
                   <span class="read">4 phút đọc</span>
+
                 </div>
                 <a href="#">Read More</a>
               </div>
             </div>
           </div>
-        `
+        `}
     );
     const listBlogs = document.createElement("div");
     listBlogs.classList.add("boxBlogs");
@@ -77,21 +87,26 @@ const app = {
         <li>Hello:<span> Loading... </span></li>
         <li><a href="#" class="logout">Dang xuat</a></li>
         </ul>
-        <form>
+        <form class="postBlogForm">
             <div class="mb-3">
                 <label for="">Enter your title</label>
                 <input
                 type="text"
+                name="name"
                 class="form-control"
                 placeholder="Please enter the title..."
               />
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea class="form-control" name="content" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <p> test</p>
+            </div>
+            <div class="mb-3">
+                  <input type="date" placeholder="MM/DD/YYYY">
             </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary btn-post">Post</button>
 
         </form>
         </div>`;
@@ -186,6 +201,18 @@ const app = {
     </div>
     `;
   },
+  postBlog: async function({title, content}, el){
+    const {data:tokens, response} = await client.post("/blogs",{
+      title, content,
+    });
+    if(!response.ok){
+      this.showMess(el,"Post lỗi")
+      return;
+    }
+    console.log("post ok", tokens);
+    this.getBlog()
+  },
+
 
   getBlog: async function (query = {}) {
     let queryString = new URLSearchParams(query).toString();
@@ -195,9 +222,9 @@ const app = {
 
     const { data: blogs } = await client.get("/blogs" + queryString);
     this.blogs = blogs.data;
-    console.log(blogs);
+    // console.log(blogs);
     this.listBlog(blogs.data);
-    console.log(blogs.data);
+    // console.log(blogs.data);
   },
 
   addEvent: function () {
@@ -206,14 +233,20 @@ const app = {
       //get data when login
       const form = [...new FormData(e.target)];
       const data = Object.fromEntries(form);
-      console.log(e.target);
+      // console.log(e.target);
       if (e.target.classList.contains("form-signIn")) {
         this.login(data, e.target);
+      }
+      if(e.target.classList.contains("postBlogForm")){
+        e.preventDefault();
+        this.postBlog(data, e.target)
+        // const  headerLog = document.querySelector(".header-log");
+        // headerLog.style.display = "none";
       }
 
       if (e.target.classList.contains("form-signUp")) {
         this.register(data, e.target);
-        console.log("okk" + data);
+        // console.log("okk" + data);
       }
     });
 
@@ -229,10 +262,11 @@ const app = {
       const boxBlogs = document.querySelector(".boxBlogs");
       if (e.target.classList.contains("btn-log")) {
         e.preventDefault();
-        console.log(form1);
+        // console.log(form1);
         form1.style.display = "block";
         boxBlogs.style.display = "none";
       }
+
     });
 
     // const btn = document.querySelector(".btn-signUp");
@@ -249,14 +283,54 @@ const app = {
           this.render();
         }
       }
+
+
+
+    });
+
+    root.addEventListener("click",(e) =>{
+      const postBlogForm = document.querySelector(".postBlogForm")
+      if(e.target.classList.contains("btn-post")){
+        e.preventDefault();
+        console.log("ok");
+        const title = postBlogForm.querySelector('[name = "name"]').value;
+        const content = postBlogForm.querySelector("#exampleFormControlTextarea1").value;
+
+
+        const data ={
+          title: title,
+          content: content,
+        }
+        this.postBlog(data, postBlogForm);
+        console.log("form data:", data);
+
+      }
     });
   },
+  // regexLink: function(content){
+  //   // const contents = postBlogForm.querySelector("#exampleFormControlTextarea1");
+  //   // let partten = /((0|\+84)(?:\d{9}))|(^[a-zA-Z0-9+.-_]+\.[a-zA-Z]{2,3})$/g;
+  //   const phoneRegex = /^(0|\+84)(?:\d{9})$/;
+  //   content = content.replace(phoneRegex,`<a href="tel:$1" target="_blank" title="Gọi tới số:$1" data-start="$2">$1</a>`);
+
+  //   const mailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  //   content = content.replace(mailRegex,`<a href="tel:$1" target="_blank" title="email: $1" data-start="$2">$1</a>`);
+
+  //   const youTuRegex = /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/
+  //   content = content.replace(youTuRegex,`<a href="tel:$1" target="_blank" title="link: $1" data-start="$2">$1</a>`);
+
+  //   return content;
+
+  // },
 
   handLogout: function () {
     localStorage.removeItem("login_token");
     this.loginStatus = false;
     //call Api / logout
     this.render();
+    const form1 = document.querySelector(".form1");
+    console.log(root.innerHTML);
+    form1.style.display = "block";
   },
   showMess: function (el, msg) {
     el.querySelector(".msg").innerText = "";
@@ -273,24 +347,28 @@ const app = {
       this.showMess(el, "Email hoac mat khau ko chinh xac");
       return;
     }
+    // localStorage.setItem("login_token", JSON.stringify(tokens.data));
     localStorage.setItem("login_token", JSON.stringify(tokens.data));
+    // localStorage.setItem("access_Token", JSON.stringify(tokens.accessToken));
+    // localStorage.setItem("refresh_Token", JSON.stringify(tokens.refreshToken));
+    console.log(localStorage);
     this.loginStatus = true;
     this.checkAuth();
     this.render();
   },
 
-//   register: async function ({ name, email, password }) {
-//     const { data, response } = await client.post("/auth/register", {
-//       name,
-//       email,
-//       password,
-//     });
-//     if (!response.ok) {
-//       this.showMess(el, "Dang ky khong thanh cong!!");
-//       return;
-//     }
-//     await this.login({ email, password }, el);
-//   },
+  // register: async function ({ name, email, password }) {
+  //   const { data, response } = await client.post("/auth/register", {
+  //     name,
+  //     email,
+  //     password,
+  //   });
+  //   if (!response.ok) {
+  //     this.showMess(el, "Dang ky khong thanh cong!!");
+  //     return;
+  //   }
+  //   await this.login({ email, password }, el);
+  // },
 
   loading: function (el, startus = true) {
     const btn = el.querySelector(".btn");
@@ -308,16 +386,19 @@ const app = {
   },
 
   checkAuth: async function () {
-    if (localStorage.getItem("login-token")) {
+    // if (localStorage.getItem("login-token")) 
+    if (localStorage.getItem("login_token")) {
       try {
-        const { accessToken } = JSON.parse(localStorage.getItem("login-token"));
-        if (!accessToken) {
+        const {accessToken:access_Token} = JSON.parse(localStorage.getItem("login_token"));
+        if (!access_Token) {
           throw new Error("Access TOken Not Exists");
         }
+
         root.innerHTML = `<div class="container">
             <h2>...</h2></div>`;
         this.loginStatus = true;
-        client.setToken(accessToken);
+
+        client.setToken(access_Token);
         const { data: user, response } = await client.get("/users/profile");
 
         if (!response.ok) {
@@ -327,10 +408,11 @@ const app = {
         this.loginStatus = true;
         this.user = user;
       } catch (e) {
-        throw new Error(e);
-        // this.loginStatus = false;
+        // throw new Error(e);
+        console.log(e);
+        this.loginStatus = false;
       }
-      console.log(this.loginStatus);
+      // console.log(this.loginStatus);
       this.render();
     }
   },
