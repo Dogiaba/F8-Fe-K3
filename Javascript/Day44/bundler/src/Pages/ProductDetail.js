@@ -3,6 +3,6 @@ export const ProductDetail = ({data}) =>{
     // console.log(router)
     return `
     <h1>Chi tiết sản phẩm:${id}</h1>
-    <button onclick="navigate('/san-pham')">Back</button>
+    <button class="btnBack" onclick="navigate('/san-pham')">Back</button>
     `
 }

@@ -3,6 +3,10 @@ import Navigo from "navigo";
 //khởi tạo
 const routerNa = new Navigo("/",{linksSelector: "a", hash: true});
 
+window.navigate = function(path){
+    routerNa.navigate(path);
+}
+
  const renderPage = (content, target) =>{
     target.innerHTML = content();
 }
