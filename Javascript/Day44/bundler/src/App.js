@@ -3,6 +3,8 @@ import {About} from "./Pages/About";
 import {ProductDetail} from"./Pages/ProductDetail";
 import {Products} from "./Pages/Products";
 import {DefaultLayout} from "./Layouts/Default";
+import router from "./Utils/Router";
+
 export const App = () => {
     return router(
         [
