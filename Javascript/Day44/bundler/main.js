@@ -1,17 +1,27 @@
 import './style.css'
-import {DefaultLayout} from "./src/Layouts/Default.js";
 import { Home } from './src/Pages/Home.js';
-import {About} from "./src/Pages/About.js";
-import {ProductDetail} from"./src/Pages/ProductDetail.js";
-import {Products} from "./src/Pages/Products.js";
-import {renderPage , router} from "./src/Utils/Router.js"
+
+import {renderPage , routerNa} from "./src/Utils/Router.js"
 import { App } from './src/App.js';
 
+const {root:roots, DefaultLayout} = App();
 
-let stringHtml = DefaultLayout();
-const pattern = /{body}/;
-const app = document.querySelector("#app");
-app.innerHTML = stringHtml.replace(pattern,Home);
-// renderPage(ProductDetail,app);
-router.resolve();
+
+function render(component, DefaultLayout, params = null){
+    let stringHtml = DefaultLayout;
+    const pattern = /{body}/;
+    const app = document.querySelector("#app");
+    if(params){
+        app.innerHTML = stringHtml.replace(pattern,component(params));
+    }else{
+        app.innerHTML = stringHtml.replace(pattern,component());
+    }
+    
+}
+roots.forEach(({path, component}, _)=> {
+    routerNa.on(path,(params)=>{
+        render(component,DefaultLayout, params )
+    })
+});
+routerNa.resolve();
 
