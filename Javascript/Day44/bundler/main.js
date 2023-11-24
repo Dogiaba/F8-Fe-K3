@@ -1,12 +1,14 @@
 import './style.css'
-import { Home } from './src/Pages/Home.js';
 import {renderPage , routerNa} from "./src/Utils/Router.js"
 import { App } from './src/App.js';
 import {Error} from './src/Error.js'
+import { ProductDetail } from './src/Pages/ProductDetail.js';
 
 const {root:roots, DefaultLayout} = App();
 
 const app = document.querySelector("#app");
+const btnBack = document.querySelector(".btnBack");
+
 function render(component, DefaultLayout, params = null){
     let stringHtml = DefaultLayout;
     const pattern = /{body}/;
@@ -30,6 +32,11 @@ routerNa.notFound(()=> {
 }).resolve();
 
 
+// btnBack.onclick = function(){
+//     console.log("ok")
+// }
 
 
-
+function navigate(){
+    console.log("ok")
+}
