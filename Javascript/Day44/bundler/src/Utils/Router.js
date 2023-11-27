@@ -1,7 +1,7 @@
 import Navigo from "navigo";
  
 //khởi tạo
-const routerNa = new Navigo("/",{linksSelector: "a",hash: true});
+const routerNa = new Navigo("/",{linksSelector: "a",hash: false});
 
 //Button back productDetail
 window.navigate = function(path){
