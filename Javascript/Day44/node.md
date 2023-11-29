@@ -6,7 +6,7 @@
 
 hàm route: có 2 tham số
 - Tham số 1: Mảng chứa các route
-- Tham số 2: layout (tạo nên bố cục trng web)
+- Tham số 2: layout (tạo nên bố cục trang web)
 
 
 
