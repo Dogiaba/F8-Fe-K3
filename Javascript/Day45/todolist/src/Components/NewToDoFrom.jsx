@@ -1,7 +1,7 @@
 import React, { useReducer, useState } from 'react'
 // import  "uuid"
 import "bootstrap/dist/css/bootstrap.min.css"
-// import "../assets/Styles/Styles.scss"
+import "../assets/Styles/Styles.scss"
 import"../assets/Styles/styless.css"
 
 
