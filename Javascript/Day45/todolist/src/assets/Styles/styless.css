@@ -1,3 +1,6 @@
+ul {
+  list-style: none;
+}
 .inputBtn{
     width: 200px;
     height: 45px;
