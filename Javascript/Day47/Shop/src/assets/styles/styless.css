@@ -1,0 +1,19 @@
+body{
+    background-color: #CBD5E1;
+}
+.login-form{
+    width: 23%;
+    margin: 4% auto;
+    box-shadow: 0px 0px 10px #afc0d9;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 0.25rem;
+}
+.input-container{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.font-medium{
+    font-weight: 500;
+}
