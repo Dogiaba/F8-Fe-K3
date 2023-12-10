@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../assets/Styles/Styles.css";
+import TodoList from "./TodoList";
 
 const TodoAdd = ({onGetTodo})=> {
   const[name, setName] = useState("");
@@ -43,6 +44,7 @@ const TodoAdd = ({onGetTodo})=> {
               không có todo
             </li>
           </ul> */}
+          {/* <TodoList/> */}
         </div>
       </div>
     </div>
