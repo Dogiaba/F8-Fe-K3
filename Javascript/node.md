@@ -39,79 +39,107 @@ maxElement(arr);
 
 <!-- ===================================================================================== -->
 
-
-import { config } from "./config.js";
-import {requestRefresh} from "./utils.js";
-const { SERVER_API } = config;
-
-export const client = {
-  serverApi: SERVER_API,
-  token:null,
-  setToken:function(tokens){
-    this.token = tokens;
-  },
-  requestRefresh:null,
-  setUrl: function (url) {
-    this.serverApi = url;
-  },
-  send: async function (path, method = "GET", body = null) {
-    //nối chuỗi
-    const url = `${this.serverApi}${path}`;
-    //tác vụ call api
-    const headers = {
-      "Content-Type": "application/json",
-    };
-    if(this.token){
-      headers["Authorization"] = `Bearer ${this.token}`
-    }
-    const options = {
-      method,
-      headers,
-    };
-    if (body) {
-      options.body = JSON.stringify(body);
-    }
-    try {
-      const response = await fetch(url, options);
-       //Response
-      //Check token ở đây --> Nếu hết hạn -> Gọi API Refresh -> Lưu lại -> Gọi lại hàm send()
-      if(!response.ok){
-        const newToken = await requestRefresh(this);
-        if(newToken){
-          //xử lý --> Lưu token vào localStorage
-          this.token = newToken.data.token.accessToken;
-          console.log(this.token)
-          //xử lý -> Gọi lại hàm send
-          return this.send(path, method, body);
-        }
-        console.log(newToken)
-      }
-      const data = await response.json();
-      return { response, data };
-    } catch (e) {
-      throw new Error(e);
-    }
-  },
-  get: function (url) {
-    //call API với get method
-    return this.send(url);
-  },
-  post: function (url, body) {
-    //Call API với post method
-    return this.send(url, "POST", body);
-  },
-  put: function (url, body) {
-    //call api với put method
-    return this.send(url, "PUT", body);
-  },
-  patch: function (url, body) {
-    //callapi với path method
-    return this.send(url, "PATH", body);
-  },
-  delete: function (url) {
-    //callapi voiws delete
-    return this.send(url, "DELETE");
-  },
-};
+        <h1>DAY 1</h1>
+            <a href="https://dogiaba.github.io/F8-Fe-K3/Day1/">Home work day 1</a>
+        <h1>DAY 2</h1>
+          <a href="#">Update...</a>
+        <h1>DAY 3</h1>
+            <a href="https://dogiaba.github.io/F8-Fe-K3/Day3/CallToAction/">Call To Action</a>
+            <a href="https://dogiaba.github.io/F8-Fe-K3/Day3/ContactMap/">Contact map</a>
+            <a href="https://dogiaba.github.io/F8-Fe-K3/Day3/FormAccessManager/">Form Access Manager</a>
+            <a href="https://dogiaba.github.io/F8-Fe-K3/Day3/FormContact/">Form Contact</a>
+            <a href="https://dogiaba.github.io/F8-Fe-K3/Day3/CustomerReviews/">Customer Reviews</a>
+        <h1>DAY 4</h1>
+            <a href="https://dogiaba.github.io/F8-Fe-K3/Day4/BestSeller/">Best Seller</a>
+            <a href="https://dogiaba.github.io/F8-Fe-K3/Day4/BookTableForm/">Book Table Form</a>
+            <a href="https://dogiaba.github.io/F8-Fe-K3/Day4/FormSubscribe/">Form Subscribe</a>
+        <h1>DAY 5</h1>
+            <a href="https://dogiaba.github.io/F8-Fe-K3/Day5/AnswerReveal/">Answer Reveal</a>
+            <a href="https://dogiaba.github.io/F8-Fe-K3/Day5/FormSubmit/">Form Submit</a>
+            <a href="https://dogiaba.github.io/F8-Fe-K3/Day5/TakeServices/">Take Services</a>
+        <h1>DAY 6</h1>
+            <a href="https://dogiaba.github.io/F8-Fe-K3/Day6/FormLogin/">FormLogin</a>
+            <a href="https://dogiaba.github.io/F8-Fe-K3/Day6/MenuDropdown/">MenuDropdown</a>
+            <a href="https://dogiaba.github.io/F8-Fe-K3/Day6/ServiceLayout/">ServiceLayout</a>
+        <h1>DAY 7</h1>
+            <a href="https://dogiaba.github.io/F8-Fe-K3/Day7/Lesson1/">Project Banner</a>
+            <a href="https://dogiaba.github.io/F8-Fe-K3/Day7/Lesson2/">Investor Profile</a>
+            <a href="https://dogiaba.github.io/F8-Fe-K3/Day7/Lesson3/">Khu vực bất động sản</a>
+        <h1>DAY 8</h1>
+            <a href="https://dogiaba.github.io/F8-Fe-K3/Day8/MegaMenu/">Mega Menu</a>
+            <a href="https://dogiaba.github.io/F8-Fe-K3/Day8/ShoppingCart/">Shopping Cart Mini</a>
+            <a href="https://dogiaba.github.io/F8-Fe-K3/Day8/ServiceLayout/">Service Layout</a>
+        <h1>DAY 9</h1>
+            <a href="https://dogiaba.github.io/F8-Fe-K3/Day9/Lesson1/">Lesson1</a>
+            <a href="https://dogiaba.github.io/F8-Fe-K3/Day9/Lesson2/">Lesson2</a>
+            <a href="https://dogiaba.github.io/F8-Fe-K3/Day9/Lesson3/">Lesson3</a>
+        <h1>DAY 10</h1>
+            <a href="https://dogiaba.github.io/F8-Fe-K3/Day10/Lesson1/">Lesson1</a>
+            <a href="https://dogiaba.github.io/F8-Fe-K3/Day10/Lesson2/">Lesson2</a>
+            <a href="https://dogiaba.github.io/F8-Fe-K3/Day10/Lesson3/">Lesson3</a>
+        <h1>DAY 11</h1>
+            <a href="https://dogiaba.github.io/F8-Fe-K3/Day11/">Lesson1</a>
+        <h1>DAY 12</h1>
+            <a href="https://dogiaba.github.io/F8-Fe-K3/Day12/">Lesson1</a>
+        <h1>DAY 13</h1>
+            <a href="https://dogiaba.github.io/F8-Fe-K3/Day13/">Lesson1</a>
+        <h1>DAY 15</h1>
+          <a href="https://dogiaba.github.io/F8-Fe-K3/">Lesson1</a>
+        <h2>Day23</h2>
+            <a
+              href="https://dogiaba.github.io/F8-Fe-K3/Javascript/Day23/Lesson1/">Lesson1</a>
+            <a
+              href="https://dogiaba.github.io/F8-Fe-K3/Javascript/Day23/Lesson2/">Lesson2</a>
+            <a
+              href="https://dogiaba.github.io/F8-Fe-K3/Javascript/Day23/Lesson3/">Lesson3</a>
+            <a
+              href="https://dogiaba.github.io/F8-Fe-K3/Javascript/Day23/Lesson4/">Lesson4</a>
+            <a
+              href="https://dogiaba.github.io/F8-Fe-K3/Javascript/Day23/Lesson5/">Lesson5</a>
 
 
+        <h2>Day24</h2>
+            <a
+              href="https://dogiaba.github.io/F8-Fe-K3/Javascript/Day24/Lesson1/"
+              >Lesson1</a
+            >
+
+            <a
+              href="https://dogiaba.github.io/F8-Fe-K3/Javascript/Day24/Lesson2/"
+              >Lesson2</a>
+
+            <a href="https://dogiaba.github.io/F8-Fe-K3/Javascript/Day24/Lesson3/">Lesson3</a>
+
+
+        <h2>Day25</h2>
+            <a href="https://dogiaba.github.io/F8-Fe-K3/Javascript/Day25/">Chưa hoàn thành</a>
+        <h2>Day26</h2>
+          <a href="https://dogiaba.github.io/F8-Fe-K3/Javascript/Day26/">todoapp</a>
+        <h2>Day27</h2>
+          <a href="https://dogiaba.github.io/F8-Fe-K3/Javascript/Day27/">slide Show</a>
+        <h2>Day28</h2>
+          <a href="https://dogiaba.github.io/F8-Fe-K3/Javascript/Day28/">Music Play</a>
+        <h2>Day29</h2>
+            <a href="https://dogiaba.github.io/F8-Fe-K3/Javascript/Day29/">Shopping Cart</a>
+        <h2>Day31</h2>
+          <a href="https://dogiaba.github.io/F8-Fe-K3/Javascript/Day31/">Drag & Drop Sortable List</a>
+        <h2>Day32</h2>
+            <a href="https://dogiaba.github.io/F8-Fe-K3/Javascript/Day32/">Doc Editor</a>
+        <h2>Day33</h2>
+            <a href="https://dogiaba.github.io/F8-Fe-K3/Javascript/Day33/">Get Link</a>
+        <h2>Day34</h2>
+          <a href="https://dogiaba.github.io/F8-Fe-K3/Javascript/Day34/">Zoom image</a>
+        <h2>Day35</h2>
+          <a href="https://dogiaba.github.io/F8-Fe-K3/Javascript/Day35/">voice search</a >
+      </div>
+
+      <h2>Day37</h2>
+          <a href="https://dogiaba.github.io/F8-Fe-K3/Javascript/Day37/">Skeleton Loading</a>
+      <h2>Day39</h2>
+          <a href="https://dogiaba.github.io/F8-Fe-K3/Javascript/Day39/">Infinity Scroll</a>
+      <h2>Day40</h2>
+          <a href="https://dogiaba.github.io/F8-Fe-K3/Javascript/Day40/">Quiz App</a>
+      <h2>Day41</h2>
+          <a href="https://dogiaba.github.io/F8-Fe-K3/Javascript/Day41/">Login Form</a>
+      <h2>Day42</h2>
+          <a href="https://dogiaba.github.io/F8-Fe-K3/Javascript/Day42/">Login Form Blog</a>
