@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import emailjs, { send } from "@emailjs/browser";
 import LogoutButton from "./LogoutButton";
@@ -8,6 +8,9 @@ import {toast} from "react-toastify";
 const Profile = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
   const form = useRef();
+
+  // const [enteredEmail, setEnteredEmail] = useState("");
+  const [email, setEmail] = useState();
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -27,14 +30,22 @@ const Profile = () => {
           console.log(error.text);
         }
       );
+      // setEnteredEmail("");
   };
 
-  const validate = (v)=>{
+  const validateEmail = (email)=>{
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
   }
 
 
 
+const emaiInputBlurHandler =()=>{
+  if(enteredEmail.trim() === ""){
+    setInputEmailvalid(false);
+    toast.error("Email không bỏ trống!")
+  }
+
+}
   if (isLoading) {
     return <div>Loading ...</div>;
   }
@@ -57,7 +68,10 @@ const Profile = () => {
           >
             <div className="inputEmail">
               <label htmlFor="">Email của bạn</label>
-              <input type="email" name="user_email" />
+              <input type="email" name="user_email"
+              // value={enteredEmail}
+              // onChange={changeEmailHandler}
+              onBlur={emaiInputBlurHandler} />
             </div>
             <div className="textArea">
               <label htmlFor="">Tin nhắn</label>
