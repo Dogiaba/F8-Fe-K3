@@ -1,0 +1,46 @@
+.container{
+    padding: 1rem;
+    display: block;
+    position: relative;
+}
+.table_container{
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+    border-width: 2px;
+    border-style: solid;
+    border-image: initial;
+    border-color: #2c7a7b;
+    border-radius: 8px;
+    flex-shrink: 0;
+    width: 100vw;
+}
+.table_content{
+    font-variant-numeric: lining-nums tabular-nums;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+td{
+    border-bottom: 1px solid #dddddd;
+    padding: 8px;
+    text-align: center;
+    
+}
+.total_number{
+    margin-top: 1rem;
+    text-align: center;
+}
+.infor_his{
+    margin-top: 1rem;
+}
+.numInforHisMi{
+    color: #38b2ac;
+}
+.ratio{
+    padding-bottom: 1rem;
+    font-size: 1rem;
+    color: #9B2C2C;
+}
