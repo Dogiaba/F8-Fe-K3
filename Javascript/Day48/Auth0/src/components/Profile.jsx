@@ -1,51 +1,48 @@
-import React, { useRef, useState } from "react";
+import { useRef } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
-import emailjs, { send } from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 import LogoutButton from "./LogoutButton";
 import "../assets/styles/Profile.css";
 import {toast} from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Profile = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
   const form = useRef();
 
-  // const [enteredEmail, setEnteredEmail] = useState("");
-  const [email, setEmail] = useState();
-
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
+    const name = user.name;
+    const email = form.current.querySelectorAll("input")[0].value;
+    const mess = form.current.querySelectorAll("textarea")[0].value;
+    const address = window.location.origin;
+
+    
+    const paEmails = {
+      name,
+      email,
+      mess,
+      address,
+    };
+    console.log(paEmails)
+    emailjs.send(
         "service_8d2ftdn",
         "template_ey09nof",
-        form.current,
+        paEmails,
         "4rx130gGapr6FNaKy"
       )
       .then(
         (result) => {
           console.log(result.text);
           console.log("message sent");
+          toast.success("Gửi thành công!!");
         },
         (error) => {
           console.log(error.text);
         }
       );
-      // setEnteredEmail("");
   };
 
-  const validateEmail = (email)=>{
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-  }
-
-
-
-const emaiInputBlurHandler =()=>{
-  if(enteredEmail.trim() === ""){
-    setInputEmailvalid(false);
-    toast.error("Email không bỏ trống!")
-  }
-
-}
   if (isLoading) {
     return <div>Loading ...</div>;
   }
@@ -68,16 +65,13 @@ const emaiInputBlurHandler =()=>{
           >
             <div className="inputEmail">
               <label htmlFor="">Email của bạn</label>
-              <input type="email" name="user_email"
-              // value={enteredEmail}
-              // onChange={changeEmailHandler}
-              onBlur={emaiInputBlurHandler} />
+              <input type="email" name="user_email" />
             </div>
             <div className="textArea">
               <label htmlFor="">Tin nhắn</label>
               <textarea name="message"></textarea>
             </div>
-            <button className="btn_support" type="submit" value={send}>
+            <button className="btn_support" type="submit">
               YÊU CẦU HỖ TRỢ
             </button>
           </form>
