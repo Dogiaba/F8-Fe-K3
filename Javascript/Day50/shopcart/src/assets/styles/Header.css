@@ -1,0 +1,14 @@
+.header-container{
+    background-color: #252b48;
+    display: flex;
+    height: 5rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+.logo{
+    color: #fff;
+}
+.nav-bag{
+    color: #fff;
+}

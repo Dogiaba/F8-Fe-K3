@@ -17,14 +17,6 @@ function TableHis() {
               <td>1</td>
               <td>4</td>
             </tr>
-            <tr>
-              <td>1</td>
-              <td>4</td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>4</td>
-            </tr>
           </tbody>
         </table>
         <div className="total_number">
