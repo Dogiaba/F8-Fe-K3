@@ -1,0 +1,115 @@
+.contents{
+    /* bottom: 0;
+    left: 0;
+    margin-bottom: 8px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 8px;
+    right: 0;
+    scrollbar-color: #fff6 #00000026;
+    scrollbar-width: auto;
+    top: 0;
+    user-select: none;
+    white-space: nowrap; */
+    
+    padding-left: 40px;
+    padding-right: 40px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    align-items: center;
+    /* width: 100%; */
+    margin: auto;
+    display: flex;
+    min-height: 80vh;
+}
+
+.content{
+    display: flex;
+    gap: 1rem;
+    margin: auto;
+}
+.content-left{
+    display: flex;
+    gap: 1rem;
+}
+.content-item{
+    background-color: var(--background-color);
+    height: 300px;
+    gap: 1rem;
+    border-radius: 5px;
+    width: 250px;
+    max-height: 500px;
+    height: 400px;
+
+}
+.list-title{
+    display: flex;
+    align-items: center;
+    background-color: #99999940;
+}
+
+.list-title-textare{
+    margin: 6px 0 5px 6px;
+    border-radius: 3px;
+    border: none;
+    resize: none;
+    outline: none;
+    font-size: 15px;
+    padding: 5px;
+    width: 198px;
+    height: 18px;
+}
+.btn-trash{
+    cursor: pointer;
+    padding: 2px;
+    margin: 1px 3px;
+    font-size: 23px;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.content-list{
+    padding: 0.5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    gap: 1rem;
+    flex-direction: column;
+    flex-grow: 1;
+
+}
+.content-list-item{
+    /* padding: 0.625rem;
+    background-color: #99999940;
+    border-radius: 5px;
+    align-items: center;
+    display: flex;
+    gap: 1px; */
+
+    position: relative;
+    cursor: pointer;
+    background-color: #99999940;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    font-size: 15px;
+    overflow-wrap: break-word;
+    min-height: 18px;
+    display: flex;
+}
+.content-list-item:hover{
+    border: 1px inset rgba(51,153,0,0.65);
+}
+.add-column{
+    background-color: rgba(0, 0, 0, 0.12);
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    min-height: 32px;
+    padding: 8px 16px;
+    border: none;
+}
+.add-column:hover{
+    background-color: rgba(0, 0, 0, 0.24);
+}
