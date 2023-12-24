@@ -1,0 +1,44 @@
+.boards{
+    background-color: var(--background-secondary-color);
+    min-height: fit-content;
+    height: 100vh;
+}
+.header{
+    height: auto;
+    position: relative;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    gap: 4px;
+    width: calc(100% - 26px);
+    align-items: center;
+    padding: 12px 10px 12px 16px;
+    backdrop-filter: blur(4px);
+    background: #0000003d;
+}
+.header-left{
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    min-height: 32px;
+    flex-wrap: nowrap;
+    max-width: 100%;
+}
+.header-right{
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    min-height: 32px;
+    flex-wrap: nowrap;
+    margin-left: auto;
+}
+img{
+    height: 25px;
+    border-radius: 50%;
+}
+.p-icon{
+    height: 26px;
+    margin: 0 5px;
+}
+
