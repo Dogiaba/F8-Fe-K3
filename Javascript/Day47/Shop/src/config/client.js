@@ -1,5 +1,16 @@
+import { toast } from "react-toastify";
 import { config } from "./configs.js";
 const { SERVER_API } = config;
+
+export const getApiKey = async email => {
+  const response = await fetch(config.SERVER_API + "/api-key?email=" + email)
+  const data = await response.json()
+
+  console.log(data)
+  if(response.ok) {
+    return data.data.apiKey
+  }
+}
 
 export const client = {
   serverApi: SERVER_API,
@@ -17,8 +28,8 @@ export const client = {
     const headers = {
       "Content-Type": "application/json",
     };
-    if(!url.includes("api-key")){
-      headers["X-Api-key"]= `${this.apiKey}`
+    if(this.apiKey){
+      headers["X-Api-Key"]= `${this.apiKey}`
     }
     const options = {
       method,
@@ -29,6 +40,15 @@ export const client = {
     }
     try {
       const response = await fetch(url, options);
+      if(!response.ok) {
+        if(response.status == 401) {
+          toast.error("Co loi xay ra, dang nhap lai", {
+            onClick: () => {
+              location.reload()
+            }
+          })
+        }
+      }
       const data = await response.json();
       return { response, data };
     } catch (e) {

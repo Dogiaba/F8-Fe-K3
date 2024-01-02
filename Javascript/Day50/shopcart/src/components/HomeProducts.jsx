@@ -4,13 +4,14 @@ import "../assets/styles/HomeProducts.css";
 const HomeProducts = () => {
   const [product, setProduct] = useState([]);
   useEffect(() => {
-    fetch("https://api-exercise-sopi.vercel.app/api/v1")
+    fetch("https://api-exercise-sopi.vercel.app/api/v1/products?limit=20&page=1")
       .then((res) => {
         return res.json();
       })
       .then((data) => {
         console.log(data);
-        setProduct(data);
+        setProduct(data.data.listProduct);
+
       });
   }, []);
 
@@ -20,7 +21,7 @@ const HomeProducts = () => {
       <div className="container">
         {product.map(
           ({ _id, name, category, brand, price, quantity, image }) => (
-            <div className="card-item">
+            <div key={_id} className="card-item">
               <div className="product-title">
                 <img src={image} alt="image" />
                 <h2>{name}</h2>

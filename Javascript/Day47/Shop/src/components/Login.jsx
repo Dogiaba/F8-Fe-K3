@@ -1,36 +1,31 @@
 import React, { useState } from "react";
 import "../assets/styles/styless.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { client } from "../config/client";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useDispatch, useSelector } from "../config/hook";
-import { app } from "../config/app";
-const Login = () => {
-  // const notify = () =>{
-  //   // toast("Check");
-  //   // toast.success("success!!");
+import { getApiKey } from "../config/client";
 
-  // }
-  const [inputs, setInputs] = useState("");
-//  const state = useSelector();
+const Login = ({ setLogin }) => {
  const dispatch = useDispatch()
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(dispatch)
-    app.start(inputs)
-    try {
-      console.log(inputs)
-      dispatch({
-        type: "login/inpuEmail",
-        payload: inputs,
-      });
+    
+    const data = Object.fromEntries([...new FormData(e.target)])
 
-    } catch (error) {
-      console.log(error);
-      toast.error("Không tìm thấy email");
+    const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
+    if(data.email.trim() == '') {
+      console.warn('Email trong')
+    }else if(!emailRegex.test(data.email)) {
+      console.warn('Email khong hop le')
+    }else {
+      getApiKey(data.email).then(res => {
+        if(res) {
+          localStorage.setItem('apiKey', JSON.stringify(res))
+          setLogin(true)
+        }
+      })
     }
-    setInputs("");
   };
 
   return (
@@ -44,8 +39,7 @@ const Login = () => {
             type="email"
             placeholder="example@example.com"
             className="p-2 rounded"
-            value={inputs}
-            onChange={(e) => setInputs(e.target.value)}
+            name="email"
           />
           <button
             type="submit"
