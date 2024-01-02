@@ -11,6 +11,9 @@ export const getApiKey = async email => {
   if (response.ok) {
     return data.data.apiKey;
   }
+  // else{
+  //   toast.error("Email không tồn tại")
+  // }
 };
 
 export const client = {

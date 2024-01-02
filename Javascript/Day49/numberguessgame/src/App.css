@@ -1,6 +1,5 @@
-
 .App{
     background-color: var(--background-color);
     color: var(--primary-text-color);
-
+    height: 100vh;
 }

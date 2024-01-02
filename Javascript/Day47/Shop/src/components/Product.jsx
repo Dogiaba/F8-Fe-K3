@@ -1,6 +1,5 @@
 import React from 'react'
-import {client} from "../config/client"
-import { config } from '../config/configs'
+
 function Product() {
   return (
     <div>

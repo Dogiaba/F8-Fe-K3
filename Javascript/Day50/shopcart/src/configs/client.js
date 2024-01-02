@@ -3,13 +3,23 @@ import { config } from "./config.js";
 const { SERVER_API } = config;
 
 export const client = {
-  send: async function (url, method = "GET", body = null) {
+  apiKey: null,
+
+  setApi: function(apiKey){
+    this.apiKey = apiKey;
+  },
+  send: async function (path, method = "GET", body = null) {
     //nối chuỗi
-    url = `${SERVER_API}${url}`;
+    const url = `${SERVER_API}${path}`;
     //tác vụ call api
     const headers = {
       "Content-Type": "application/json",
     };
+    if(this.apiKey){
+      if(!path.includes("products")){
+        headers["X-Api-Key"] = `${this.apiKey}`
+      }
+    }
     const options = {
       method,
       headers,
