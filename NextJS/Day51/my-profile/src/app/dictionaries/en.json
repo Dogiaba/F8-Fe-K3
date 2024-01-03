@@ -1,0 +1,58 @@
+{
+  "data": {
+    "fullName": "Tran Bao Minh",
+    "job": "Front-end developer",
+    "skills": {
+      "heading": "My skills",
+      "skill-1": {
+        "title-desc": "Web developer",
+        "descript": "REST API, React.js, Next.js, CSS3, HTML5, UI/UX,"
+      },
+      "skill-2": {
+        "title-desc": "Other skills ",
+        "descript": "Relatively good research and search skills. Working thinking, good teamwork skills compared to age."
+      }
+    },
+    "histories": {
+      "heading": "Histories",
+      "times": [
+        {
+          "year": "2017-2019:",
+          "descript": "Other Junior high school"
+        },
+        {
+          "year": "2020-2023:",
+          "descript": "College studies"
+        }
+      ]
+    },
+
+    "contact": {
+      "social": "Social contact",
+      "myProject": {
+        "heading": "Self project",
+        "projects": [
+          {
+            "heading": "Project Code snippet",
+            "descript": "A small project completed within a day A simple website that allows you to create and share code snippets. Using HTML, CSS, JS and custom elements."
+          },
+          {
+            "heading": "Project 20f8",
+            "descript": "A bigger project done in three days A personal blog website with posts about programming and learning. Using React.js."
+          },
+          {
+            "heading": "Project blog",
+            "descript": "A fun project made in a day A puzzle game based on the 2048 game. Using Next.js and Tailwind CSS"
+          }
+        ]
+      }
+    },
+    "myHobbies": {
+      "heading": "My hobbies",
+      "list-hobbi": [
+        "Philosophy, Historie,...",
+        "Follow The Technology Trends, News About Famous Products"
+      ]
+    }
+  }
+}
