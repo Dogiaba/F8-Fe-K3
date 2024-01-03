@@ -4,8 +4,10 @@ import Image from "next/image";
 import imageAvata from "@/app/assets/image/code-icon.png";
 import logoIm from "@/app/assets/image/logo.png";
 import { getDictionary } from "./dictionaries";
-export default async function page({ params}) {
-    const {lang} = params
+import ChangeLang from "../components/ChangeLang";
+
+export default async function page({params}) {
+    const {lang} = params;
     // console.log("par" , params, typeof(lang));
   const dict = await getDictionary(lang);
   console.log("dict", dict)
@@ -47,8 +49,9 @@ export default async function page({ params}) {
                   </div>
                 </label>
               </li>
-              <li className="nav-link">
-                <button className="btn-lang">En</button>
+              <li className="nav-link" >
+                <ChangeLang>{params}</ChangeLang>
+                {/* <button className="btn-lang">en</button> */}
               </li>
             </ul>
           </header>
