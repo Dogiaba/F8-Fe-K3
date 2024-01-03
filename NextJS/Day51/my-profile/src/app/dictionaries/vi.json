@@ -1,0 +1,64 @@
+
+{
+    "data":{
+        "fullName": "Trần Bảo Minh",
+        "job": "Front-end developer",
+        "skills":{
+            "heading":"Các kĩ năng của tôi",
+            "skill-1":{
+                "title-desc":"Kỹ năng làm việc",
+                "descript":"REST API, React.js, Next.js, CSS3, HTML5, UI/UX,"
+            },
+            "skill-2":{
+                "title-desc":"Các ký năng khác: ",
+                "descript":"Kỹ năng nghiên cứu và tìm kiếm tương đối tốt. Tư duy làm việc, kỹ năng làm việc nhóm tốt so với độ tuổi."
+            }
+        },
+        "histories":{
+            "heading":"Lịch sử",
+            "times":[
+                {
+                    "year":"2017-2019:",
+                    "descript":"Học trung học Trung học phổ thông"
+                },
+                {
+                    "year":"2020-2023:",
+                    "descript":"Học đại học"
+                }
+            ]
+        },
+
+        "contact":{
+            "social":"Thông tin liên hệ",
+            "myProject":{
+                "heading":"Các án cá nhân",
+                "projects":[
+                    {
+                        "heading":"Project Code snippet",
+                        "descript":"Một dự án nhỏ hoàn thành trong vòng một ngày Một trang web đơn giản cho phép tạo và chia sẻ các đoạn code. Sử dụng HTML, CSS, JS và custom elements."
+                    },
+                    {
+                        "heading":"Project 20f8",
+                        "descript":"Một dự án nhỏ hoàn thành trong vòng một ngày Một trang web đơn giản cho phép tạo và chia sẻ các đoạn code. Sử dụng HTML, CSS, JS và custom elements."
+                    },
+                    {
+                        "heading":"Project blog",
+                        "descript":"Một dự án nhỏ hoàn thành trong vòng một ngày Một trang web đơn giản cho phép tạo và chia sẻ các đoạn code. Sử dụng HTML, CSS, JS và custom elements."
+                    }
+
+
+                ]
+            }
+        },
+        "myHobbies":{
+            "heading":"Sở thích cá nhân",
+            "list-hobbi":[
+                "Triết học, Lịch sử",
+                "Đọc Sách, Học Hỏi Thêm Về Các Ngôn Ngữ Lập Trình Mới Mẻ. Hiện Tại, Tôi Đang Tự Học Python"
+            ]
+        }
+        
+    }
+}
+
+
