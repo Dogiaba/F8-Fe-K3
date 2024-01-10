@@ -3,10 +3,8 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-const ChangeLang =({ children, className })=> {
-    let language = children.lang;
-    console.log(className)
-  const [lang, setLang] = useState(language);
+const ChangeLang =({ children })=> {
+  const [lang, setLang] = useState(children);
   const router = useRouter();
 
 
@@ -19,7 +17,7 @@ const ChangeLang =({ children, className })=> {
   }
   useEffect(() => {
     document.cookie = `lang=${lang}`;
-    router.push(lang);
+    router.refresh();
   }, [lang]);
   return (
     <button className="btn-lang" onClick={handleClickLang}>
