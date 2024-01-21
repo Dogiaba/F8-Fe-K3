@@ -150,3 +150,33 @@ h3{
     cursor: pointer;
     background-color: rgb(231, 231, 231);
 }
+.text-center{
+    text-align: center;
+}
+.px-6{
+    padding-left: 1.5rem; /* 24px */
+    padding-right: 1.5rem; /* 24px */
+}
+.flex{
+    display: flex;
+}
+.items-center{
+    align-items: center;
+}
+.mr-1{
+    margin-right: 0.8rem;
+}
+.m{
+    margin: 1rem 0px;
+}
+.conten-profi{
+    display: flex;
+}
+.bor-top{
+    border-top: 2px solid var(--background-color);
+    margin-top: 1rem;
+}
+.content-right{
+    flex-grow: 1;
+    margin-left: 30px;
+}

@@ -14,8 +14,8 @@ const pageAuth = () => {
         <h2 className="textLog">Login</h2>
         <div className="loginWith">
           <button
-            onClick={() => signIn("google")}
-            className="btn-logWith signin   mt-1"
+            onClick={() => signIn("google",{callbackUrl:'http://localhost:3000/profile'})}
+            className="btn-logWith signin mt-1"
           >
             <svg
               viewBox="0 0 256 262"
@@ -42,7 +42,7 @@ const pageAuth = () => {
             <p className="">Sign in with Google</p>
           </button>
           <button
-            onClick={() => signIn("github")}
+            onClick={() => signIn("github",{callbackUrl:'http://localhost:3000/profile'})}
             className="btn-logWith button mt-1"
           >
             <svg

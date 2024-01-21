@@ -1,0 +1,23 @@
+/* .header{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 33px;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+} */
+
+.header{
+    justify-content: space-between;
+    padding: 12px 33px;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+    /* position: fixed; */
+    background-color: #fff;
+    top: 0;
+    left: 0;
+}

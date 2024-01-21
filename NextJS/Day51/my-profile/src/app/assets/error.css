@@ -1,0 +1,9 @@
+.imgError{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img404{
+    width: 40%;
+    height: 13%;
+}
