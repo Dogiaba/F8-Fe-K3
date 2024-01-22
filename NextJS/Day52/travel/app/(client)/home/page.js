@@ -3,7 +3,6 @@ import logoImg from "@/app/assets/image/logoTravel.jpg"
 import "@/app/assets/styles/home.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFaceSmile, faLock, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import videoAu from "@/app/assets/audio/sea.mp4";
 const homePage = () => {
   return (
     <>
@@ -27,7 +26,7 @@ const homePage = () => {
     </header>
     <section className="header-content">
         {/* <Video muted loop autoplay><source src={videoAu}/></Video> */}
-        <Video src={videoAu} />
+        {/* <Video src={videoAu} /> */}
         <div className="content">
             <h3>Mọi chuyến đi đều đáng giá</h3>
             <p>Khám phá cá vùng đất mới cùng chúng tôi</p>
