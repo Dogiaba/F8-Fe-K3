@@ -1,7 +1,9 @@
 import { ThemeSwitcher } from "@/app/components/ThemeSwitcher";
 import Image from "next/image";
 import avata from "@/app/assets/images/code-icon-png-0.png";
-import styles from '@/app/assets/flow.module.css';
+import styles from "@/app/assets/flow.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaPlus } from "react-icons/fa";
 export default function layoutItemMindMap({ children }) {
   return (
     <>
@@ -14,7 +16,7 @@ export default function layoutItemMindMap({ children }) {
             Mindmap Flow
           </a>
           <button className="bg-blue-500 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80 h-9 px-4 py-2">
-            Create
+            <FontAwesomeIcon icon={FaPlus} /> Create
           </button>
         </div>
         <div className="flex space-x-3 items-center">
@@ -40,7 +42,7 @@ export default function layoutItemMindMap({ children }) {
           <button>Chia sẻ</button>
         </div>
       </div>
-      <main > {children}</main>
+      <main> {children}</main>
     </>
   );
 }

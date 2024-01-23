@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
 import { Handle, Position } from 'reactflow';
-
+import "./node.modele.css"
 const handleStyle = { left: 10 };
 
 function TextUpdaterNode({ data, isConnectable }) {
@@ -10,18 +10,17 @@ function TextUpdaterNode({ data, isConnectable }) {
 
   return (
     <div className="text-updater-node">
-      <Handle type="target" position={Position.Top} isConnectable={isConnectable} />
+      <Handle type="target" position={Position.Top} isConnectable={isConnectable} className='react-flow__handle '/>
       <div>
-        <label htmlFor="text">Text:</label>
-        <input id="text" name="text" onChange={onChange} className="nodrag" />
+        <input id="text" name="text" onChange={onChange}  className="nodrag " />
       </div>
-      <Handle
+      {/* <Handle
         type="source"
         position={Position.Bottom}
         id="a"
         style={handleStyle}
         isConnectable={isConnectable}
-      />
+      /> */}
       <Handle type="source" position={Position.Bottom} id="b" isConnectable={isConnectable} />
     </div>
   );
