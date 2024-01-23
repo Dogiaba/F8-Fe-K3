@@ -10,7 +10,7 @@ function TextUpdaterNode({ data, isConnectable }) {
 
   return (
     <div className="text-updater-node">
-      <Handle type="target" position={Position.Top} isConnectable={isConnectable} className='react-flow__handle '/>
+      <Handle type="target" position={Position.Top} isConnectable={isConnectable} />
       <div>
         <input id="text" name="text" onChange={onChange}  className="nodrag " />
       </div>

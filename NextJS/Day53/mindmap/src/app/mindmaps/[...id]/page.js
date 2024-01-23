@@ -47,7 +47,6 @@ const PageFlow = () => {
 const onNodeDoubleClick = useCallback(
 (e, activeNode)=>{
   console.log("Active Id:", activeNode.id)
-
   const newNodes = nodes.map(node => {
     console.log("Node Id:", node.id)
     if(node.id == activeNode.id) {

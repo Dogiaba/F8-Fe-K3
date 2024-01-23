@@ -295,8 +295,8 @@ const pageMindMap = async () => {
             </li>
           </ul>
         </div>
-        <main className="main-dash p-4 md:ml-64  pt-20 flex h-screen dark:bg-slate-900">
-          <div className="bg-sky-400 h-28 w-28 rounded-md mr-4 flex items-center justify-center">
+        <main className="main-dash p-4 md:ml-64  pt-20 flex h-screen dark:bg-slate-900 ">
+          <div  className="bg-sky-400 h-28 w-28 rounded-md mr-4 flex items-center justify-center cursor-pointer hover:bg-sky-600">
             <IoIosAddCircleOutline className="text-white text-6xl" />
           </div>
           <div className=" bg-gray-100 h-28 w-28 rounded-md mr-4 flex items-center justify-center">
