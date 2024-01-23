@@ -4,7 +4,10 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
+<<<<<<< HEAD
     './src/**/*.{js,ts,jsx,tsx,mdx}'
+=======
+>>>>>>> a7a5c9e109c18f3d67315a859f86fd3070dfcd80
   ],
   theme: {
     extend: {

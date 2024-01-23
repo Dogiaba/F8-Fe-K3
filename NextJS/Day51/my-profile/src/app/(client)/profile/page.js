@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import Image from "next/image";
 import iconGlass from "@/app/assets/icons/glasses.png";
@@ -54,3 +55,14 @@ const pageProfile = async() => {
 };
 
 export default pageProfile;
+=======
+import React from 'react'
+
+const pageProfile = () => {
+  return (
+    <div>pageProfile</div>
+  )
+}
+
+export default pageProfile
+>>>>>>> a7a5c9e109c18f3d67315a859f86fd3070dfcd80

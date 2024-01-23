@@ -20,13 +20,21 @@ const layout = ({children}) => {
             </li> */}
             <li>
               {/* <a href="#"><Image src={logoIm} alt="logo"/></a> */}
+<<<<<<< HEAD
               <a className="logo nav-link" href='/'>CODE WITH ME</a>
+=======
+              <a className="logo nav-link">CODE WITH ME</a>
+>>>>>>> a7a5c9e109c18f3d67315a859f86fd3070dfcd80
             </li>
             <li className="nav-link">
               <a href="#">Home</a>
             </li>
             <li className="nav-link">
+<<<<<<< HEAD
               <Link href={"/blogs"}>Blogs</Link>
+=======
+              <a href="#">Blogs</a>
+>>>>>>> a7a5c9e109c18f3d67315a859f86fd3070dfcd80
             </li>
           </ul>
 
