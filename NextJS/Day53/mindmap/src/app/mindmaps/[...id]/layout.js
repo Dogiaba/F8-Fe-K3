@@ -36,9 +36,7 @@ export default function layoutItemMindMap({ children }) {
           type="text"
         />
         <div className="ml-auto flex items-center gap-4">
-          <div>
-            <span>auto save</span>
-          </div>
+          <button>Lưu thay đổi</button>
           <button>Chia sẻ</button>
         </div>
       </div>

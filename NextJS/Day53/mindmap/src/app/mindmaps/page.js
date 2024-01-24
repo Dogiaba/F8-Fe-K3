@@ -4,21 +4,24 @@ import Link from "next/link";
 
 import logoDash from "@/app/assets/images/Logomind-mapping.png";
 import avata from "@/app/assets/images/code-icon-png-0.png";
-import iconMap1 from "@/app/assets/icons/map1.png";
-import iconMap2 from "@/app/assets/icons/map2.png";
-import iconMap3 from "@/app/assets/icons/map3.png";
+// import iconMap1 from "@/app/assets/icons/map1.png";
+// import iconMap2 from "@/app/assets/icons/map2.png";
+// import iconMap3 from "@/app/assets/icons/map3.png";
 
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
-
+  
 import { RiMindMap } from "react-icons/ri";
 import { CiClock2 } from "react-icons/ci";
 import { CiStar } from "react-icons/ci";
 import { CiTrash } from "react-icons/ci";
-import { IoIosAddCircleOutline } from "react-icons/io";
+// import { IoIosAddCircleOutline } from "react-icons/io";
 
 import { ThemeSwitcher } from "../components/ThemeSwitcher";
+import ListMap from "../components/ListMap";
+import ItemMindMap from "../components/ItemMindMap";
+import CreateNewMap from "../components/CreateNewMap";
 
 const pageMindMap = async () => {
   const session = await getServerSession(authOptions);
@@ -295,8 +298,8 @@ const pageMindMap = async () => {
             </li>
           </ul>
         </div>
-        <main className="main-dash p-4 md:ml-64  pt-20 flex h-screen dark:bg-slate-900 ">
-          <div  className="bg-sky-400 h-28 w-28 rounded-md mr-4 flex items-center justify-center cursor-pointer hover:bg-sky-600">
+        <main className="main-dash p-4 md:ml-64  pt-20  h-screen dark:bg-slate-900 ">
+          {/* <div  className="bg-sky-400 h-28 w-28 rounded-md mr-4 flex items-center justify-center cursor-pointer hover:bg-sky-600">
             <IoIosAddCircleOutline className="text-white text-6xl" />
           </div>
           <div className=" bg-gray-100 h-28 w-28 rounded-md mr-4 flex items-center justify-center">
@@ -307,7 +310,11 @@ const pageMindMap = async () => {
           </div>
           <div className="bg-gray-100 h-28 w-28 rounded-md mr-4 flex items-center justify-center">
             <Image src={iconMap3} alt="map3" />
-          </div>
+          </div> */}
+          
+          <ListMap email={session.user.email}/>
+
+
         </main>
       </div>
     </>
