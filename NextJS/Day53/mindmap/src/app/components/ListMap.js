@@ -12,7 +12,7 @@ const getProjects = async (url) => {
     );
 
     console.log(
-        "sao ko dc",
+        "have problem",
         `${process.env.SERVER_API}/project_mindmap?user_id=${url}`
     );
     return await response.json();

@@ -78,6 +78,7 @@ const pageMindMap = async () => {
             </div>
 
             <div className="flex items-center lg:order-2">
+              <span>{session.user.name}</span>
               <button
                 type="button"
                 data-dropdown-toggle="notification-dropdown"
@@ -313,7 +314,6 @@ const pageMindMap = async () => {
           </div> */}
           
           <ListMap email={session.user.email}/>
-
 
         </main>
       </div>

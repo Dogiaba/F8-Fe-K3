@@ -1,7 +1,7 @@
 {
   "project_mindmap": [
     {
-      "id": "703ec186-845d-410f-853f-a8fe03ab7e18",
+      "id": "9c15a699-8c2e-4bc3-8578-975941fb8047",
       "name": "Không có tên",
       "user_id": "tienggoicuagio0911@gmail.com",
       "private": true,
@@ -22,7 +22,28 @@
       "dataEdges": []
     },
     {
-      "id": "a679e18e-a699-4a49-bc88-bffcd9da55e0",
+      "id": "05aa5720-49a8-4760-81b9-31677eb4db7d",
+      "name": "Không có tên",
+      "user_id": "17loiten@gmail.com",
+      "private": true,
+      "dataNodes": [
+        {
+          "id": "0",
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "data": {
+            "label": "1"
+          },
+          "type": "input",
+          "deletable": false
+        }
+      ],
+      "dataEdges": []
+    },
+    {
+      "id": "7a62ce34-7e05-4824-bc56-8431a375eddd",
       "name": "Không có tên",
       "user_id": "tienggoicuagio0911@gmail.com",
       "private": true,

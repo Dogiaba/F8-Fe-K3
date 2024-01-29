@@ -9,10 +9,10 @@ const notFound = () => {
             404
           </h1>
           <p class="mb-4 text-3xl tracking-tight font-bold text-gray-900 md:text-4xl ">
-            Something's missing.
+            Something&prime;s missing.
           </p>
           <p class="mb-4 text-lg font-light text-gray-500 ">
-            Sorry, we can't find that page. You'll find lots to explore on the
+            Sorry&sbquo; we can&prime;t find that page. You&prime;ll find lots to explore on the
             home page.{" "}
           </p>
           <div class="mt-10 flex items-center justify-center gap-x-6">
