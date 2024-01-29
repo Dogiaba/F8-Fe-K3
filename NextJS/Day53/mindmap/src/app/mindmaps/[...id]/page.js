@@ -1,7 +1,9 @@
 import MapFlowContent from '@/app/components/MapFlowContent'
 import React from 'react'
 
-const page = () => {
+const page = ({params}) => {
+  const {id} = params;
+  // console.log(id)
   const getServer = async function(id){
     const respone = await fetch(
       `${process.env.SERVER_API}/project_mindmap/${id}`,
@@ -13,7 +15,7 @@ const page = () => {
   }
   return (
     <div>
-      <MapFlowContent/>
+      <MapFlowContent id={id[0]}/>
     </div>
   )
 }

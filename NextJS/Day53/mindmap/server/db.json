@@ -1,27 +1,6 @@
 {
   "project_mindmap": [
     {
-      "id": "9c15a699-8c2e-4bc3-8578-975941fb8047",
-      "name": "Không có tên",
-      "user_id": "tienggoicuagio0911@gmail.com",
-      "private": true,
-      "dataNodes": [
-        {
-          "id": "0",
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "data": {
-            "label": "1"
-          },
-          "type": "input",
-          "deletable": false
-        }
-      ],
-      "dataEdges": []
-    },
-    {
       "id": "05aa5720-49a8-4760-81b9-31677eb4db7d",
       "name": "Không có tên",
       "user_id": "17loiten@gmail.com",
@@ -43,12 +22,54 @@
       "dataEdges": []
     },
     {
-      "id": "7a62ce34-7e05-4824-bc56-8431a375eddd",
+      "id": "92e470f6-6dcd-44c5-a5b8-023840622ebd",
       "name": "Không có tên",
       "user_id": "tienggoicuagio0911@gmail.com",
       "private": true,
       "dataNodes": [
         {
+          "width": 150,
+          "height": 39,
+          "id": "2",
+          "position": {
+            "x": 91.28929146895035,
+            "y": 69.57085230494683
+          },
+          "data": {
+            "label": "Node 2"
+          },
+          "origin": [
+            0.5,
+            0
+          ],
+          "positionAbsolute": {
+            "x": 91.28929146895035,
+            "y": 69.57085230494683
+          }
+        },
+        {
+          "width": 150,
+          "height": 39,
+          "id": "1",
+          "position": {
+            "x": -75.21070853104965,
+            "y": 58.070852304946825
+          },
+          "data": {
+            "label": "Node 1"
+          },
+          "origin": [
+            0.5,
+            0
+          ],
+          "positionAbsolute": {
+            "x": -75.21070853104965,
+            "y": 58.070852304946825
+          }
+        },
+        {
+          "width": 150,
+          "height": 39,
           "id": "0",
           "position": {
             "x": 0,
@@ -58,10 +79,78 @@
             "label": "1"
           },
           "type": "input",
-          "deletable": false
+          "deletable": false,
+          "positionAbsolute": {
+            "x": 0,
+            "y": 0
+          }
         }
       ],
-      "dataEdges": []
+      "dataEdges": [
+        {
+          "id": "1",
+          "source": "0",
+          "target": "1"
+        },
+        {
+          "id": "2",
+          "source": "0",
+          "target": "2"
+        }
+      ]
+    },
+    {
+      "id": "3b455505-5a0f-45e1-ae5f-8f29857e411f",
+      "name": "Không có tên",
+      "user_id": "tienggoicuagio0911@gmail.com",
+      "private": true,
+      "dataNodes": [
+        {
+          "width": 150,
+          "height": 39,
+          "id": "0",
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "data": {
+            "label": "1"
+          },
+          "type": "input",
+          "deletable": false,
+          "positionAbsolute": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "width": 150,
+          "height": 39,
+          "id": "1",
+          "position": {
+            "x": -82,
+            "y": 52.50364875793457
+          },
+          "data": {
+            "label": "Node 1"
+          },
+          "origin": [
+            0.5,
+            0
+          ],
+          "positionAbsolute": {
+            "x": -82,
+            "y": 52.50364875793457
+          }
+        }
+      ],
+      "dataEdges": [
+        {
+          "id": "1",
+          "source": "0",
+          "target": "1"
+        }
+      ]
     }
   ]
 }

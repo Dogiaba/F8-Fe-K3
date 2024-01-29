@@ -1,5 +1,5 @@
 "use client";
-import React, { useCallback, useRef } from "react";
+import React, { useCallback, useRef, useState } from "react";
 import ReactFlow, {
   MiniMap,
   Controls,
@@ -33,18 +33,29 @@ const initialNodes = [
   },
 ];
 
-let id = 1;
-const getId = () => `${id++}`;
+// let id = 1;
+// const getId = () => `${id++}`;
+
 const nodeTypes = { textUpdater: TextUpdaterNode };
 const MapFlow = ({ id, serverData, initialEdges, initialNodes }) => {
+  console.log(initialNodes);
+  const maxidNode = initialNodes.sort((a, b) => {
+    return b.id - a.id;
+  })[0];
   const reactFlowWrapper = useRef(null);
   const connectingNodeId = useRef(null);
   const [nodes, setNodes] = useNodesState(initialNodes);
-  const [edges, setEdges] = useEdgesState([]);
+  const [edges, setEdges] = useEdgesState(initialEdges);
   const { screenToFlowPosition } = useReactFlow();
 
+  const [countId, setCountId] = useState(
+    maxidNode ? Number(maxidNode.id) + 1 + "" : "1"
+  );
   // console.log( nodes)
 
+  const getId = async () =>{
+    await setCountId((prev) => Number(prev) + 1  + "");
+  };
   const onNodeDoubleClick = useCallback(
     (e, activeNode) => {
       console.log("Active Id:", activeNode.id);
@@ -92,7 +103,9 @@ const MapFlow = ({ id, serverData, initialEdges, initialNodes }) => {
 
       if (targetIsPane) {
         // we need to remove the wrapper bounds, in order to get the correct position
-        const id = getId();
+        // const id = getId();
+        getId();
+        const id = countId;
         const newNode = {
           id,
           position: screenToFlowPosition({
@@ -145,6 +158,7 @@ const MapFlow = ({ id, serverData, initialEdges, initialNodes }) => {
 function MapFlowContent(props) {
   const fetcher = (url) => fetch(url).then((res) => res.json());
   const { id } = props;
+  console.log(`${process.env.NEXT_PUBLIC_SERVER_API}/project_mindmap/${id}`);
   const { data, isLoading, error } = useSWR(
     `${process.env.NEXT_PUBLIC_SERVER_API}/project_mindmap/${id}`,
     fetcher,
@@ -162,7 +176,12 @@ function MapFlowContent(props) {
         <h1>Loading</h1>
       ) : (
         <ReactFlowProvider>
-          <MapFlow {...props} serverData={data} initialNodes={data.dataNodes} />
+          <MapFlow
+            {...props}
+            serverData={data}
+            initialNodes={data.dataNodes}
+            initialEdges={data.dataEdges}
+          />
         </ReactFlowProvider>
       )}
     </>

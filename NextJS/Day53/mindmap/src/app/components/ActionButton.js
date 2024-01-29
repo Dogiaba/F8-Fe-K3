@@ -5,16 +5,18 @@ import { IoIosShareAlt } from "react-icons/io";
 import { useReactFlow } from "reactflow";
 
 const ActionButton = ({ id, serverData }) => {
+  console.log(id)
   const [name, setName] = useState(serverData.name);
   const reactFlow = useReactFlow();
 
   async function handSave(e) {
     e.preventDefault();
     e.stopPropagation();
-    const react_flow = document.querySelector(".react_flowAll");
-    await react_flow.click();
+    // const react_flow = document.querySelector(".react_flowAll");
+    // await react_flow.click();
+    console.log(`${process.env.NEXT_PUBLIC_SERVER_API}/project_mindmap/${id}`)
     const response = await fetch(
-      `${process.env.SERVER_API}/project_mindmap/${id}`,
+      `${process.env.NEXT_PUBLIC_SERVER_API}/project_mindmap/${id}`,
       {
         method: "PATCH",
         headers: {
@@ -34,7 +36,7 @@ const ActionButton = ({ id, serverData }) => {
 };
   return (
     <>
-      <div className="w-full h-14 z-[40] items-center justify-between bg-black/50  flex  px-6 gap-x-4 text-white">
+      <div className="fixed top-16 w-full h-14 z-[40] items-center justify-between bg-black/50  flex  px-6 gap-x-4 text-white">
         <input
           className="outline-none bg-transparent mr-1"
           placeholder="Bản đồ tư duy chưa có tên"

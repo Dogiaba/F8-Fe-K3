@@ -78,7 +78,7 @@ const pageMindMap = async () => {
             </div>
 
             <div className="flex items-center lg:order-2">
-              <span>{session.user.name}</span>
+              <span>Hi, {session.user.name}</span>
               <button
                 type="button"
                 data-dropdown-toggle="notification-dropdown"
@@ -127,9 +127,9 @@ const pageMindMap = async () => {
                 data-dropdown-toggle="dropdown"
               >
                 <span className="sr-only">Open user menu</span>
-                <Image
+                <img
                   className="w-8 h-8 rounded-full"
-                  src={avata}
+                  src={session.user.image}
                   alt="user photo"
                 />
               </button>
