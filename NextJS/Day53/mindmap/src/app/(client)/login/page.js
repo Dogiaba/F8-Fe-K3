@@ -2,13 +2,14 @@
 import React from "react";
 import { signIn } from "next-auth/react";
 const pageLogin = () => {
+  console.log(`${process.env.NEXTAUTH_URL}/mindmaps`)
   return (
     <div className="w-full relative mx-auto max-w-md bg-white px-6 pt-5 pb-8 my-8 shadow-xl ring-1 ring-gray-900/5 sm:rounded-xl sm:px-10 justify-center ">
       <div class="w-full mt-4 flex flex-col items-center">
         <h1 class="text-2xl xl:text-3xl font-extrabold dark:text-black">Sign up</h1>
         <div class="w-full flex-1 mt-8">
           <div class="flex flex-col items-center">
-            <button onClick={() => signIn("google",{callbackUrl:`${process.env.NEXTAUTH_URL}/mindmaps`})} class="w-full max-w-xs font-bold shadow-sm rounded-lg py-3 bg-indigo-100 text-gray-800 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline">
+            <button onClick={() => signIn("google",{callbackUrl:`${process.env.NEXT_PUBLIC_NEXTAUTH_URL}/mindmaps`})} class="w-full max-w-xs font-bold shadow-sm rounded-lg py-3 bg-indigo-100 text-gray-800 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline">
               <div class="bg-white p-2 rounded-full">
                 <svg class="w-4" viewBox="0 0 533.5 544.3">
                   <path
