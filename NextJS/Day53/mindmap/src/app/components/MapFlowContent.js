@@ -39,7 +39,7 @@ const initialNodes = [
 const nodeTypes = { textUpdater: TextUpdaterNode };
 const MapFlow = ({ id, serverData, initialEdges, initialNodes }) => {
   console.log(initialNodes);
-  const maxidNode = initialNodes.sort((a, b) => {
+  const maxidNode = initialNodes?.sort((a, b) => {
     return b.id - a.id;
   })[0];
   const reactFlowWrapper = useRef(null);
