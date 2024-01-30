@@ -2,7 +2,7 @@
 import React from "react";
 import { signIn } from "next-auth/react";
 const pageLogin = () => {
-  console.log(`${process.env.NEXTAUTH_URL}/mindmaps`)
+  console.log(`${process.env.NEXT_PUBLIC_NEXTAUTH_URL}/mindmaps`)
   return (
     <div className="w-full relative mx-auto max-w-md bg-white px-6 pt-5 pb-8 my-8 shadow-xl ring-1 ring-gray-900/5 sm:rounded-xl sm:px-10 justify-center ">
       <div class="w-full mt-4 flex flex-col items-center">
