@@ -147,7 +147,7 @@ const MapFlow = ({ id, serverData, initialEdges, initialNodes }) => {
         deleteKeyCode="Delete"
       >
         <Controls />
-        <MiniMap />
+        <MiniMap nodeColor="green" pannable zoomable  />
         <Background variant="dots" />
       </ReactFlow>
       <ActionButton id={id} serverData={serverData} />
