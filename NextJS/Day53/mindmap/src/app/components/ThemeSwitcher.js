@@ -40,7 +40,7 @@ export const ThemeSwitcher = () => {
           <FontAwesomeIcon icon={faSun} />
         )}
 
-        <ul  className="z-40 hidden absolute right-0 bg-white rounded-lg ring-1 ring-slate-900/10 shadow-lg overflow-hidden w-36 py-1 text-sm text-slate-700 font-semibold dark:bg-slate-800 dark:ring-0 dark:highlight-white/5 dark:text-white mt-0 ">
+        <ul  className=" mt-4 z-40 hidden absolute right-0 bg-white rounded-lg ring-1 ring-slate-900/10 shadow-lg overflow-hidden w-36 py-1 text-sm text-slate-700 font-semibold dark:bg-slate-800 dark:ring-0 dark:highlight-white/5 dark:text-white  ">
           <li className="py-1 px-2 flex items-center cursor-pointer dark:hover:bg-neutral-500  hover:bg-gray-100  "
             onClick={(e) => {
               setTheme("light");
