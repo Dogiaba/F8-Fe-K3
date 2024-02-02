@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { IoSave } from "react-icons/io5";
 import { IoIosShareAlt } from "react-icons/io";
 import { useReactFlow } from "reactflow";
+import ModalShare from "./ModalShare";
 
 const ActionButton = ({ id, serverData }) => {
   console.log(id)
@@ -36,7 +37,7 @@ const ActionButton = ({ id, serverData }) => {
 };
   return (
     <>
-      <div className="fixed top-16 w-full h-14 z-[40] items-center justify-between bg-black/50  flex  px-6 gap-x-4 text-white">
+      <div className="fixed top-16 w-full h-14 z-[30] items-center justify-between bg-black/50  flex  px-6 gap-x-4 text-white">
         <input
           className="outline-none bg-transparent mr-1"
           placeholder="Bản đồ tư duy chưa có tên"
@@ -49,10 +50,9 @@ const ActionButton = ({ id, serverData }) => {
             <IoSave />
             <span>Lưu thay đổi</span>
           </button>
-          <button className="flex items-center">
-            <IoIosShareAlt />
-            Chia sẻ
-          </button>
+          <div className="flex items-center">
+          <ModalShare id={id} serverData={serverData}/>
+          </div>
         </div>
       </div>
     </>

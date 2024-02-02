@@ -2,9 +2,17 @@
   "project_mindmap": [
     {
       "id": "05aa5720-49a8-4760-81b9-31677eb4db7d",
-      "name": "Không có tên",
+      "name": "map1",
       "user_id": "17loiten@gmail.com",
-      "private": true,
+      "private": false,
+      "public_id": "56e40d68-8698-49c8-b728-6afde861be55",
+      "desc": "Powerful & Easy To Use — Your Ideas Deserve A Beautiful Online Mind Map Canvas. Start For Free. Upgrade Anytime. ",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Elements_of_the_culture_mindmap.png",
+      "public": {
+        "title": "Hello",
+        "imageShared": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Elements_of_the_culture_mindmap.png",
+        "desc": "Powerful & Easy To Use — Your Ideas Deserve A Beautiful Online Mind Map Canvas. Start For Free. Upgrade Anytime. "
+      },
       "dataNodes": [
         {
           "id": "0",
@@ -22,54 +30,16 @@
       "dataEdges": []
     },
     {
-      "id": "92e470f6-6dcd-44c5-a5b8-023840622ebd",
+      "id": "899aa69a-fce4-4e11-bb35-33b4eb682c98",
       "name": "Không có tên",
       "user_id": "tienggoicuagio0911@gmail.com",
       "private": true,
+      "public_id": null,
+      "desc": "Powerful & Easy To Use — Your Ideas Deserve A Beautiful Online Mind Map Canvas. Start For Free. Upgrade Anytime. ",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Elements_of_the_culture_mindmap.png",
+      "public": null,
       "dataNodes": [
         {
-          "width": 150,
-          "height": 39,
-          "id": "2",
-          "position": {
-            "x": 91.28929146895035,
-            "y": 69.57085230494683
-          },
-          "data": {
-            "label": "Node 2"
-          },
-          "origin": [
-            0.5,
-            0
-          ],
-          "positionAbsolute": {
-            "x": 91.28929146895035,
-            "y": 69.57085230494683
-          }
-        },
-        {
-          "width": 150,
-          "height": 39,
-          "id": "1",
-          "position": {
-            "x": -75.21070853104965,
-            "y": 58.070852304946825
-          },
-          "data": {
-            "label": "Node 1"
-          },
-          "origin": [
-            0.5,
-            0
-          ],
-          "positionAbsolute": {
-            "x": -75.21070853104965,
-            "y": 58.070852304946825
-          }
-        },
-        {
-          "width": 150,
-          "height": 39,
           "id": "0",
           "position": {
             "x": 0,
@@ -79,60 +49,22 @@
             "label": "1"
           },
           "type": "input",
-          "deletable": false,
-          "positionAbsolute": {
-            "x": 0,
-            "y": 0
-          }
-        },
-        {
-          "width": 150,
-          "height": 39,
-          "id": "3",
-          "position": {
-            "x": 79.60846628007616,
-            "y": 158.56539285593874
-          },
-          "data": {
-            "label": "Node 3"
-          },
-          "origin": [
-            0.5,
-            0
-          ],
-          "positionAbsolute": {
-            "x": 79.60846628007616,
-            "y": 158.56539285593874
-          }
+          "deletable": false
         }
       ],
-      "dataEdges": [
-        {
-          "id": "1",
-          "source": "0",
-          "target": "1"
-        },
-        {
-          "id": "2",
-          "source": "0",
-          "target": "2"
-        },
-        {
-          "id": "3",
-          "source": "2",
-          "target": "3"
-        }
-      ]
+      "dataEdges": []
     },
     {
-      "id": "3b455505-5a0f-45e1-ae5f-8f29857e411f",
+      "id": "bb8fc9fb-25fd-4f8e-bcb8-9a0d112285d3",
       "name": "Không có tên",
       "user_id": "tienggoicuagio0911@gmail.com",
       "private": true,
+      "public_id": null,
+      "desc": "Powerful & Easy To Use — Your Ideas Deserve A Beautiful Online Mind Map Canvas. Start For Free. Upgrade Anytime. ",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Elements_of_the_culture_mindmap.png",
+      "public": null,
       "dataNodes": [
         {
-          "width": 150,
-          "height": 39,
           "id": "0",
           "position": {
             "x": 0,
@@ -142,40 +74,10 @@
             "label": "1"
           },
           "type": "input",
-          "deletable": false,
-          "positionAbsolute": {
-            "x": 0,
-            "y": 0
-          }
-        },
-        {
-          "width": 150,
-          "height": 39,
-          "id": "1",
-          "position": {
-            "x": -82,
-            "y": 52.50364875793457
-          },
-          "data": {
-            "label": "Node 1"
-          },
-          "origin": [
-            0.5,
-            0
-          ],
-          "positionAbsolute": {
-            "x": -82,
-            "y": 52.50364875793457
-          }
+          "deletable": false
         }
       ],
-      "dataEdges": [
-        {
-          "id": "1",
-          "source": "0",
-          "target": "1"
-        }
-      ]
+      "dataEdges": []
     }
   ]
 }

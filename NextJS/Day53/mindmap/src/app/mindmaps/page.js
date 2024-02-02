@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-
+import 'flowbite';
 import logoDash from "@/app/assets/images/Logomind-mapping.png";
 import avata from "@/app/assets/images/code-icon-png-0.png";
 // import iconMap1 from "@/app/assets/icons/map1.png";
@@ -300,19 +300,7 @@ const pageMindMap = async () => {
           </ul>
         </div>
         <main className="main-dash p-4 md:ml-64  pt-20  h-screen dark:bg-slate-900 ">
-          {/* <div  className="bg-sky-400 h-28 w-28 rounded-md mr-4 flex items-center justify-center cursor-pointer hover:bg-sky-600">
-            <IoIosAddCircleOutline className="text-white text-6xl" />
-          </div>
-          <div className=" bg-gray-100 h-28 w-28 rounded-md mr-4 flex items-center justify-center">
-            <Image src={iconMap1} alt="map1" />
-          </div>
-          <div className=" bg-gray-100 h-28 w-28 rounded-md mr-4 flex items-center justify-center">
-            <Image src={iconMap2} alt="map2" />
-          </div>
-          <div className="bg-gray-100 h-28 w-28 rounded-md mr-4 flex items-center justify-center">
-            <Image src={iconMap3} alt="map3" />
-          </div> */}
-          
+
           <ListMap email={session.user.email}/>
 
         </main>
