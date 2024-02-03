@@ -6,6 +6,11 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 
+import { CiSun } from "react-icons/ci";
+import { IoMoonOutline } from "react-icons/io5";
+import { GrSystem } from "react-icons/gr";
+
+
 
 export const ThemeSwitcher = () => {
   const [mounted, setMounted] = useState(false);
@@ -46,6 +51,7 @@ export const ThemeSwitcher = () => {
               setTheme("light");
             }}
           >
+            <CiSun className="mr-3"/>
             Light
           </li>
 
@@ -54,6 +60,7 @@ export const ThemeSwitcher = () => {
               setTheme("dark");
             }}
           >
+            <IoMoonOutline className="mr-3"/>
             Dark
           </li>
 
@@ -62,6 +69,7 @@ export const ThemeSwitcher = () => {
               setTheme("system");
             }}
           >
+            <GrSystem className="mr-3"/>
             System
           </li>
         </ul>
