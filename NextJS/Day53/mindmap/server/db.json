@@ -30,7 +30,7 @@
       "dataEdges": []
     },
     {
-      "id": "176b69c3-07fb-4064-bdb4-2618dbd7c91c",
+      "id": "89d95c62-850f-4d3e-bbef-e70e0c1dce73",
       "name": "Không có tên",
       "user_id": "tienggoicuagio0911@gmail.com",
       "private": true,
@@ -42,48 +42,10 @@
         {
           "width": 150,
           "height": 39,
-          "id": "0",
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "data": {
-            "label": "1"
-          },
-          "type": "input",
-          "deletable": false,
-          "positionAbsolute": {
-            "x": 0,
-            "y": 0
-          }
-        },
-        {
-          "width": 150,
-          "height": 39,
-          "id": "1",
-          "position": {
-            "x": -108,
-            "y": 69.25364875793457
-          },
-          "data": {
-            "label": "Node 1"
-          },
-          "origin": [
-            0.5,
-            0
-          ],
-          "positionAbsolute": {
-            "x": -108,
-            "y": 69.25364875793457
-          }
-        },
-        {
-          "width": 150,
-          "height": 39,
           "id": "2",
           "position": {
-            "x": 87,
-            "y": 82.75364875793457
+            "x": 109.9999999073276,
+            "y": 91.01150758459087
           },
           "data": {
             "label": "Node 2"
@@ -93,28 +55,132 @@
             0
           ],
           "positionAbsolute": {
-            "x": 87,
-            "y": 82.75364875793457
+            "x": 109.9999999073276,
+            "y": 91.01150758459087
           }
         },
         {
           "width": 150,
           "height": 39,
-          "id": "3",
+          "id": "1",
           "position": {
-            "x": -169.5809824530886,
-            "y": 180.180927425164
+            "x": -105.0000000926724,
+            "y": 65.51150758459087
           },
           "data": {
-            "label": "Node 3"
+            "label": "Node 1"
           },
           "origin": [
             0.5,
             0
           ],
           "positionAbsolute": {
-            "x": -169.5809824530886,
-            "y": 180.180927425164
+            "x": -105.0000000926724,
+            "y": 65.51150758459087
+          }
+        },
+        {
+          "width": 150,
+          "height": 39,
+          "id": "0",
+          "position": {
+            "x": 0.5,
+            "y": 0
+          },
+          "data": {
+            "label": "1"
+          },
+          "type": "input",
+          "deletable": false,
+          "selected": false,
+          "positionAbsolute": {
+            "x": 0.5,
+            "y": 0
+          },
+          "dragging": false
+        }
+      ],
+      "dataEdges": [
+        {
+          "id": "1",
+          "source": "0",
+          "target": "1"
+        },
+        {
+          "id": "2",
+          "source": "0",
+          "target": "2"
+        }
+      ]
+    },
+    {
+      "id": "d58b9d02-0f13-4718-ad46-653a0b89a6c3",
+      "name": "Node 2",
+      "user_id": "tienggoicuagio0911@gmail.com",
+      "private": true,
+      "public_id": null,
+      "desc": "Powerful & Easy To Use — Your Ideas Deserve A Beautiful Online Mind Map Canvas. Start For Free. Upgrade Anytime. ",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Elements_of_the_culture_mindmap.png",
+      "public": null,
+      "dataNodes": [
+        {
+          "width": 150,
+          "height": 39,
+          "id": "2",
+          "position": {
+            "x": 79.5,
+            "y": 87.25364875793457
+          },
+          "data": {
+            "label": "Node 2"
+          },
+          "origin": [
+            0.5,
+            0
+          ],
+          "positionAbsolute": {
+            "x": 79.5,
+            "y": 87.25364875793457
+          }
+        },
+        {
+          "width": 150,
+          "height": 39,
+          "id": "1",
+          "position": {
+            "x": -148.5,
+            "y": 65.25364875793457
+          },
+          "data": {
+            "label": "Node 1"
+          },
+          "origin": [
+            0.5,
+            0
+          ],
+          "positionAbsolute": {
+            "x": -148.5,
+            "y": 65.25364875793457
+          }
+        },
+        {
+          "width": 150,
+          "height": 39,
+          "id": "0",
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "data": {
+            "label": "zxcvbnm,."
+          },
+          "type": "input",
+          "deletable": false,
+          "selected": false,
+          "dragging": false,
+          "positionAbsolute": {
+            "x": 0,
+            "y": 0
           }
         }
       ],
@@ -128,13 +194,33 @@
           "id": "2",
           "source": "0",
           "target": "2"
-        },
-        {
-          "id": "3",
-          "source": "1",
-          "target": "3"
         }
       ]
+    },
+    {
+      "id": "caa0ea6b-2249-40a9-9970-e34add48182d",
+      "name": "Không có tên",
+      "user_id": "tienggoicuagio0911@gmail.com",
+      "private": true,
+      "public_id": null,
+      "desc": "Powerful & Easy To Use — Your Ideas Deserve A Beautiful Online Mind Map Canvas. Start For Free. Upgrade Anytime. ",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Elements_of_the_culture_mindmap.png",
+      "public": null,
+      "dataNodes": [
+        {
+          "id": "0",
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "data": {
+            "label": "1"
+          },
+          "type": "input",
+          "deletable": false
+        }
+      ],
+      "dataEdges": []
     }
   ]
 }

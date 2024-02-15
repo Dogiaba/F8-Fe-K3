@@ -18,20 +18,21 @@ import "reactflow/dist/style.css";
 import "@/app/assets/flow.module.css";
 import ActionButton from "./ActionButton";
 import useSWR from "swr";
+import Loading from "./Loading";
 
 // const initialNodes = [
 //   { id: "1", position: { x: 0, y: 0 }, data: { label: "1" } },
 //   { id: "2", position: { x: 0, y: 100 }, data: { label: "2" } },
 // ];
 
-const initialNodes = [
-  {
-    id: "0",
-    type: "",
-    data: { label: "Node" },
-    position: { x: 0, y: 50 },
-  },
-];
+// const initialNodes = [
+//   {
+//     id: "0",
+//     type: "",
+//     data: { label: "Node" },
+//     position: { x: 0, y: 50 },
+//   },
+// ];
 
 // let id = 1;
 // const getId = () => `${id++}`;
@@ -170,10 +171,12 @@ function MapFlowContent(props) {
   if (error) {
     return <h2>ERROR !!!</h2>;
   }
+
   return (
     <>
       {isLoading ? (
-        <h1>Loading</h1>
+        <Loading/>
+        
       ) : (
         <ReactFlowProvider>
           <MapFlow

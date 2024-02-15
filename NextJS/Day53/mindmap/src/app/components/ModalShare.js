@@ -92,7 +92,7 @@ const ModalShare = ({ id, serverData}) => {
                 <div className="px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                   <div className="mx-auto max-w-sm text-center flex flex-wrap justify-center  gap-1 ">
                     <div className="flex items-center mr-4 mb-4 " onClick={(e)=> setPrivateShare(true)}>
-                      <input name="private" type="radio" value="true" checked />
+                      {/* <input name="private" type="radio" value="true" checked /> */}
                       <label
                         className="flex items-center cursor-pointer"
                         htmlFor="private"
@@ -101,7 +101,7 @@ const ModalShare = ({ id, serverData}) => {
                       </label>
                     </div>
                     <div className="flex items-center mr-4 mb-4" onClick={(e)=> setPrivateShare(false)}>
-                      <input type="radio" name="public" value="false" />
+                      {/* <input type="radio" name="public" value="false" /> */}
                       <label className="flex items-center cursor-pointer">
                         Public
                       </label>
@@ -124,7 +124,7 @@ const ModalShare = ({ id, serverData}) => {
                         </label>
                         <input
                           type="url"
-                          className="peer h-10 w-full rounded-md bg-gray-50 px-4 drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400 outline-none"
+                          className="peer h-10 w-full rounded-md bg-gray-50 px-4 drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2  focus:ring-blue-400 outline-none"
                           onChange={(e) => setShareLink(e.target.value)}
                           readOnly
                           value={shareLink}

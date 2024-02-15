@@ -4,6 +4,8 @@ import { IoSave } from "react-icons/io5";
 import { IoIosShareAlt } from "react-icons/io";
 import { useReactFlow } from "reactflow";
 import ModalShare from "./ModalShare";
+import { mutate } from "swr";
+import { toast } from "react-toastify";
 
 const ActionButton = ({ id, serverData }) => {
   console.log(id)
@@ -24,11 +26,21 @@ const ActionButton = ({ id, serverData }) => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          name: name,
           dataNodes: [...reactFlow.getNodes()],
           dataEdges: [...reactFlow.getEdges()],
         }),
       }
     );
+    if(response.ok){
+      mutate(
+        `${process.env.NEXT_PUBLIC_SERVER_API}/project_mindmap/${id}`
+      )
+      toast.success("Save ok")
+      console.log(`${process.env.NEXT_PUBLIC_SERVER_API}/project_mindmap/${id}`)
+    }else{
+      toast.error("Save error")
+    }
   }
   const handleChangeTitleMap =(e)=> {
     e.preventDefault();

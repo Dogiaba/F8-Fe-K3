@@ -20,6 +20,7 @@ const getProjects = async (url) => {
 
 async function ListMap ({email})  {
     const itemMaps = await getProjects(email)
+    console.log(itemMaps)
     console.log(email)
   return (
     <>
